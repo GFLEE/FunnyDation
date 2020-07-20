@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FunnyDation
+namespace FunnyDation.Client.Wpf
 {
     /// <summary>
     /// MainWindowVm

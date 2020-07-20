@@ -11,7 +11,7 @@ using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Unity;
 
-namespace FunnyDation
+namespace FunnyDation.Client.Wpf
 {
     /// <summary>
     /// Interaction logic for App.xaml
