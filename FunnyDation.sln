@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{858251
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Common", "Common\FunnyDation.Common\FunnyDation.Common.csproj", "{B4DBF030-1A9B-4BD0-B8A9-5324492BE6C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Wpf.Devexpress", "Common\FunnyDation.Wpf.Devexpress\FunnyDation.Wpf.Devexpress.csproj", "{29D4CFBE-590F-41B7-AE3A-BF06D6C94A5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{B4DBF030-1A9B-4BD0-B8A9-5324492BE6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4DBF030-1A9B-4BD0-B8A9-5324492BE6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4DBF030-1A9B-4BD0-B8A9-5324492BE6C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D4CFBE-590F-41B7-AE3A-BF06D6C94A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D4CFBE-590F-41B7-AE3A-BF06D6C94A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D4CFBE-590F-41B7-AE3A-BF06D6C94A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D4CFBE-590F-41B7-AE3A-BF06D6C94A5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B4DBF030-1A9B-4BD0-B8A9-5324492BE6C1} = {858251AA-00B5-49BD-8C80-B23B9DE2E3D8}
+		{29D4CFBE-590F-41B7-AE3A-BF06D6C94A5A} = {858251AA-00B5-49BD-8C80-B23B9DE2E3D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AA461BC-5A17-49E8-881B-37EA6EEFECE9}
