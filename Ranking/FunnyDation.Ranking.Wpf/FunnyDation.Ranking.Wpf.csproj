@@ -12,4 +12,10 @@
     <Exec Command="move /y $(TargetPath)  $(SolutionDir)\Assembly\Modules\" />
   </Target>
 
+  <ItemGroup>
+    <PackageReference Include="Prism.Core" Version="7.2.0.1422" />
+    <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+  </ItemGroup>
+
 </Project>
