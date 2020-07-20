@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Client.Wpf", "FunnyDation.Client.Wpf.csproj", "{E82A5D71-E579-4209-8E83-F48D07C29F55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Client.Wpf", "FunnyDation.Client.Wpf\FunnyDation.Client.Wpf.csproj", "{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E82A5D71-E579-4209-8E83-F48D07C29F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E82A5D71-E579-4209-8E83-F48D07C29F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E82A5D71-E579-4209-8E83-F48D07C29F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E82A5D71-E579-4209-8E83-F48D07C29F55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
