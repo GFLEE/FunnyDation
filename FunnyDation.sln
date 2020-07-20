@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Client.Wpf", "FunnyDation.Client.Wpf\FunnyDation.Client.Wpf.csproj", "{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Common", "FunnyDation.Common\FunnyDation.Common\FunnyDation.Common.csproj", "{0DFC0391-B3E4-4F11-ACA1-EECE1B0F7A6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{858251AA-00B5-49BD-8C80-B23B9DE2E3D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AB3B9A3-DEE9-4F42-B5EB-FF09E47AAC00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DFC0391-B3E4-4F11-ACA1-EECE1B0F7A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DFC0391-B3E4-4F11-ACA1-EECE1B0F7A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DFC0391-B3E4-4F11-ACA1-EECE1B0F7A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DFC0391-B3E4-4F11-ACA1-EECE1B0F7A6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DFC0391-B3E4-4F11-ACA1-EECE1B0F7A6F} = {858251AA-00B5-49BD-8C80-B23B9DE2E3D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AA461BC-5A17-49E8-881B-37EA6EEFECE9}
