@@ -1,0 +1,2 @@
+# FunnyDation
+Init Repo
