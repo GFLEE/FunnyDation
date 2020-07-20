@@ -10,7 +10,7 @@ namespace FunnyDation
     public class MainWindowVm
     {
         public MainWindowVm()
-        {
+        { 
 
         }
     }
