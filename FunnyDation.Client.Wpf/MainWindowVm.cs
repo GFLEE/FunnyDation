@@ -14,10 +14,16 @@ namespace FunnyDation.Client.Wpf
 
         }
 
+        public void LoadModules()
+        {
+
+        }
+
+
 
         public void Test()
         {
-             
+
         }
 
 

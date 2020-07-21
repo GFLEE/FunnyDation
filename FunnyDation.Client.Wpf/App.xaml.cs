@@ -22,7 +22,9 @@ namespace FunnyDation.Client.Wpf
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            var win = Container.Resolve<MainWindow>();
+            win.WindowState = WindowState.Maximized;
+            return win;
 
         }
 
