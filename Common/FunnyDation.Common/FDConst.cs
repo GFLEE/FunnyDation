@@ -6,7 +6,7 @@ namespace FunnyDation.Common
     /// 
     /// </summary>
     public static class FDConst
-    {
+    { 
         public const string ModulePath = "Modules";
     }
 }

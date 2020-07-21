@@ -25,6 +25,17 @@
           }
         }
       },
+      "Microsoft.Toolkit/6.1.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Toolkit.dll": {
+            "assemblyVersion": "6.1.0.0",
+            "fileVersion": "6.1.0.1"
+          }
+        }
+      },
       "Prism.Core/7.2.0.1422": {
         "runtime": {
           "lib/netcoreapp3.0/Prism.dll": {
@@ -61,7 +72,14 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.6.0",
+            "fileVersion": "4.700.20.12001"
+          }
+        }
+      },
       "System.Threading.Tasks.Extensions/4.5.2": {},
       "Unity.Abstractions/5.11.1": {
         "dependencies": {
@@ -76,7 +94,7 @@
       },
       "Unity.Container/5.11.1": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1",
           "Unity.Abstractions": "5.11.1"
         },
         "runtime": {
@@ -87,6 +105,9 @@
         }
       },
       "FunnyDation.Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.Toolkit": "6.1.0"
+        },
         "runtime": {
           "FunnyDation.Common.dll": {}
         }
@@ -105,6 +126,13 @@
       "sha512": "sha512-YpXfV5l6kv1iQRDfhQnN4RxocbnNehU/rAAS62IlaQUTAKN3WoUbtx9MHwE98Pb09mBemSs4xhVqFhXq27rjxw==",
       "path": "commonservicelocator/2.0.4",
       "hashPath": "commonservicelocator.2.0.4.nupkg.sha512"
+    },
+    "Microsoft.Toolkit/6.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CoE+lGVe+HorMHH1DRnLH8S1t1V38PS+pRxuM2ldvUZ0KsJmNGrGP8ieKmb9He+SI2EjkZIrAP/U7ysR3Lm26w==",
+      "path": "microsoft.toolkit/6.1.0",
+      "hashPath": "microsoft.toolkit.6.1.0.nupkg.sha512"
     },
     "Prism.Core/7.2.0.1422": {
       "type": "package",
@@ -127,12 +155,12 @@
       "path": "prism.wpf/7.2.0.1422",
       "hashPath": "prism.wpf.7.2.0.1422.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+    "System.Runtime.CompilerServices.Unsafe/4.7.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
-      "path": "system.runtime.compilerservices.unsafe/4.5.2",
-      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+      "sha512": "sha512-zOHkQmzPCn5zm/BH+cxC1XbUS3P4Yoi3xzW7eRgVpDR2tPGSzyMZ17Ig1iRkfJuY0nhxkQQde8pgePNiA7z7TQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.7.1",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
     },
     "System.Threading.Tasks.Extensions/4.5.2": {
       "type": "package",
