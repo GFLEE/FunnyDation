@@ -47,7 +47,7 @@ namespace FunnyDation.Client.Wpf
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             string mdPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FDConst.ModulePath);
-            var files = Directory.GetFiles(mdPath, "FunnyDation.*.Wpf", SearchOption.AllDirectories);
+            var files = Directory.GetFiles(mdPath, "FunnyDation.*.Wpf.dll", SearchOption.AllDirectories);
 
             foreach (var file in files)
             {
