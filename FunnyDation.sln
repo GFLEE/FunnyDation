@@ -13,11 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Wpf.Devexpress"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ranking", "Ranking", "{0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Ranking.Wpf", "Ranking\FunnyDation.Ranking.Wpf\FunnyDation.Ranking.Wpf.csproj", "{E645087C-2AEA-4C06-AD7D-F61FBD4B1286}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Wpf.Ranking", "Ranking\FunnyDation.Ranking.Wpf\FunnyDation.Wpf.Ranking.csproj", "{E645087C-2AEA-4C06-AD7D-F61FBD4B1286}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Wpf", "Common\FunnyDation.Wpf\FunnyDation.Wpf.csproj", "{B588DC29-15D4-4D80-9AD1-75AE60B08EB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Wpf.Base", "Common\FunnyDation.Wpf.Base\FunnyDation.Wpf.Base.csproj", "{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Wpf.Base", "Common\FunnyDation.Wpf.Base\FunnyDation.Wpf.Base.csproj", "{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.IService.Ranking", "Ranking\FunnyDation.IService.Ranking\FunnyDation.IService.Ranking.csproj", "{84287163-3033-4CB9-BD7E-D2E2AD2A8458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Service.Ranking", "Ranking\FunnyDation.Service.Ranking\FunnyDation.Service.Ranking.csproj", "{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84287163-3033-4CB9-BD7E-D2E2AD2A8458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84287163-3033-4CB9-BD7E-D2E2AD2A8458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84287163-3033-4CB9-BD7E-D2E2AD2A8458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84287163-3033-4CB9-BD7E-D2E2AD2A8458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +71,8 @@ Global
 		{E645087C-2AEA-4C06-AD7D-F61FBD4B1286} = {0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}
 		{B588DC29-15D4-4D80-9AD1-75AE60B08EB9} = {858251AA-00B5-49BD-8C80-B23B9DE2E3D8}
 		{BEE5940B-051D-43B8-98BF-D5F54E65AEDA} = {858251AA-00B5-49BD-8C80-B23B9DE2E3D8}
+		{84287163-3033-4CB9-BD7E-D2E2AD2A8458} = {0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}
+		{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B} = {0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AA461BC-5A17-49E8-881B-37EA6EEFECE9}

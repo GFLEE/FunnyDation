@@ -2,7 +2,7 @@
 using Prism.Modularity;
 using System;
 
-namespace FunnyDation.Ranking.Wpf
+namespace FunnyDation.Wpf.Ranking
 {
     public class RankingModule : IModule
     {
