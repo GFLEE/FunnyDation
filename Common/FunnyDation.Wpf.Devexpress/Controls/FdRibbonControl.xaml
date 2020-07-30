@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ribbons="crl-namespace:FunnyDation.Wpf.Base.ViewModel.Ribbons;assembly=FunnyDation.Wpf.Base"
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
@@ -12,11 +13,11 @@
              xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
              xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
              xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" 
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.Resources>
+             mc:Ignorable="d" d:DesignHeight="150" d:DesignWidth="400">
+             <!--d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True,Type=x:Type ribbons:RibbonVm}"-->
 
-        <DataTemplate DataType="{x:Type ribbon}"></DataTemplate>
+    <UserControl.Resources>
+        <!--<DataTemplate DataType="{x:Type ribbon}"></DataTemplate>-->
     </UserControl.Resources>
     <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" 
                        ShowApplicationButton="{Binding IsShowTabMenu,Mode=TwoWay}" CategoriesSource="{Binding PageCatories}">
