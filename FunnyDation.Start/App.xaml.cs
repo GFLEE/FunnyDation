@@ -24,6 +24,7 @@ namespace FunnyDation.Start
         {
             var win = Container.Resolve<MainWindow>();
             win.WindowState = WindowState.Maximized;
+            win.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             win.Show();
             return win;
         }

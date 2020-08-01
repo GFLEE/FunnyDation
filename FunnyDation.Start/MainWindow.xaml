@@ -10,22 +10,81 @@
         xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:prism="http://prismlibrary.com/" 
         mc:Ignorable="d" 
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="FunnyDation" Height="950" Width="1000">
-    <dxr:RibbonControl RibbonStyle="Office2019" AllowSimplifiedRibbon="True"
-                       IsSimplified="True" >
+        Title="FunnyDation" Height="700" Width="1000">
+
+    <dxr:RibbonControl x:Name="RibbonControl" Grid.Row="0" Background="White" 
+                               ApplicationButtonSmallIcon="{dxc:DXImage Image=Home_16x16.png}" 
+                               ApplicationButtonLargeIcon="{dxc:DXImage Image=Home_32x32.png}" 
+                               PageCategoryAlignment="Right" ToolbarShowMode="Hide" ShowApplicationButton="False"
+                               RibbonStyle="Office2019" 
+                               >
+        <!--region #AppMenu-->
         <dxr:RibbonControl.ApplicationMenu>
-            <dxr:BackstageViewControl>
-                <dxr:BackstageSeparatorItem Placement="Bottom"/>
-                <dxr:BackstageButtonItem Content="Close"  Placement="Bottom"/>
+            <dxr:BackstageViewControl >
+                <!--<dxr:BackstageSeparatorItem Placement="Bottom"/>-->
             </dxr:BackstageViewControl>
         </dxr:RibbonControl.ApplicationMenu>
-        <dxr:RibbonDefaultPageCategory>
-            <dxr:RibbonPage Caption="Home">
-                <dxr:RibbonPageGroup Caption="File">
-                    <dxb:BarButtonItem x:Name="biOpen" Content="Open"
-                    dxr:SimplifiedModeSettings.Location="Simplified"/>
+        <!--endregion #AppMenu-->
+
+        <!--region #PageHeaderItemLinks-->
+        <dxr:RibbonControl.PageHeaderItems>
+            <dxb:BarButtonItem Name="About" Content="About" 
+                               Glyph="{dxc:DXImage Image=Info_16x16.png}" 
+                               LargeGlyph="{dxc:DXImage Image=Info_32x32.png}" />
+        </dxr:RibbonControl.PageHeaderItems>
+        <!--endregion #PageHeaderItemLinks-->
+
+        <!--region #DefaultPageCategory-->
+
+        <dxr:RibbonDefaultPageCategory >
+            <dxr:RibbonPage Caption="Home" Background="White"  >
+                <dxr:RibbonPageGroup Name="pgFile" Caption="btnGroup1" Background="White"  
+                                         ShowCaptionButton="True"  >
+                    <dxb:BarButtonItem Name="bNew" Content="New1" 
+                               Glyph="{dxc:DXImage Image=New_16x16.png}" 
+                               LargeGlyph="{dxc:DXImage Image=New_32x32.png}"  
+                               Description="Creates a new document."
+                               Hint="Creates a blank document."
+                               RibbonStyle="Large"/>
+                    <dxb:BarButtonItem Name="bNew2" Content="New2" 
+                               Glyph="{dxc:DXImage Image=New_16x16.png}" 
+                               LargeGlyph="{dxc:DXImage Image=New_32x32.png}"  
+                               Description="Creates a new document."
+                               Hint="Creates a blank document."
+                               RibbonStyle="Large"/>
+                    <dxb:BarButtonItem Name="bNew3" Content="New3" 
+                               Glyph="{dxc:DXImage Image=New_16x16.png}" 
+                               LargeGlyph="{dxc:DXImage Image=New_32x32.png}"  
+                               Description="Creates a new document."
+                               Hint="Creates a blank document."
+                               RibbonStyle="Large"/>
+
+
+                    <dxb:BarItemLinkSeparator/>
+
+                    <dxb:BarButtonItem Name="sbSave" Content="Save" 
+                                    Glyph="{dxc:DXImage Image=Save_16x16.png}" 
+                                    LargeGlyph="{dxc:DXImage Image=Save_32x32.png}" 
+                                    RibbonStyle="Large">
+                    </dxb:BarButtonItem>
                 </dxr:RibbonPageGroup>
+
+                <dxr:RibbonPageGroup Caption="btnGroup2" ShowCaptionButton="True" >
+                    <dxb:BarButtonItem Name="bPaste" Content="Paste" 
+                               Glyph="{dxc:DXImage Image=Paste_16x16.png}" 
+                               LargeGlyph="{dxc:DXImage Image=Paste_32x32.png}" RibbonStyle="Large"/>
+
+                    <dxb:BarButtonItem Name="bCut" Content="Cut" 
+                               Glyph="{dxc:DXImage Image=Cut_16x16.png}"  RibbonStyle="Large"/>
+                    <dxb:BarButtonItem Name="bCopy" Content="Copy" 
+                               Glyph="{dxc:DXImage Image=Copy_16x16.png}"  RibbonStyle="Large"/>
+                    <dxb:BarButtonItem Name="bClear" Content="Clear" 
+                               Glyph="{dxc:DXImage Image=Delete_16x16.png}"  RibbonStyle="Large"/>
+
+                </dxr:RibbonPageGroup>
+
             </dxr:RibbonPage>
         </dxr:RibbonDefaultPageCategory>
     </dxr:RibbonControl>
