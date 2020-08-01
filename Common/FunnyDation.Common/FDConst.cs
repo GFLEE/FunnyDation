@@ -6,7 +6,10 @@ namespace FunnyDation.Common
     /// 
     /// </summary>
     public static class FDConst
-    { 
+    {
+        #region Client
         public const string ModulePath = "Modules";
+
+        #endregion
     }
 }

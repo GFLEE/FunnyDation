@@ -9,7 +9,7 @@ namespace FunnyDation.Common
     /// </summary>
     public class FDIoc
     {
-      //  public static IServiceProvider ServiceProvider { get; set; }
+        public static IServiceProvider ServiceProvider { get; set; }
 
     }
 }

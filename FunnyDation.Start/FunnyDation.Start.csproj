@@ -164,5 +164,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\FunnyDation.Common\FunnyDation.Common.csproj">
+      <Project>{b4dbf030-1a9b-4bd0-b8a9-5324492be6c1}</Project>
+      <Name>FunnyDation.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
