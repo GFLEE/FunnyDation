@@ -22,14 +22,10 @@ namespace FunnyDation.Client
     {
         protected override Window CreateShell()
         {
-            //var win = Container.Resolve<MainWindow>();
-            ////MainWindow win = new MainWindow();
-            //win.WindowState = WindowState.Maximized;
-            //win.Show();
-            //return win;
-
-            return Container.Resolve<MainWindow>();
-
+            var win = Container.Resolve<MainWindow>();
+            win.WindowState = WindowState.Maximized;
+            win.Show();
+            return win;
         }
 
         /// <summary>

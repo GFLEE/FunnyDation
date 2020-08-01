@@ -26,7 +26,7 @@ namespace FunnyDation.Client
 
 
 
-          //  containerRegistry.RegisterForNavigation(typeof(MainWindow),typeof(MainWindow).FullName);
+           containerRegistry.RegisterForNavigation(typeof(MainWindow),typeof(MainWindow).FullName);
 
         }
     }
