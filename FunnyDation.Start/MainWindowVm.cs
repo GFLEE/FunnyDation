@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FunnyDation.Start
+namespace FunnyDation.Client.Wpf
 {
     public class MainWindowVm
     {

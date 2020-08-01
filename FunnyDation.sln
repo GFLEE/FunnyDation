@@ -19,9 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.IService.Rankin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Service.Ranking", "Ranking\FunnyDation.Service.Ranking\FunnyDation.Service.Ranking.csproj", "{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Client", "FunnyDation.Client\FunnyDation.Client.csproj", "{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Start", "FunnyDation.Start\FunnyDation.Start.csproj", "{A369B43E-EA30-49E8-AA66-A89C213A82AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Client.Wpf", "FunnyDation.Start\FunnyDation.Client.Wpf.csproj", "{A369B43E-EA30-49E8-AA66-A89C213A82AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Wpf.Ranking", "Ranking\FunnyDation.Wpf.Ranking\FunnyDation.Wpf.Ranking.csproj", "{C4672449-671D-4379-BF3E-2289BF5C9952}"
 EndProject
@@ -55,10 +53,6 @@ Global
 		{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A369B43E-EA30-49E8-AA66-A89C213A82AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A369B43E-EA30-49E8-AA66-A89C213A82AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A369B43E-EA30-49E8-AA66-A89C213A82AC}.Release|Any CPU.ActiveCfg = Release|Any CPU

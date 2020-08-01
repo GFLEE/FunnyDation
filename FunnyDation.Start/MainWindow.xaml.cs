@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FunnyDation.Start
+namespace FunnyDation.Client.Wpf
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
