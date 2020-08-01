@@ -31,8 +31,7 @@
         <!--region #PageHeaderItemLinks-->
         <dxr:RibbonControl.PageHeaderItems>
             <dxb:BarButtonItem Name="About" Content="About" 
-                               Glyph="{dxc:DXImage Image=Info_16x16.png}" 
-                               LargeGlyph="{dxc:DXImage Image=Info_32x32.png}" />
+                               LargeGlyph= "/FunnyDation.Client.Wpf;component/Images/Menu/colorrecords.png" />
         </dxr:RibbonControl.PageHeaderItems>
         <!--endregion #PageHeaderItemLinks-->
 
