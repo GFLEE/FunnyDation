@@ -170,5 +170,53 @@
       <Name>FunnyDation.Common</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\ToolBar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\aim.png" />
+    <Resource Include="Images\behance.png" />
+    <Resource Include="Images\blogger.png" />
+    <Resource Include="Images\deviant-art.png" />
+    <Resource Include="Images\digg.png" />
+    <Resource Include="Images\dribbble.png" />
+    <Resource Include="Images\dropbox.png" />
+    <Resource Include="Images\etsy.png" />
+    <Resource Include="Images\evernote.png" />
+    <Resource Include="Images\facebook.png" />
+    <Resource Include="Images\feed.png" />
+    <Resource Include="Images\flickr.png" />
+    <Resource Include="Images\forrst.png" />
+    <Resource Include="Images\foursquare.png" />
+    <Resource Include="Images\github.png" />
+    <Resource Include="Images\google+.png" />
+    <Resource Include="Images\google.png" />
+    <Resource Include="Images\instagram.png" />
+    <Resource Include="Images\last-fm.png" />
+    <Resource Include="Images\linked-in.png" />
+    <Resource Include="Images\mail.png" />
+    <Resource Include="Images\myspace.png" />
+    <Resource Include="Images\paypal.png" />
+    <Resource Include="Images\picasa.png" />
+    <Resource Include="Images\pinterest.png" />
+    <Resource Include="Images\rdio.png" />
+    <Resource Include="Images\reddit.png" />
+    <Resource Include="Images\share-this.png" />
+    <Resource Include="Images\skype.png" />
+    <Resource Include="Images\soundcloud.png" />
+    <Resource Include="Images\spotify.png" />
+    <Resource Include="Images\stumbleupon.png" />
+    <Resource Include="Images\tumblr.png" />
+    <Resource Include="Images\twitter.png" />
+    <Resource Include="Images\viddlr.png" />
+    <Resource Include="Images\vimeo.png" />
+    <Resource Include="Images\wordpress.png" />
+    <Resource Include="Images\xing.png" />
+    <Resource Include="Images\yahoo.png" />
+    <Resource Include="Images\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
