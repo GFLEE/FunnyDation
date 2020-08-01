@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Service.Ranking
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Client", "FunnyDation.Client\FunnyDation.Client.csproj", "{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Client.Wpf", "FunnyDation.Client.Wpf\FunnyDation.Client.Wpf.csproj", "{AAD2DCFD-129A-4525-BB2B-24C0FD7F9673}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CFFF96E-9A91-4C37-83F0-52197BF3F6EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD2DCFD-129A-4525-BB2B-24C0FD7F9673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD2DCFD-129A-4525-BB2B-24C0FD7F9673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD2DCFD-129A-4525-BB2B-24C0FD7F9673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD2DCFD-129A-4525-BB2B-24C0FD7F9673}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
