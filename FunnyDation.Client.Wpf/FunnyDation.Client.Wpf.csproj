@@ -31,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v20.1">
+      <HintPath>D:\DevExpress\Components\Bin\Framework\DevExpress.Data.Desktop.v20.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v20.1">
       <HintPath>D:\DevExpress\Components\Bin\Framework\DevExpress.Data.v20.1.dll</HintPath>
     </Reference>

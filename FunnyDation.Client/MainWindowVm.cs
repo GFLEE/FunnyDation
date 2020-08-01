@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FunnyDation.Client.Wpf
+namespace FunnyDation.Client
 {
     /// <summary>
     /// MainWindowVm

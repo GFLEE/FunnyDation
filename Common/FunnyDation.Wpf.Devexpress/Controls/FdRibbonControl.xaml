@@ -16,8 +16,8 @@
              mc:Ignorable="d" d:DesignHeight="150" d:DesignWidth="400">
              <!--d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True,Type=x:Type ribbons:RibbonVm}"-->
 
-    <UserControl.Resources>
-        <!--<DataTemplate DataType="{x:Type ribbon}"></DataTemplate>-->
+    <!--<UserControl.Resources>
+        --><!--<DataTemplate DataType="{x:Type ribbon}"></DataTemplate>--><!--
     </UserControl.Resources>
     <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" 
                        ShowApplicationButton="{Binding IsShowTabMenu,Mode=TwoWay}" CategoriesSource="{Binding PageCatories}">
@@ -26,5 +26,5 @@
             <dxr:BackstageViewControl x:Name="ribbonBackStage"
                                       ItemsSource ="{Binding BackStageItems}"   />
         </dxr:RibbonControl.ApplicationMenu>
-    </dxr:RibbonControl>
+    </dxr:RibbonControl>-->
 </UserControl>
