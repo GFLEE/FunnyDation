@@ -7,7 +7,6 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
-using FunnyDation.Common;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Mvvm;
@@ -46,7 +45,7 @@ namespace FunnyDation.Client
         /// <param name="moduleCatalog"></param>
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            string mdPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FDConst.ModulePath);
+            string mdPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Modules");
             var files = Directory.GetFiles(mdPath, "FunnyDation.*.Wpf.dll", SearchOption.AllDirectories);
 
             foreach (var file in files)
@@ -83,7 +82,6 @@ namespace FunnyDation.Client
 
         protected override void ConfigureViewModelLocator()
         {
-            base.ConfigureViewModelLocator();
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver((viewType) =>
             {
                 var viewName = viewType.FullName;
@@ -91,6 +89,9 @@ namespace FunnyDation.Client
                 var viewModelName = $"{viewName}Vm, {viewAssemblyName}";
                 return Type.GetType(viewModelName);
             });
+
+            base.ConfigureViewModelLocator();
+
         }
     }
 }

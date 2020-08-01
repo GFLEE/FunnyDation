@@ -11,7 +11,8 @@
           "FunnyDation.IService.Ranking": "1.0.0",
           "Prism.Core": "7.2.0.1422",
           "Prism.Unity": "7.2.0.1422",
-          "Prism.Wpf": "7.2.0.1422"
+          "Prism.Wpf": "7.2.0.1422",
+          "System.Runtime": "4.3.1"
         },
         "runtime": {
           "FunnyDation.Wpf.Ranking.dll": {}
@@ -25,6 +26,8 @@
           }
         }
       },
+      "Microsoft.NETCore.Platforms/1.1.1": {},
+      "Microsoft.NETCore.Targets/1.1.3": {},
       "Prism.Core/7.2.0.1422": {
         "runtime": {
           "lib/netcoreapp3.0/Prism.dll": {
@@ -59,6 +62,12 @@
             "assemblyVersion": "4.5.0.0",
             "fileVersion": "3.0.40218.0"
           }
+        }
+      },
+      "System.Runtime/4.3.1": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.1",
+          "Microsoft.NETCore.Targets": "1.1.3"
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
@@ -106,6 +115,20 @@
       "path": "commonservicelocator/2.0.4",
       "hashPath": "commonservicelocator.2.0.4.nupkg.sha512"
     },
+    "Microsoft.NETCore.Platforms/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TMBuzAHpTenGbGgk0SMTwyEkyijY/Eae4ZGsFNYJvAr/LDn1ku3Etp3FPxChmDp5HHF3kzJuoaa08N0xjqAJfQ==",
+      "path": "microsoft.netcore.platforms/1.1.1",
+      "hashPath": "microsoft.netcore.platforms.1.1.1.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY3ndDNlhQ==",
+      "path": "microsoft.netcore.targets/1.1.3",
+      "hashPath": "microsoft.netcore.targets.1.1.3.nupkg.sha512"
+    },
     "Prism.Core/7.2.0.1422": {
       "type": "package",
       "serviceable": true,
@@ -126,6 +149,13 @@
       "sha512": "sha512-njl3uLjqDXeWCbAItgDkZsWIqVnRyhknoMMXZSQdO9jKoIgb+qB/X47YT5KchCNLxLtDq3saQMf5mSZ/LQLqiQ==",
       "path": "prism.wpf/7.2.0.1422",
       "hashPath": "prism.wpf.7.2.0.1422.nupkg.sha512"
+    },
+    "System.Runtime/4.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-abhfv1dTK6NXOmu4bgHIONxHyEqFjW8HwXPmpY9gmll+ix9UNo4XDcmzJn6oLooftxNssVHdJC1pGT9jkSynQg==",
+      "path": "system.runtime/4.3.1",
+      "hashPath": "system.runtime.4.3.1.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
       "type": "package",
