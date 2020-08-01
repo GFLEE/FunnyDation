@@ -45,7 +45,7 @@ namespace FunnyDation.Start
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             string mdPath = Path.Combine(@"C:\Users\Ricov\source\repos\FunnyDation\Assembly\", "Modules");
-            var files = Directory.GetFiles(mdPath, "FunnyDation.*.Wpf.dll", SearchOption.AllDirectories);
+            var files = Directory.GetFiles(mdPath, "FunnyDation.Wpf.*.dll", SearchOption.AllDirectories);
 
             foreach (var file in files)
             {
