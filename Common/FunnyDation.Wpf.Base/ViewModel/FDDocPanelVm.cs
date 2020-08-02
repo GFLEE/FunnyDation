@@ -24,22 +24,17 @@ namespace FunnyDation.Wpf.Base.ViewModel
 
         public const string ListOfCollagesPropertyName = "Panels";
 
-        public ObservableCollection<PanelItem> panel = null;
+        public ObservableCollection<PanelItem> panels;
         public ObservableCollection<PanelItem> Panels
         {
             get
             {
-                return panel;
+                return panels;
             }
 
             set
             {
-                if (panel == value)
-                {
-                    return;
-                }
-
-                panel = value;
+                panels = value;
                 NotifyPropertyChanged("Panels");
             }
         }
@@ -50,14 +45,14 @@ namespace FunnyDation.Wpf.Base.ViewModel
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public PanelItem AddPanel(UserControl obj)
+        public PanelItem AddPanel(int id, string name, UserControl obj)
         {
             if (Panels == null)
             {
                 Panels = new ObservableCollection<PanelItem>();
             }
 
-            PanelItem panel = new PanelItem(1, "666", new UserControl());
+            PanelItem panel = new PanelItem(id, name, obj);
             Panels.Add(panel);
 
             return panel;

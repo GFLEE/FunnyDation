@@ -18,6 +18,22 @@ namespace FunnyDation.Client.Wpf
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public FDDocPanelVm docPanelVm;
         public FDDocPanelVm DocPanelVm
         {
@@ -29,7 +45,7 @@ namespace FunnyDation.Client.Wpf
             set
             {
                 docPanelVm = value;
-                NotifyPropertyChanged("WindowID");
+                NotifyPropertyChanged("DocPanelVm");
             }
         }
 

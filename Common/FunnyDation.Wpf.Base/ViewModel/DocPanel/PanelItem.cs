@@ -23,7 +23,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 
         public const string WindowIDPropertyName = "ID";
 
-        private int id = 0;
+        public int id = 0;
         public int ID
         {
             get
@@ -33,11 +33,6 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 
             set
             {
-                if (id == value)
-                {
-                    return;
-                }
-
                 id = value;
                 NotifyPropertyChanged("ID");
             }
@@ -57,11 +52,6 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 
             set
             {
-                if (name == value)
-                {
-                    return;
-                }
-
                 name = value;
                 NotifyPropertyChanged("Name");
             }
