@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
@@ -172,6 +172,10 @@
       <Project>{b4dbf030-1a9b-4bd0-b8a9-5324492be6c1}</Project>
       <Name>FunnyDation.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common\FunnyDation.Wpf.Devexpress\FunnyDation.Wpf.Devexpress.csproj">
+      <Project>{29d4cfbe-590f-41b7-ae3a-bf06d6c94a5a}</Project>
+      <Name>FunnyDation.Wpf.Devexpress</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\ToolBar\" />
@@ -220,7 +224,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Menu\colorrecords.png" />
-    <Resource Include="icon.ico" />
+    <Resource Include="favicon.ico" />
     <Content Include="Images\Menu\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
