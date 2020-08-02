@@ -15,7 +15,7 @@ namespace FunnyDation.Wpf.Base
         /// 引发属性更改
         /// </summary>
         /// <param name="propertyName"></param>
-        public void NotifyPropertyChanged(string propertyName)
+        public  void NotifyPropertyChanged(string propertyName)
         {
             if (PropertyChanged == null)
             {

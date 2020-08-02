@@ -172,9 +172,17 @@
       <Project>{b4dbf030-1a9b-4bd0-b8a9-5324492be6c1}</Project>
       <Name>FunnyDation.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common\FunnyDation.Wpf.Base\FunnyDation.Wpf.Base.csproj">
+      <Project>{bee5940b-051d-43b8-98bf-d5f54e65aeda}</Project>
+      <Name>FunnyDation.Wpf.Base</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\FunnyDation.Wpf.Devexpress\FunnyDation.Wpf.Devexpress.csproj">
       <Project>{a3ec9455-4c46-4062-99e1-0d7040b4c4bf}</Project>
       <Name>FunnyDation.Wpf.Devexpress</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\FunnyDation.Wpf\FunnyDation.Wpf.csproj">
+      <Project>{b588dc29-15d4-4d80-9ad1-75ae60b08eb9}</Project>
+      <Name>FunnyDation.Wpf</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
