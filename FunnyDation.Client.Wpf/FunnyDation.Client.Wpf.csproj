@@ -172,10 +172,6 @@
       <Project>{b4dbf030-1a9b-4bd0-b8a9-5324492be6c1}</Project>
       <Name>FunnyDation.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Common\FunnyDation.Wpf.DevExpress\FunnyDation.Wpf.Devexpress.csproj">
-      <Project>{9959930c-d92a-4df4-b4b7-8b1a54b27525}</Project>
-      <Name>FunnyDation.Wpf.Devexpress</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\ToolBar\" />
