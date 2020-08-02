@@ -17,13 +17,18 @@ namespace FunnyDation.Wpf.Ranking.Views
         public CrlFundListVm(IRESTService rESTService)
         {
             this._RESTService = rESTService;
+            GetList();
+        }
 
+        public override void OnInitComplete()
+        {
+            GetList();
         }
 
         public List<FundBase> GetList()
         {
             List<FundBase> datas = new List<FundBase>();
-
+            WebTool.GetFundingList(_RESTService);
 
 
             return datas;

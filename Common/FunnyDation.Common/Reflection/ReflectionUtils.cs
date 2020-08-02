@@ -6,7 +6,6 @@ using System.Collections.Specialized;
 using System.Collections;
 using System.Linq;
 using FunnyDation.Common.Reflection;
-using Microsoft.Toolkit.Diagnostics;
 
 namespace FunnyDation.Common.Reflection
 {
@@ -44,9 +43,7 @@ namespace FunnyDation.Common.Reflection
         /// <param name="propVal">Property value to set.</param>
         public static void SetProperty<T>(object obj, string propName, object propVal) where T : class
         {
-            Guard.IsNotNull(obj, "Object containing properties to set is null");
-            Guard.IsTrue(!string.IsNullOrEmpty(propName), "Property name not supplied.");
-
+         
             // Remove spaces.
             propName = propName.Trim();
             if (string.IsNullOrEmpty(propName)) { throw new ArgumentException("Property name is empty."); }
@@ -128,9 +125,7 @@ namespace FunnyDation.Common.Reflection
         /// <param name="propVal">Property value to set.</param>
         public static void SetProperty(object obj, PropertyInfo prop, string propVal)
         {
-            Guard.IsNotNull(obj, "Object containing properties to set is null");
-            Guard.IsNotNull(prop, "Property not supplied.");
-
+           
             // Correct property with write access 
             if (prop != null && prop.CanWrite)
             {
@@ -152,9 +147,7 @@ namespace FunnyDation.Common.Reflection
         /// <returns>Property value.</returns>
         public static object GetPropertyValue(object obj, string propName)
         {
-            Guard.IsNotNull(obj, "Must provide object to get it's property.");
-            Guard.IsTrue(!string.IsNullOrEmpty(propName), "Must provide property name to get property value.");
-
+         
             propName = propName.Trim();
 
             PropertyInfo property = obj.GetType().GetProperty(propName);
@@ -246,7 +239,6 @@ namespace FunnyDation.Common.Reflection
         /// <returns>Retrieved property value.</returns>
         public static object GetPropertyValueSafely(object obj, PropertyInfo propInfo)
         {
-            Guard.IsNotNull(obj, "Must provide object to get it's property.");
             if (propInfo == null) return null;
 
             object result = null;
@@ -443,9 +435,7 @@ namespace FunnyDation.Common.Reflection
         /// <param name="parameters">Parameters to pass when invoking the method.</param>
         public static object InvokeMethod(object obj, string methodName, object[] parameters)
         {
-            Guard.IsNotNull(methodName, "Method name not provided.");
-            Guard.IsNotNull(obj, "Can not invoke method on null object");
-
+           
             methodName = methodName.Trim();
 
             // Validate.

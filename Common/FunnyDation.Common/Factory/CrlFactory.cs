@@ -34,10 +34,20 @@ namespace FunnyDation.Common
                 return null;
             }
             var crl = FDIoc.ServiceLocator.GetInstance(type) as FrameworkElement;
-            action?.Invoke(crl.DataContext);
+            crl.Loaded += Crl_Loaded;
+            if (action != null)
+            {
+                action?.Invoke(crl.DataContext);
+            }
             return crl;
 
         }
 
+        private static void Crl_Loaded(object sender, RoutedEventArgs e)
+        { 
+            //var crlVm = (sender as FrameworkElement).DataContext as CrlVm;
+            //crlVm.Init();
+
+        }
     }
 }

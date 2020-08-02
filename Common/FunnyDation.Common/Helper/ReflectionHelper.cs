@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
-using Microsoft.Toolkit.Diagnostics;
 using FunnyDation.Common.Reflection;
 
 namespace FunnyDation.Common.Helper
@@ -21,8 +20,7 @@ namespace FunnyDation.Common.Helper
         /// <param name="propVal">Value to set.</param>
         public static void SetProperty(object obj, PropertyInfo prop, string propVal)
         {
-            Guard.IsNotNull(obj, "Object containing properties to set is null");
-            Guard.IsNotNull(prop, "Property not supplied.");
+          
 
             // Correct property with write access 
             if (prop != null && prop.CanWrite)
@@ -46,7 +44,6 @@ namespace FunnyDation.Common.Helper
         /// <returns></returns>
         public static object GetPropertyValueSafely(object obj, PropertyInfo propInfo)
         {
-            Guard.IsNotNull(obj, "Must provide object to get it's property.");
             if (propInfo == null) return null;
 
             object result = null;

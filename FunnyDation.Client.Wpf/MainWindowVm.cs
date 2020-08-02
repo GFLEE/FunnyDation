@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using FunnyDation.Wpf;
 using FunnyDation.Wpf.Base;
 using Prism.Mvvm;
-using DevExpress.Mvvm;
 using System.IO;
 using FunnyDation.Common;
 using System.Reflection;
+using Prism.Commands;
 
 namespace FunnyDation.Client.Wpf
 {
