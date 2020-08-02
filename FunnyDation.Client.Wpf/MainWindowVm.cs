@@ -15,6 +15,7 @@ namespace FunnyDation.Client.Wpf
         public MainWindowVm()
         {
             DocPanelVm = new FDDocPanelVm(this);
+            DocPanelVm.AddPanel(2,"sdadsa",new System.Windows.Controls.UserControl());
         }
 
 

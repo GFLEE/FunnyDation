@@ -1,4 +1,4 @@
-﻿<dx:ThemedWindow x:Class="FunnyDation.Client.Wpf.MainWindow"
+﻿<dxr:DXRibbonWindow  x:Class="FunnyDation.Client.Wpf.MainWindow"
          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:docpanel="clr-namespace:FunnyDation.Wpf.Devexpress.Controls;assembly=FunnyDation.Wpf.Devexpress"
@@ -11,7 +11,7 @@
         xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
         xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:prism="http://prismlibrary.com/" 
-        mc:Ignorable="d" 
+        mc:Ignorable="d"   
         xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="FunnyDation" Height="700" Width="1000">
@@ -24,7 +24,7 @@
                                ApplicationButtonSmallIcon="{dxc:DXImage Image=Home_16x16.png}" 
                                ApplicationButtonLargeIcon="{dxc:DXImage Image=Home_32x32.png}" 
                                PageCategoryAlignment="Right" ToolbarShowMode="Hide" 
-                               ShowApplicationButton="True"
+                               ShowApplicationButton="True" ToolbarShowCustomizationButton="True"
                                RibbonStyle="Office2019" >
             <!--region #AppMenu-->
             <dxr:RibbonControl.ApplicationMenu >
@@ -129,4 +129,4 @@
 
         <docpanel:FDDocPanel Grid.Row="1" DataContext="{Binding DocPanelVm}" />
     </Grid>
-</dx:ThemedWindow>
+</dxr:DXRibbonWindow>
