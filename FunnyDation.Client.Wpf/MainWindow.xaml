@@ -26,22 +26,14 @@
                                PageCategoryAlignment="Right" ToolbarShowMode="Hide" 
                                ShowApplicationButton="True" ToolbarShowCustomizationButton="True"
                                RibbonStyle="Office2019" >
-            <!--region #AppMenu-->
             <dxr:RibbonControl.ApplicationMenu >
                 <dxr:BackstageViewControl >
-                    <!--<dxr:BackstageSeparatorItem Placement="Bottom"/>-->
                 </dxr:BackstageViewControl>
             </dxr:RibbonControl.ApplicationMenu>
-            <!--endregion #AppMenu-->
-
-            <!--region #PageHeaderItemLinks-->
             <dxr:RibbonControl.PageHeaderItems>
                 <dxb:BarButtonItem Name="About" Content="About" Glyph="{dxc:DXImage Image=Info_16x16.png}" 
                                LargeGlyph="{dxc:DXImage Image=Info_32x32.png}" Command="{Binding CommandAbout}" />
             </dxr:RibbonControl.PageHeaderItems>
-            <!--endregion #PageHeaderItemLinks-->
-
-            <!--region #DefaultPageCategory-->
 
             <dxr:RibbonDefaultPageCategory >
                 <dxr:RibbonPage Caption="Home" Background="White">

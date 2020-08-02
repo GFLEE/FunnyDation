@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
     <PackageReference Include="Microsoft.Toolkit" Version="6.1.0" />
   </ItemGroup>
 
