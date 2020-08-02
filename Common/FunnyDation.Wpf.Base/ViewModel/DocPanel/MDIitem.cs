@@ -3,109 +3,86 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 {
-    public class MDIitem : NotifyPropertyChangedBase
+    /// <summary>
+    /// panel： 唯一ID，名称，内容
+    /// </summary>
+    public class PanelItem : NotifyPropertyChangedBase
     {
 
-        #region  Property=WindowID  -  Type=int  -  InitialValue=0
-        /// <summary>
-        /// The <see cref="WindowID" /> property's name.
-        /// </summary>
-        public const string WindowIDPropertyName = "WindowID";
+        public PanelItem(int id, string name, UserControl obj)
+        {
+            this.ID = id;
+            this.name = name;
+            this.Content = obj; 
+        }
 
-        private int _WindowID = 0;
 
-        /// <summary>
-        /// Sets and gets the WindowID property.
-        /// Changes to that property's value raise the PropertyChanged event. 
-        /// </summary>
-        public int WindowID
+        public const string WindowIDPropertyName = "ID";
+
+        private int id = 0;
+        public int ID
         {
             get
             {
-                return _WindowID;
+                return id;
             }
 
             set
             {
-                if (_WindowID == value)
+                if (id == value)
                 {
                     return;
                 }
 
-                _WindowID = value;
-                NotifyPropertyChanged("WindowID");
+                id = value;
+                NotifyPropertyChanged("ID");
             }
         }
-        #endregion  Property=WindowID
 
-        #region  Property=WindowName  -  Type=string  -  InitialValue=""
-        /// <summary>
-        /// The <see cref="WindowName" /> property's name.
-        /// </summary>
-        public const string WindowNamePropertyName = "WindowName";
+        public const string WindowNamePropertyName = "Name";
 
-        private string _WindowName = "";
 
-        /// <summary>
-        /// Sets and gets the WindowName property.
-        /// Changes to that property's value raise the PropertyChanged event. 
-        /// </summary>
-        public string WindowName
+
+        public string name;
+        public string Name
         {
             get
             {
-                return _WindowName;
+                return name;
             }
 
             set
             {
-                if (_WindowName == value)
+                if (name == value)
                 {
                     return;
                 }
 
-                _WindowName = value;
-                NotifyPropertyChanged("WindowName");
+                name = value;
+                NotifyPropertyChanged("Name");
             }
         }
-        #endregion  Property=WindowName
 
-        #region  Property=WindowContent   -  Type=string   -  InitialValue=""
-        /// <summary>
-        /// The <see cref="WindowContent " /> property's name.
-        /// </summary>
-        public const string WindowContentPropertyName = "WindowContent";
+        public const string WindowContentPropertyName = "Content";
 
-        private string _WindowContent = "";
-
-        /// <summary>
-        /// Sets and gets the WindowContent  property.
-        /// Changes to that property's value raise the PropertyChanged event. 
-        /// </summary>
-        public string WindowContent
+        public UserControl content;
+        public UserControl Content
         {
             get
             {
-                return _WindowContent;
+                return content;
             }
 
             set
             {
-                if (_WindowContent == value)
-                {
-                    return;
-                }
-
-                _WindowContent = value;
-                NotifyPropertyChanged("WindowContent");
+                content = value;
+                NotifyPropertyChanged("Content");
             }
         }
-        #endregion  Property=WindowContent 
-
-
 
     }
 

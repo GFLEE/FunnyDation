@@ -5,18 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:docpanelvm="crl-namespace:FunnyDation.Wpf.Base.ViewModel;assembly=FunnyDation.Wpf.Base"
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
-             xmlns:converter="crl-namespace:FunnyDation.Wpf.Base.Converter;assembly=FunnyDation.Wpf.Base"
+             xmlns:converter="clr-namespace:FunnyDation.Wpf.Base.Converter;assembly=FunnyDation.Wpf.Base"
              xmlns:prism="http://prismlibrary.com/" 
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True,Type={x:Type docpanelvm:FDDocPanelVm}}"
-             xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+             xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" 
              d:DesignHeight="450" d:DesignWidth="800"  >
-    <UserControl.DataContext>
-        <local:DocVM />
-    </UserControl.DataContext>
 
     <UserControl.Resources>
-        <converter: x:Key="zCVT" />
+        <converter:ZStringToStringConverter x:Key="zCVT" />
     </UserControl.Resources>
     <Grid>
         <dxdo:DockLayoutManager x:Name="dlm">
@@ -24,24 +21,19 @@
                 <dxdo:DocumentGroup x:Name="documentGroup"
                                     AllowClose="False"
                                     ClosePageButtonShowMode="InAllTabPageHeaders"
-                                    ItemsSource="{Binding ListOfCollages}"
+                                    ItemsSource="{Binding Panels,Mode=TwoWay}"
                                     MDIStyle="Tabbed">
                     <dxdo:DocumentGroup.ItemContentTemplate>
                         <DataTemplate>
-                            <!--<dxdo:DocumentPanel  Caption="{Binding WindowName}">
-                                <Grid>-->
-                            <TextBlock Text="{Binding WindowContent}" />
-                            <!--</Grid>
-                            </dxdo:DocumentPanel>-->
+                            <ContentControl Content="{Binding Content,Mode=TwoWay}" />
                         </DataTemplate>
                     </dxdo:DocumentGroup.ItemContentTemplate>
                     <dxdo:DocumentGroup.ItemCaptionTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding WindowName}" />
+                            <TextBlock Text="{Binding Name,Mode=TwoWay}" />
                         </DataTemplate>
                     </dxdo:DocumentGroup.ItemCaptionTemplate>
                 </dxdo:DocumentGroup>
-
             </dxdo:LayoutGroup>
         </dxdo:DockLayoutManager>
     </Grid>

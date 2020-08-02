@@ -7,7 +7,7 @@ using System.Windows.Data;
 
 namespace FunnyDation.Wpf.Base.Converter
 {
-    public class zStringToStringConverter : IValueConverter
+    public class ZStringToStringConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
