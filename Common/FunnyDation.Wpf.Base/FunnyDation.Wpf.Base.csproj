@@ -5,7 +5,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Controls\FDDocPanel.xaml" />
+    <None Remove="Controls\FdRibbonControl.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Controls\FDDocPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FdRibbonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FunnyDation.Wpf\FunnyDation.Wpf.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Controls\FDDocPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\FdRibbonControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>
