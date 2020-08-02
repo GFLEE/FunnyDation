@@ -5,61 +5,41 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
              xmlns:prism="http://prismlibrary.com/" 
-             prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <dxdo:DockLayoutManager Margin="0" Name="DockLayoutManager1" Grid.Row="1"  >
-            <dxdo:LayoutGroup Orientation="Horizontal">
+    <UserControl.DataContext>
+        <local:DocVM />
+    </UserControl.DataContext>
 
-                <dxdo:DocumentGroup Name="documentContainer" Grid.Row="1" BorderThickness="1"
-                            ItemWidth="3*" Background="White" ClosePageButtonShowMode="InAllTabPageHeaders">
-                    <dxdo:DocumentPanel Name="document1"
-                                                Caption="About DXDocking"
-                                                ToolTip="C:\Documents\AboutDXDocking.doc"
-                                                FooterDescription="C:\Documents\AboutDXDocking.doc"
-                                                Description="Text file">
-                        <FlowDocumentScrollViewer VerticalScrollBarVisibility="Hidden" Zoom="1" FocusVisualStyle="{x:Null}">
-                            <FlowDocument FontFamily="Segoue" PagePadding="24" FontStyle="Italic">
-                                <Paragraph FontSize="24">
-                                    DevExpress WPF Docking
-                                </Paragraph>
-                                <Paragraph>
-                                    DXDocking is the docking library for the Windows Presentation Framework. Developed from the ground up, it brings you complete docking features, strengthened by the WPF technology. Whenever your end-users want to perform any dock operation, they can do this with ease, using helpful hints and intuitive UI.
-                                </Paragraph>
-                            </FlowDocument>
-                        </FlowDocumentScrollViewer>
-                    </dxdo:DocumentPanel>
-                    <dxdo:DocumentPanel Name="document2"
-                                                Caption="Document1"
-                                                ToolTip="C:\Documents\doc1.doc"
-                                                FooterDescription="C:\Documents\doc1.doc"
-                                                Description="Text file">
-                        <FlowDocumentScrollViewer VerticalScrollBarVisibility="Hidden" Zoom="1">
-                            <FlowDocument FontFamily="Segoue" PagePadding="24" FontStyle="Italic">
-                                <Paragraph>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis urna et lorem. Nunc diam justo, tempus sit amet, euismod a, lacinia nec, eros.
-                                </Paragraph>
-                            </FlowDocument>
-                        </FlowDocumentScrollViewer>
-                    </dxdo:DocumentPanel>
-                    <dxdo:DocumentPanel Name="document3"
-                                                Caption="Document2"
-                                                ToolTip="C:\Documents\doc2.doc"
-                                                FooterDescription="C:\Documents\doc2.doc"
-                                                Description="Text file">
-                        <FlowDocumentScrollViewer VerticalScrollBarVisibility="Hidden" Zoom="1">
-                            <FlowDocument FontFamily="Segoue" PagePadding="24" FontStyle="Italic">
-                                <Paragraph>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis urna et lorem. Nunc diam justo, tempus sit amet, euismod a, lacinia nec, eros.
-                                </Paragraph>
-                            </FlowDocument>
-                        </FlowDocumentScrollViewer>
-                    </dxdo:DocumentPanel>
+    <UserControl.Resources>
+        <local:zStringToStringConverter x:Key="zCVT" />
+    </UserControl.Resources>
+    <Grid>
+        <dxdo:DockLayoutManager x:Name="dlm">
+            <dxdo:LayoutGroup>
+                <dxdo:DocumentGroup x:Name="documentGroup"
+                                    AllowClose="False"
+                                    ClosePageButtonShowMode="InAllTabPageHeaders"
+                                    ItemsSource="{Binding ListOfCollages}"
+                                    MDIStyle="Tabbed">
+                    <dxdo:DocumentGroup.ItemContentTemplate>
+                        <DataTemplate>
+                            <!--<dxdo:DocumentPanel  Caption="{Binding WindowName}">
+                                <Grid>-->
+                            <TextBlock Text="{Binding WindowContent}" />
+                            <!--</Grid>
+                            </dxdo:DocumentPanel>-->
+                        </DataTemplate>
+                    </dxdo:DocumentGroup.ItemContentTemplate>
+                    <dxdo:DocumentGroup.ItemCaptionTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding WindowName}" />
+                        </DataTemplate>
+                    </dxdo:DocumentGroup.ItemCaptionTemplate>
                 </dxdo:DocumentGroup>
+
             </dxdo:LayoutGroup>
         </dxdo:DockLayoutManager>
-
     </Grid>
 </UserControl>
