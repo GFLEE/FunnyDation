@@ -5,26 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Controls\FDDocPanel.xaml" />
-    <None Remove="Controls\FdRibbonControl.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Page Include="Controls\FDDocPanel.xaml" />
-    <Page Include="Controls\FdRibbonControl.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FunnyDation.Wpf\FunnyDation.Wpf.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Controls\FDDocPanel.xaml.cs">
-      <DependentUpon>FDDocPanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Controls\FdRibbonControl.xaml.cs">
-      <DependentUpon>FdRibbonControl.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
 </Project>

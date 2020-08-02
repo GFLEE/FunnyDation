@@ -126,7 +126,7 @@
 
             </dxr:RibbonDefaultPageCategory>
         </dxr:RibbonControl>
-    </Grid>
-        
 
+        <docpanel:FDDocPanel Grid.Row="1" DataContext="{Binding DocManager,Mode=TwoWay}"/>
+    </Grid>
 </dx:ThemedWindow>
