@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="7.1.0.431" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FunnyDation.Wpf\FunnyDation.Wpf.csproj" />
   </ItemGroup>
 

@@ -35,7 +35,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
             set
             {
                 panels = value;
-                NotifyPropertyChanged("Panels");
+                SetProperty(ref panels, value);
             }
         }
 

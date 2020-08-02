@@ -21,16 +21,16 @@
                 <dxdo:DocumentGroup x:Name="documentGroup"
                                     AllowClose="False"
                                     ClosePageButtonShowMode="InAllTabPageHeaders"
-                                    ItemsSource="{Binding Panels,Mode=TwoWay}"
+                                    ItemsSource="{Binding Panels}"
                                     MDIStyle="Tabbed">
                     <dxdo:DocumentGroup.ItemContentTemplate>
                         <DataTemplate>
-                            <ContentControl Content="{Binding Content,Mode=TwoWay}" />
+                            <ContentControl Content="{Binding Content}" />
                         </DataTemplate>
                     </dxdo:DocumentGroup.ItemContentTemplate>
                     <dxdo:DocumentGroup.ItemCaptionTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Name,Mode=TwoWay}" />
+                            <TextBlock Text="{Binding Name}" />
                         </DataTemplate>
                     </dxdo:DocumentGroup.ItemCaptionTemplate>
                 </dxdo:DocumentGroup>

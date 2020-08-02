@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prism.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
     /// <summary>
     /// panel： 唯一ID，名称，内容
     /// </summary>
-    public class PanelItem : NotifyPropertyChangedBase
+    public class PanelItem : BindableBase
     {
 
         public PanelItem(int id, string name, UserControl obj)
@@ -34,7 +35,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
             set
             {
                 id = value;
-                NotifyPropertyChanged("ID");
+                SetProperty(ref id, value);
             }
         }
 
@@ -53,7 +54,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
             set
             {
                 name = value;
-                NotifyPropertyChanged("Name");
+                SetProperty(ref name, value);
             }
         }
 
@@ -70,7 +71,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
             set
             {
                 content = value;
-                NotifyPropertyChanged("Content");
+                SetProperty(ref content, value);
             }
         }
 

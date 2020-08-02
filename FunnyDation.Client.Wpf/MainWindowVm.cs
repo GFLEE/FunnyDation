@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FunnyDation.Wpf;
 using FunnyDation.Wpf.Base;
-
+using Prism.Mvvm;
 
 namespace FunnyDation.Client.Wpf
 {
@@ -31,7 +31,21 @@ namespace FunnyDation.Client.Wpf
 
 
 
+        public string text;
+        public string Text
+        {
+            get
+            {
+                return text;
+            }
 
+            set
+            {
+
+                text = value;
+                SetProperty(ref text, value);
+            }
+        }
 
 
         public FDDocPanelVm docPanelVm;
@@ -44,8 +58,13 @@ namespace FunnyDation.Client.Wpf
 
             set
             {
+                if (docPanelVm == value)
+                {
+                    return;
+                }
                 docPanelVm = value;
-                NotifyPropertyChanged("DocPanelVm");
+                SetProperty(ref docPanelVm, value);
+
             }
         }
 
