@@ -13,7 +13,7 @@ namespace FunnyDation.Wpf.Web
         /// </summary>
         /// <param name="url">请求链接地址</param>
         /// <returns></returns>
-        public static string Get(string url)
+        public string Get(string url)
         {
             string result = "";
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
@@ -40,7 +40,7 @@ namespace FunnyDation.Wpf.Web
         /// <param name="url">地址</param>
         /// <param name="dic">请求参数定义</param>
         /// <returns></returns>
-        public static string Get(string url, Dictionary<string, string> dic)
+        public string Get(string url, Dictionary<string, string> dic)
         {
             string result = "";
             StringBuilder builder = new StringBuilder();

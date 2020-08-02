@@ -39,10 +39,9 @@
                 <dxr:RibbonPage Caption="Home" Background="White">
                     <dxr:RibbonPageGroup Name="pgFile" Caption="btnGroup1"  Background="White" 
                                          ShowCaptionButton="True"  >
-                        <dxb:BarButtonItem Name="bNew" Content="New1" 
+                        <dxb:BarButtonItem Name="bNew" Content="FundList" 
                                LargeGlyph="./Images/Menu/colorrecords.png"  
-                               Description="Creates a new document."
-                               Hint="Creates a blank document."
+                                           Command="{Binding CommandFundBase}"
                                RibbonStyle="Large"/>
                         <dxb:BarButtonItem Name="bNew2" Content="New2" 
                                Glyph="{dxc:DXImage Image=New_16x16.png}" 

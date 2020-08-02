@@ -41,6 +41,9 @@
     <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\..\packages\CommonServiceLocator.2.0.4\lib\net47\CommonServiceLocator.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=7.1.0.431, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Prism.Core.7.1.0.431\lib\net45\Prism.dll</HintPath>
     </Reference>
@@ -82,7 +85,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ranking.cs" />
+    <Compile Include="Base\FundBase.cs" />
+    <Compile Include="Base\FundInfo.cs" />
+    <Compile Include="RankingModule.cs" />
+    <Compile Include="Views\CrlFundList.xaml.cs">
+      <DependentUpon>CrlFundList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrlFundListVm.cs" />
+    <Compile Include="Web\WebTool.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -102,10 +112,31 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\CrlFundList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\FunnyDation.Common\FunnyDation.Common.csproj">
+      <Project>{B4DBF030-1A9B-4BD0-B8A9-5324492BE6C1}</Project>
+      <Name>FunnyDation.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\FunnyDation.Wpf.Base\FunnyDation.Wpf.Base.csproj">
+      <Project>{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}</Project>
+      <Name>FunnyDation.Wpf.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\FunnyDation.Wpf\FunnyDation.Wpf.csproj">
+      <Project>{B588DC29-15D4-4D80-9AD1-75AE60B08EB9}</Project>
+      <Name>FunnyDation.Wpf</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

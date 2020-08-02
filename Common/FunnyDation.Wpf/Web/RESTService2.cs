@@ -9,7 +9,7 @@ namespace FunnyDation.Wpf.Web
     /// <summary>
     /// HTTP 请求
     /// </summary>
-    public partial class RESTService
+    public partial class RESTService : IRESTService
     {
         public RESTService()
         {
@@ -23,7 +23,7 @@ namespace FunnyDation.Wpf.Web
         /// </summary>
         /// <param name="url">请求后台地址</param>
         /// <returns></returns>
-        public static string Post(string url)
+        public string Post(string url)
         {
             string result = "";
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
@@ -43,7 +43,7 @@ namespace FunnyDation.Wpf.Web
         /// </summary>
         /// <param name="url">请求后台地址</param>
         /// <returns></returns>
-        public static string Post(string url, Dictionary<string, string> dic)
+        public string Post(string url, Dictionary<string, string> dic)
         {
             string result = "";
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
@@ -83,7 +83,7 @@ namespace FunnyDation.Wpf.Web
         /// <param name="url">请求后台地址</param>
         /// <param name="content">Post提交数据内容(utf-8编码的)</param>
         /// <returns></returns>
-        public static string Post(string url, string content)
+        public string Post(string url, string content)
         {
             string result = "";
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 
 namespace FunnyDation.Common
 {
@@ -15,15 +16,26 @@ namespace FunnyDation.Common
 
             return FDIoc.ServiceLocator.GetInstance<T>();
         }
-
         public static object Create(Type type)
         {
             if (type == null)
             {
                 return null;
             }
+            var crl = FDIoc.ServiceLocator.GetInstance(type);
+            return crl;
 
-            return FDIoc.ServiceLocator.GetInstance(type);
+        }
+
+        public static object Create(Type type, Action<object> action)
+        {
+            if (type == null)
+            {
+                return null;
+            }
+            var crl = FDIoc.ServiceLocator.GetInstance(type) as FrameworkElement;
+            action?.Invoke(crl.DataContext);
+            return crl;
 
         }
 

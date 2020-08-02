@@ -8,6 +8,8 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
 using FunnyDation.Common;
+using FunnyDation.Wpf;
+using FunnyDation.Wpf.Web;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Mvvm;
@@ -34,10 +36,10 @@ namespace FunnyDation.Client.Wpf
         /// <param name="containerRegistry"></param>
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.Register<IRESTService, RESTService>();
 
 
-
-           FDIoc.ServiceProvider = new UnityServiceLocatorAdapter(containerRegistry.GetContainer());
+            FDIoc.ServiceLocator = new UnityServiceLocatorAdapter(containerRegistry.GetContainer());
         }
 
         /// <summary>
@@ -46,7 +48,7 @@ namespace FunnyDation.Client.Wpf
         /// <param name="moduleCatalog"></param>
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            string mdPath = Path.Combine(@"C:\Users\Ricov\source\repos\FunnyDation\Assembly\", FDConst.ModulePath);
+            string mdPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FDConst.ModulePath);
             var files = Directory.GetFiles(mdPath, "FunnyDation.Wpf.*.dll", SearchOption.AllDirectories);
 
             foreach (var file in files)
