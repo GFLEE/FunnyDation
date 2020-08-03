@@ -1,4 +1,5 @@
-﻿using FunnyDation.Common;
+﻿using CommonServiceLocator;
+using FunnyDation.Common;
 using FunnyDation.Wpf.Base.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace FunnyDation.Wpf.Base
     {
         public static T Create<T>() where T : class
         {
-            var res = FDIoc.ServiceLocator.GetInstance<T>();
+            var res = ServiceLocator.Current.GetInstance<T>();
 
             var crl = res as FrameworkElement;
             var crlVm = crl.DataContext as CrlVm;
@@ -28,7 +29,7 @@ namespace FunnyDation.Wpf.Base
             {
                 return null;
             }
-            var crl = FDIoc.ServiceLocator.GetInstance(type);
+            var crl = ServiceLocator.Current.GetInstance(type);
             return crl;
 
         }
@@ -39,7 +40,7 @@ namespace FunnyDation.Wpf.Base
             {
                 return null;
             }
-            var crl = FDIoc.ServiceLocator.GetInstance(type) as FrameworkElement;
+            var crl = ServiceLocator.Current.GetInstance(type) as FrameworkElement;
 
             var crlVm = crl.DataContext as CrlVm;
             if (crlVm != null)

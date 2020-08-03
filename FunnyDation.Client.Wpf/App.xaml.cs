@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
 using FunnyDation.Common;
+using FunnyDation.Common.Ioc;
 using FunnyDation.Wpf;
 using FunnyDation.Wpf.Web;
 using Prism.Ioc;
@@ -18,7 +19,7 @@ using Prism.Unity;
 namespace FunnyDation.Client.Wpf
 {
     /// <summary>
-    /// App.xaml 的交互逻辑
+    /// App
     /// </summary>
     public partial class App : PrismApplication
     {
@@ -39,7 +40,7 @@ namespace FunnyDation.Client.Wpf
             containerRegistry.Register<IRESTService, RESTService>();
 
 
-            FDIoc.ServiceLocator = new UnityServiceLocatorAdapter(containerRegistry.GetContainer());
+            FDIoc.ServiceProvider = new UnityServiceLocatorAdapter(containerRegistry.GetContainer());
         }
 
         /// <summary>
