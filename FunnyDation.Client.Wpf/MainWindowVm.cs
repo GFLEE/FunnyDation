@@ -32,13 +32,12 @@ namespace FunnyDation.Client.Wpf
                 var file = Directory.GetFiles(mdPath, string.Format("{0}.dll", FDConst.ranking_client), SearchOption.AllDirectories).FirstOrDefault();
                 RankingAssb = Assembly.LoadFile(file);
             }
-
             var type = RankingAssb.GetType("FunnyDation.Wpf.Ranking.Views.CrlFundList");
             var crl = CrlFactory.Create(type, (crlVm) =>
-            {
+             {
 
 
-            });
+             });
 
 
 

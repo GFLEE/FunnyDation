@@ -9,11 +9,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FunnyDation.Common\FunnyDation.Common.csproj" />
     <ProjectReference Include="..\FunnyDation.Wpf\FunnyDation.Wpf.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
 
 </Project>
