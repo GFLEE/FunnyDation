@@ -26,8 +26,16 @@ namespace FunnyDation.Wpf.Ranking
             var res = rESTService.Get(FDConst.FundBaseUrl, dic);
 
             FundInfo fundInfo = JsonConvert.DeserializeObject<FundInfo>(res);
+            if (fundInfo.code.Equals(200))
+            {
+                return fundInfo;
 
-            return fundInfo;
+            }
+            else
+            {
+                throw new Exception("Get Failed!");
+            }
+
         }
 
 

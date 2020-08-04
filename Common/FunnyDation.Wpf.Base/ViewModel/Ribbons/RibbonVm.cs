@@ -1,7 +1,7 @@
 ﻿using Prism.Mvvm;
 using System;
 
-namespace FunnyDation.Wpf.Base.ViewModel
+namespace FunnyDation.Wpf.Base.Ribbons
 {
     public class RibbonVm : BindableBase
     {

@@ -8,6 +8,8 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Interop;
 
 namespace FunnyDation.Wpf.Ranking.Views
 {
@@ -17,25 +19,31 @@ namespace FunnyDation.Wpf.Ranking.Views
         public CrlFundListVm(IRESTService rESTService)
         {
             this._RESTService = rESTService;
-            GetList();
         }
 
         public override void OnInitComplete()
         {
             GetList();
+            MessageBox.Show("555");
         }
 
-        public List<FundBase> GetList()
+        public async void GetList()
         {
-            List<FundBase> datas = new List<FundBase>();
-            WebTool.GetFundingList(_RESTService);
+            await Task.Run(() =>
+            {
+                List<FundBase> datas = new List<FundBase>();
+                datas = WebTool.GetFundingList(_RESTService).data;
+                Datas = datas;
+                MessageBox.Show(string.Join(",", datas.Select(P => P.name)));
 
+                return datas;
 
-            return datas;
+            });
+
         }
 
 
-        public FundBase Datas { get; set; }
+        public List<FundBase> Datas { get; set; }
 
     }
 }
