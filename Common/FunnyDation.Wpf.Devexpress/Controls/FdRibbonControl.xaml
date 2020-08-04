@@ -6,11 +6,12 @@
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
              xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
              xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys"
              xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
              xmlns:ribbons="clr-namespace:FunnyDation.Wpf.Base.Ribbons;assembly=FunnyDation.Wpf.Base"
-             xmlns:selectors="clr-namespace:FunnyDation.Wpf.Base.Ribbons;assembly=FunnyDation.Wpf.Base"
+             xmlns:selectors="clr-namespace:FunnyDation.Wpf.Selectors;assembly=FunnyDation.Wpf"
              xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
              xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
              xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"            
@@ -39,6 +40,57 @@
         </DataTemplate>
 
         <selectors:TemplateSelector x:Key="TemplateSelector" />
+
+        <DataTemplate DataType="{x:Type ribbons:RibbonPageGroupVm}">
+            <ContentControl>
+                <dxr:RibbonPageGroup ItemLinksSource="{Binding Items}" 
+                                     ItemTemplateSelector="{StaticResource TemplateSelector}"
+                                     Caption="{Binding Caption,Mode=TwoWay}"
+                                     ShowCaptionButton="False" AllowCollapse="True"/>
+            </ContentControl>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TemplateButtonGroup">
+            <dxr:BarButtonGroup ItemsSource="{Binding Items,Mode=TwoWay}" ItemTemplateSelector="{StaticResource TemplateSelector}"/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TemplateButton">
+            <dxb:BarButtonItem  Content="{Binding Name,Mode=TwoWay}"
+                                ToolTip="{Binding ToolTip}"
+                                IsEnabled="{Binding IsEnableBtn,Mode=TwoWay}"
+                                Glyph="{Binding GlyphName}"
+                                LargeGlyph="{Binding LargeGlyphName}"
+                                Command="{Binding CommandClick}"/>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="TemplateSubItem">
+            <dxb:BarSubItem     Content="{Binding Name,Mode=TwoWay}"
+                                ToolTip="{Binding ToolTip}"
+                                IsEnabled="{Binding IsEnableBtn,Mode=TwoWay}"
+                                Glyph="{Binding GlyphName}"
+                                LargeGlyph="{Binding LargeGlyphName}"
+                                Command="{Binding CommandClick}"
+                                ItemLinksSource="{Binding Items}" 
+                                ItemTemplateSelector="{StaticResource TemplateSelector}"/>
+        </DataTemplate>
+
+
+        <DataTemplate x:Key="TemplateSeparator">
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TemplateTextBox">
+            <TextBox  Text="{Binding Text,UpdateSourceTrigger=PropertyChanged}"
+                       ToolTip="{Binding ToolTip}"
+                       Width="{Binding Width}"
+                       Style="{StaticResource {x:Static ToolBar.TextBoxStyleKey}}" 
+                       BorderThickness="1" BorderBrush="Black"/>
+        </DataTemplate>
+        
+        
+        
+        
+        
     </UserControl.Resources>
     <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" 
                        ShowApplicationButton="{Binding IsShowTabMenu,Mode=TwoWay}" 

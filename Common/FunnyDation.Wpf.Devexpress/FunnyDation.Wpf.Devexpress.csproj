@@ -163,6 +163,10 @@
       <Project>{bee5940b-051d-43b8-98bf-d5f54e65aeda}</Project>
       <Name>FunnyDation.Wpf.Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FunnyDation.Wpf\FunnyDation.Wpf.csproj">
+      <Project>{b588dc29-15d4-4d80-9ad1-75ae60b08eb9}</Project>
+      <Name>FunnyDation.Wpf</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Converter\" />
