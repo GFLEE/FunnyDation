@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Prism.Mvvm;
 
 namespace FunnyDation.Wpf.Base.Ribbons
 {
-    public class RibbonPageVm
+    public class RibbonPageVm : BindableBase
     {
-        public RibbonPageVm()
+        public RibbonPageVm(RibbonVm ribbonVm)
         {
 
         }

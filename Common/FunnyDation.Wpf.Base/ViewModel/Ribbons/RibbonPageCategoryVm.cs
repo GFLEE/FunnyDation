@@ -1,18 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Prism.Mvvm;
 
 namespace FunnyDation.Wpf.Base.Ribbons
 {
-    public class RibbonPageCategoryVm
+    public class RibbonPageCategoryVm : BindableBase
     {
-        public RibbonPageCategoryVm()
+        public RibbonPageCategoryVm(RibbonVm ribbonVm)
         {
 
         }
 
+        public bool isEnabled;
+        public bool IsEnabled
+        {
+            get
+            {
+                return isEnabled;
+            }
+
+            set
+            {
+                isEnabled = value;
+                SetProperty(ref isEnabled, value);
+
+            }
+        }
+        public RibbonVm Ribbon { get; set; }
+
+        public string caption;
+        public string Caption
+        {
+            get
+            {
+                return caption;
+            }
+
+            set
+            {
+                caption = value;
+                SetProperty(ref caption, value);
+
+            }
+        }
+
+
+        public ObservableCollection<RibbonPageVm> Pages { get; set; }
+
+        public RibbonPageVm AddPage(string Caption)
+        {
+            var page = new RibbonPageVm(this.Ribbon) { Caption = caption };
+
+            Pages.Add(page);
+
+            return page;
+        }
 
 
     }

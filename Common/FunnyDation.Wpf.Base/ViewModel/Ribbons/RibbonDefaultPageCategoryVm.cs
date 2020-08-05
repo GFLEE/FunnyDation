@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FunnyDation.Wpf.Base.Ribbons
 {
-    public class RibbonDefaultPageCategoryVm
+    public class RibbonDefaultPageCategoryVm : RibbonPageCategoryVm
     {
-        public RibbonDefaultPageCategoryVm()
+        public RibbonDefaultPageCategoryVm(RibbonVm ribbonVm):base(ribbonVm)
         {
 
         }
