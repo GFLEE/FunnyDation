@@ -62,7 +62,7 @@
                                 LargeGlyph="{Binding LargeGlyphName}"
                                 Command="{Binding CommandClick}"/>
         </DataTemplate>
-        
+
         <DataTemplate x:Key="TemplateSubItem">
             <dxb:BarSubItem     Content="{Binding Name,Mode=TwoWay}"
                                 ToolTip="{Binding ToolTip}"
@@ -86,19 +86,40 @@
                        Style="{StaticResource {x:Static ToolBar.TextBoxStyleKey}}" 
                        BorderThickness="1" BorderBrush="Black"/>
         </DataTemplate>
-        
-        
-        
-        
-        
+
+        <DataTemplate x:Key="TemplateComb">
+            <ComboBox  DisplayMemberPath="{Binding DisplayMember}"
+                       SelectedValuePath="{Binding ValueMember}"
+                       SelectedItem="{Binding SelectedItem,UpdateSourceTrigger=PropertyChanged}"
+                       ItemsSource="{Binding ItemsSource}"
+                       ToolTip="{Binding ToolTip}"
+                       Width="{Binding Width}"
+                       Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ribbons:BackstageButtonItemVm}">
+            <dxr:BackstageButtonItem Width="200" Content="{Binding Content}" Command="{Binding Cmd}"/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type ribbons:BackstageSeparatorItemVm}">
+            <dxr:BackstageSeparatorItem  />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type ribbons:BackstageTabItemVm}">
+            <dxr:BackstageTabItem  Content="{Binding Content}" >
+                <dxr:BackstageTabItem.ControlPane >
+                    <ContentPresenter Content="{Binding PanelVm}"/>
+                </dxr:BackstageTabItem.ControlPane>
+            </dxr:BackstageTabItem>
+        </DataTemplate>
+
     </UserControl.Resources>
     <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" 
                        ShowApplicationButton="{Binding IsShowTabMenu,Mode=TwoWay}" 
                        CategoriesSource="{Binding PageCatories}">
 
         <dxr:RibbonControl.ApplicationMenu>
-            <dxr:BackstageViewControl x:Name="ribbonBackStage"
-                                      ItemsSource ="{Binding BackStageItems}"   />
+            <dxr:BackstageViewControl x:Name="ribbonBackStageViewControl"  
+                                      ItemsSource ="{Binding BackStageItems}"  />
         </dxr:RibbonControl.ApplicationMenu>
     </dxr:RibbonControl>
 </UserControl>
