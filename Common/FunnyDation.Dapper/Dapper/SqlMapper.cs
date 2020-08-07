@@ -1429,7 +1429,11 @@ namespace Dapper
         private static IEnumerable<TReturn> MultiMapImpl<TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh, TReturn>(this IDbConnection cnn, CommandDefinition command, Delegate map, string splitOn, IDataReader reader, Identity identity, bool finalize)
         {
             object param = command.Parameters;
-            identity ??= new Identity<TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh>(command.CommandText, command.CommandType, cnn, typeof(TFirst), param?.GetType());
+            if (identity == null)
+            {
+                identity = new Identity<TFirst, TSecond, TThird, TFourth, TFifth, TSixth, TSeventh>(command.CommandText, command.CommandType, cnn, typeof(TFirst), param?.GetType());
+
+            }
             CacheInfo cinfo = GetCacheInfo(identity, param, command.AddToCache);
 
             IDbCommand ownedCommand = null;
@@ -1499,7 +1503,11 @@ namespace Dapper
             }
 
             object param = command.Parameters;
-            identity ??= new IdentityWithTypes(command.CommandText, command.CommandType, cnn, types[0], param?.GetType(), types);
+            if (identity == null)
+            {
+                identity = new IdentityWithTypes(command.CommandText, command.CommandType, cnn, types[0], param?.GetType(), types);
+
+            }
             CacheInfo cinfo = GetCacheInfo(identity, param, command.AddToCache);
 
             IDbCommand ownedCommand = null;
@@ -2410,7 +2418,7 @@ namespace Dapper
 
             bool isStruct = type.IsValueType;
             var _sizeLocal = (LocalBuilder)null;
-            LocalBuilder GetSizeLocal() => _sizeLocal ??= il.DeclareLocal(typeof(int));
+            LocalBuilder GetSizeLocal() => _sizeLocal = _sizeLocal is null ? null : il.DeclareLocal(typeof(int));
             il.Emit(OpCodes.Ldarg_1); // stack is now [untyped-param]
 
             LocalBuilder typedParameterLocal;
@@ -3055,7 +3063,11 @@ namespace Dapper
         private static LocalBuilder GetTempLocal(ILGenerator il, ref Dictionary<Type, LocalBuilder> locals, Type type, bool initAndLoad)
         {
             if (type == null) throw new ArgumentNullException(nameof(type));
-            locals ??= new Dictionary<Type, LocalBuilder>();
+            if (locals == null)
+            {
+                locals = new Dictionary<Type, LocalBuilder>();
+
+            }
             if (!locals.TryGetValue(type, out LocalBuilder found))
             {
                 found = il.DeclareLocal(type);
@@ -3777,7 +3789,10 @@ namespace Dapper
         {
             if (obj == null) return "";
             var s = obj.ToString();
-            perThreadStringBuilderCache ??= obj;
+            if (perThreadStringBuilderCache == null)
+            {
+                perThreadStringBuilderCache = obj;
+            }
             return s;
         }
     }

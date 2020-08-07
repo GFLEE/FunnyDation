@@ -55,7 +55,10 @@ namespace Dapper
                     var dictionary = obj as IEnumerable<KeyValuePair<string, object>>;
                     if (dictionary == null)
                     {
-                        templates ??= new List<object>();
+                        if (templates == null)
+                        {
+                            templates = new List<object>();
+                        }
                         templates.Add(obj);
                     }
                     else
@@ -78,7 +81,10 @@ namespace Dapper
 
                     if (subDynamic.templates != null)
                     {
-                        templates ??= new List<object>();
+                        if (templates == null)
+                        {
+                            templates = new List<object>();
+                        }
                         foreach (var t in subDynamic.templates)
                         {
                             templates.Add(t);
@@ -450,38 +456,38 @@ namespace Dapper
 
         // Queue the preparation to be fired off when adding parameters to the DbCommand
         MAKECALLBACK:
-            (outputCallbacks ??= new List<Action>()).Add(() =>
-            {
-                // Finally, prep the parameter and attach the callback to it
-                var targetMemberType = lastMemberAccess?.Type;
-                int sizeToSet = (!size.HasValue && targetMemberType == typeof(string)) ? DbString.DefaultLength : size ?? 0;
+            (outputCallbacks is null ? null : new List<Action>()).Add(() =>
+               {
+                   // Finally, prep the parameter and attach the callback to it
+                   var targetMemberType = lastMemberAccess?.Type;
+                   int sizeToSet = (!size.HasValue && targetMemberType == typeof(string)) ? DbString.DefaultLength : size ?? 0;
 
-                if (parameters.TryGetValue(dynamicParamName, out ParamInfo parameter))
-                {
-                    parameter.ParameterDirection = parameter.AttachedParam.Direction = ParameterDirection.InputOutput;
+                   if (parameters.TryGetValue(dynamicParamName, out ParamInfo parameter))
+                   {
+                       parameter.ParameterDirection = parameter.AttachedParam.Direction = ParameterDirection.InputOutput;
 
-                    if (parameter.AttachedParam.Size == 0)
-                    {
-                        parameter.Size = parameter.AttachedParam.Size = sizeToSet;
-                    }
-                }
-                else
-                {
-                    dbType = (!dbType.HasValue)
+                       if (parameter.AttachedParam.Size == 0)
+                       {
+                           parameter.Size = parameter.AttachedParam.Size = sizeToSet;
+                       }
+                   }
+                   else
+                   {
+                       dbType = (!dbType.HasValue)
 #pragma warning disable 618
                     ? SqlMapper.LookupDbType(targetMemberType, targetMemberType?.Name, true, out SqlMapper.ITypeHandler handler)
 #pragma warning restore 618
                     : dbType;
 
-                    // CameFromTemplate property would not apply here because this new param
-                    // Still needs to be added to the command
-                    Add(dynamicParamName, expression.Compile().Invoke(target), null, ParameterDirection.InputOutput, sizeToSet);
-                }
+                       // CameFromTemplate property would not apply here because this new param
+                       // Still needs to be added to the command
+                       Add(dynamicParamName, expression.Compile().Invoke(target), null, ParameterDirection.InputOutput, sizeToSet);
+                   }
 
-                parameter = parameters[dynamicParamName];
-                parameter.OutputCallback = setter;
-                parameter.OutputTarget = target;
-            });
+                   parameter = parameters[dynamicParamName];
+                   parameter.OutputCallback = setter;
+                   parameter.OutputTarget = target;
+               });
 
             return this;
         }

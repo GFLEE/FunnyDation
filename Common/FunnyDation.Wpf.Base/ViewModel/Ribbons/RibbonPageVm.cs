@@ -14,6 +14,6 @@ namespace FunnyDation.Wpf.Base.Ribbons
 
         }
 
-
+        public string Caption { get; internal set; }
     }
 }
