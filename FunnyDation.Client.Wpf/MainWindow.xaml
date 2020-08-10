@@ -27,7 +27,7 @@
                                ShowApplicationButton="True" ToolbarShowCustomizationButton="True"
                                RibbonStyle="Office2019" >
             <dxr:RibbonControl.ApplicationMenu >
-                <dxr:BackstageViewControl >
+                <dxr:BackstageViewControl>
                 </dxr:BackstageViewControl>
             </dxr:RibbonControl.ApplicationMenu>
             <dxr:RibbonControl.PageHeaderItems>
@@ -81,40 +81,6 @@
                     </dxr:RibbonPageGroup>
 
                 </dxr:RibbonPage>
-                <dxr:RibbonPage Caption="Page"  >
-                    <dxr:RibbonPageGroup Name="pg1File" Caption="btnGroup1" Background="White"  
-                                         ShowCaptionButton="True"  >
-                        <dxb:BarButtonItem Name="bNew5" Content="New1" 
-                               Glyph="{dxc:DXImage Image=New_16x16.png}" 
-                               LargeGlyph="{dxc:DXImage Image=New_32x32.png}"  
-                               Description="Creates a new document."
-                               Hint="Creates a blank document."
-                               RibbonStyle="Large"/>
-                        <dxb:BarButtonItem Name="bNewr" Content="New2" 
-                               Glyph="{dxc:DXImage Image=New_16x16.png}" 
-                               LargeGlyph="{dxc:DXImage Image=New_32x32.png}"  
-                               Description="Creates a new document."
-                               Hint="Creates a blank document."
-                               RibbonStyle="Large"/>
-                        <dxb:BarButtonItem Name="bNewr3" Content="New3" 
-                               Glyph="{dxc:DXImage Image=New_16x16.png}" 
-                               LargeGlyph="{dxc:DXImage Image=New_32x32.png}"  
-                               Description="Creates a new document."
-                               Hint="Creates a blank document."
-                               RibbonStyle="Large"/>
-
-
-                        <dxb:BarItemLinkSeparator/>
-
-                        <dxb:BarButtonItem Name="sbSrave" Content="Save" 
-                                    Glyph="{dxc:DXImage Image=Save_16x16.png}" 
-                                    LargeGlyph="{dxc:DXImage Image=Save_32x32.png}" 
-                                    RibbonStyle="Large">
-                        </dxb:BarButtonItem>
-                    </dxr:RibbonPageGroup>
-
-                </dxr:RibbonPage>
-
             </dxr:RibbonDefaultPageCategory>
         </dxr:RibbonControl>
 

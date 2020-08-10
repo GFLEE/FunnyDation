@@ -20,26 +20,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
         {
             this.HostVm = host;
         }
-        public object HostVm { get; set; }
-
-        public const string ListOfCollagesPropertyName = "Panels";
-
-        public ObservableCollection<PanelItem> panels;
-        public ObservableCollection<PanelItem> Panels
-        {
-            get
-            {
-                return panels;
-            }
-
-            set
-            {
-                panels = value;
-                SetProperty(ref panels, value);
-            }
-        }
-
-
+       
         /// <summary>
         /// Add
         /// </summary>
@@ -58,17 +39,36 @@ namespace FunnyDation.Wpf.Base.ViewModel
             return panel;
         }
 
-        public void DocVM()
+
+        public int Clear()
         {
-
-
-
+            int count = Panels.Count();
             Panels.Clear();
+            return count;
+        }
 
-            //ListOfCollages.Add(new PanelItem() { WindowID = 1, WindowName = "Doc A", WindowContent = "Text a" });
-            //ListOfCollages.Add(new PanelItem() { WindowID = 2, WindowName = "Doc B", WindowContent = "Text b" });
-            //ListOfCollages.Add(new PanelItem() { WindowID = 3, WindowName = "Doc C", WindowContent = "Text c" });
 
+
+
+
+
+
+
+        public object HostVm { get; set; }
+
+        public ObservableCollection<PanelItem> panels;
+        public ObservableCollection<PanelItem> Panels
+        {
+            get
+            {
+                return panels;
+            }
+
+            set
+            {
+                panels = value;
+                SetProperty(ref panels, value);
+            }
         }
 
 

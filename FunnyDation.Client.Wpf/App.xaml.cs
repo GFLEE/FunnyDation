@@ -75,16 +75,27 @@ namespace FunnyDation.Client.Wpf
 
         }
 
+        /// <summary>
+        /// OnStartup
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
         }
 
+        /// <summary>
+        /// Initialize
+        /// </summary>
         public override void Initialize()
         {
             base.Initialize();
         }
 
+
+        /// <summary>
+        /// ViewModel  Locator
+        /// </summary>
         protected override void ConfigureViewModelLocator()
         {
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver((viewType) =>
