@@ -26,6 +26,7 @@ namespace FunnyDation.Client.Wpf
 
         private void GetFundsInfo()
         {
+            
             if (RankingAssb == null)
             {
                 string mdPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FDConst.ModulePath);

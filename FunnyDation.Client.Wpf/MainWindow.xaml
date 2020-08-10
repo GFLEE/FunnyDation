@@ -20,7 +20,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <dxr:RibbonControl x:Name="RibbonControl" Grid.Row="0" Background="White"
+        <dxr:RibbonControl x:Name="RibbonControl" Grid.Row="0" 
                                ApplicationButtonSmallIcon="{dxc:DXImage Image=Home_16x16.png}" 
                                ApplicationButtonLargeIcon="{dxc:DXImage Image=Home_32x32.png}" 
                                PageCategoryAlignment="Right" ToolbarShowMode="Hide" 
@@ -36,8 +36,8 @@
             </dxr:RibbonControl.PageHeaderItems>
 
             <dxr:RibbonDefaultPageCategory >
-                <dxr:RibbonPage Caption="Home" Background="White">
-                    <dxr:RibbonPageGroup Name="pgFile" Caption="btnGroup1"  Background="White" 
+                <dxr:RibbonPage Caption="Home" >
+                    <dxr:RibbonPageGroup Name="pgFile" Caption="btnGroup1" 
                                          ShowCaptionButton="True"  >
                         <dxb:BarButtonItem Name="bNew" Content="FundList" 
                                LargeGlyph="./Images/Menu/colorrecords.png"  
@@ -66,7 +66,7 @@
                         </dxb:BarButtonItem>
                     </dxr:RibbonPageGroup>
 
-                    <dxr:RibbonPageGroup Caption="btnGroup2" ShowCaptionButton="True" Background="White"  >
+                    <dxr:RibbonPageGroup Caption="btnGroup2" ShowCaptionButton="True" >
                         <dxb:BarButtonItem Name="bPaste" Content="Paste" 
                                Glyph="{dxc:DXImage Image=Paste_16x16.png}" 
                                LargeGlyph="{dxc:DXImage Image=Paste_32x32.png}" RibbonStyle="Large"/>
@@ -118,6 +118,6 @@
             </dxr:RibbonDefaultPageCategory>
         </dxr:RibbonControl>
 
-        <docpanel:FDDocPanel Grid.Row="1" DataContext="{Binding DocPanelVm}" />
+        <docpanel:FdDocPanel Grid.Row="1" DataContext="{Binding DocPanelVm}" Background="White" />
     </Grid>
 </dxr:DXRibbonWindow>

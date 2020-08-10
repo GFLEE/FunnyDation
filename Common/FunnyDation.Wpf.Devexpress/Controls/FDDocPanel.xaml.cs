@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FunnyDation.Wpf.Devexpress.Controls
+namespace FunnyDation.Wpf.Devexpress.Controls 
 {
     /// <summary>
     /// FDDocPanel.xaml 的交互逻辑
     /// </summary>
-    public partial class FDDocPanel : UserControl
+    public partial class FdDocPanel : UserControl
     {
-        public FDDocPanel()
+        public FdDocPanel()
         {
             InitializeComponent();
         }

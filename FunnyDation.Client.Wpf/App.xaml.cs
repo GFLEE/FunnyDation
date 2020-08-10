@@ -59,7 +59,8 @@ namespace FunnyDation.Client.Wpf
                 var modules = types.Where(p => p.GetInterfaces().Contains(typeof(IModule)));
 
                 foreach (var module in modules)
-                {
+                { 
+                    
                     moduleCatalog.AddModule(new ModuleInfo()
                     {
                         ModuleName = module.FullName,
