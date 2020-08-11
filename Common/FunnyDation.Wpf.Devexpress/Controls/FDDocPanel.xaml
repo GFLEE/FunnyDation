@@ -5,46 +5,71 @@
              xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
              xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"             
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:docpanelvm="crl-namespace:FunnyDation.Wpf.Base.ViewModel;assembly=FunnyDation.Wpf.Base"
+             xmlns:docpanelvm="crl-namespace:FunnyDation.Wpf.Base.ViewModel.DocPanel;assembly=FunnyDation.Wpf.Base"
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
              xmlns:converter="clr-namespace:FunnyDation.Wpf.Base.Converter;assembly=FunnyDation.Wpf.Base"
              xmlns:prism="http://prismlibrary.com/" 
+             xmlns:selector="clr-namespace:FunnyDation.Wpf.Devexpress.Selector"            
              mc:Ignorable="d"  
              d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True
-                              ,Type={x:Type docpanelvm:FDDocPanelVm}}"
+                              ,Type={x:Type docpanelvm:DockManagerVm}}"
              d:DesignHeight="450" d:DesignWidth="800"  >
 
-    <UserControl.Resources>
-        <converter:ZStringToStringConverter x:Key="zCVT" />
-    </UserControl.Resources>
     <dxb:BarManager>
+        <dxb:BarManager.Resources>
+            <selector:DockPanelSelector x:Key="DockPanelSelector"/>
+        </dxb:BarManager.Resources>
+
         <Grid>
-            <dxdo:DockLayoutManager x:Name="dlm" MDIMergeStyle="Always">
+            <Grid.Resources>
+                <DataTemplate x:Key="DocumetTemplate">
+                    <dxdo:DocumentPanel Caption="{Binding Caption,Mode=TwoWay}"
+                                        IsActive="{Binding IsActive,Mode=TwoWay}"
+                                        CloseCommand="{Binding CloseCoomand}">
+                        <dxdo:DocumentPanel.ContentTemplate>
+                            <DataTemplate>
+                                <ContentPresenter Content="{Binding Crl,Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </dxdo:DocumentPanel.ContentTemplate>
+
+                    </dxdo:DocumentPanel>
+                </DataTemplate>
+                <DataTemplate x:Key="LayoutPanelTemplate">
+                    <dxdo:LayoutPanel>
+                        <dxdo:LayoutPanel.ContentTemplate>
+                            <DataTemplate>
+                                <ContentPresenter Content="{Binding Crl,Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </dxdo:LayoutPanel.ContentTemplate>
+                    </dxdo:LayoutPanel>
+                </DataTemplate>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <dxdo:DockLayoutManager FloatingMode="Desktop" ItemsSource="{Binding Panels}"
+                                    ItemTemplate="{StaticResource DockPanelSelector}">
                 <dxdo:LayoutGroup>
-                    <dxdo:DocumentGroup x:Name="documentGroup"  
-                                    AllowClose="False"  
-                                    ShowDropDownButton="False"
-                                    ClosePageButtonShowMode="InAllTabPageHeaders"
-                                    ItemsSource="{Binding Panels,Mode=TwoWay}" 
-                                    SelectedTabIndex="{Binding SelectIndex,Mode=TwoWay}"
-                                    TabHeaderLayoutType="MultiLine" ShowTabHeaders="True" 
-                                    MDIStyle="Tabbed">
+                    <dxdo:TabbedGroup Name="Root" Orientation="Horizontal"></dxdo:TabbedGroup>
+                    <dxdo:LayoutGroup ItemWidth="4*" Orientation="Vertical">
+                        <dxdo:LayoutGroup ItemWidth="3*" DestroyOnClosingChildren="True">
+                            <dxdo:LayoutGroup Orientation="Horizontal">
+                                <dxdo:DocumentGroup  ItemWidth="4*" Name="DocumentHost" 
+                                                     Background="White" DestroyOnClosingChildren="True"
+                                                     ClosePageButtonShowMode="InActiveTabPageHeader"/>
 
-                        <dxdo:DocumentGroup.ItemContentTemplate>
-                            <DataTemplate>
-                                <ContentControl Content="{Binding Content,Mode=TwoWay}" />
-                            </DataTemplate>
-                        </dxdo:DocumentGroup.ItemContentTemplate>
-                        <dxdo:DocumentGroup.ItemCaptionTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Name,Mode=TwoWay}" />
-                            </DataTemplate>
-                        </dxdo:DocumentGroup.ItemCaptionTemplate>
-                    </dxdo:DocumentGroup>
 
+                            </dxdo:LayoutGroup>
+                        </dxdo:LayoutGroup>
+                    </dxdo:LayoutGroup>
                 </dxdo:LayoutGroup>
             </dxdo:DockLayoutManager>
+
+
         </Grid>
+
 
     </dxb:BarManager>
 </UserControl>
