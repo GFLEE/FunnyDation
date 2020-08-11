@@ -15,13 +15,17 @@ namespace FunnyDation.Wpf.Base.ViewModel.Grid
         public GridVm()
         {
             DataSource = new ObservableCollection<ExpandoObject>();
-
+            Columns = new ObservableCollection<ColumnVm>();
         }
 
 
 
+
+
+
+
         public virtual ObservableCollection<ExpandoObject> DataSource { get; set; }
-        public virtual IList<ColumnVm> Columns { get; set; }
+        public virtual ObservableCollection<ColumnVm> Columns { get; set; }
 
 
 

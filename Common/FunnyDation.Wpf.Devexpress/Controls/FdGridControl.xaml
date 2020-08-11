@@ -48,11 +48,28 @@
             <Setter Property="NavigationStyle" Value="Row"/>
             <Setter Property="AutoWidth" Value="True"/>
         </Style>
+
+        <Style x:Key="FocusedCellStyle" TargetType="dxg:LightweightCellEditor" BasedOn="{StaticResource {dxgt:GridRowThemeKey ResourceKey=LightweightCellStyle}}">
+            <Style.Triggers>
+                <Trigger Property="dxg:DataViewBase.IsFocusedCell" Value="True">
+                    <Setter  Property="Background" Value="#D9E5FF" />
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="FocusedRowStyle" TargetType="dxg:RowControl">
+            <Style.Triggers>
+                <Trigger Property="dxg:DataViewBase.IsFocusedRow" Value="True">
+                    <Setter  Property="Background" Value="#D9E5FF" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
     <dxg:GridControl Name="grid"
                          AutoExpandAllGroups="True"
                          ItemsSource="{Binding DataSource,Mode=TwoWay}"
                          ColumnsSource="{Binding Columns}"
+                         SelectedItems="{Binding SelectedItems}"
                          AllowColumnMRUFilterList="False" ShowLoadingPanel="False"
                          dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
                          ShowBorder="False">
@@ -61,6 +78,8 @@
                                AllowScrollAnimation="True"
                                Name="view" ShowAutoFilterRow="False"
                                ShowBandsPanel="False"
+                               RowStyle="{Binding RowStyle}"
+                               FocusedRow="{Binding SelectItem}"
                                ShowSearchPanelFindButton="False"
                                ShowDragDropHint="False"
                                ShowSearchPanelCloseButton="False"

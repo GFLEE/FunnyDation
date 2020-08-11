@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FunnyDation.Common.Enum
+namespace FunnyDation.Wpf.Base.ViewModel.Grid
 {
     public enum EuFieldTypes
     {
