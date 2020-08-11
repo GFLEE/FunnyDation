@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FunnyDation.Wpf.Web
 {
-    public partial class RESTService
+    public partial class RESTService : IRESTService
     {
         /// <summary>
         /// 简单发送Get请求: 指定Url地址使用Get 方式获取全部字符串

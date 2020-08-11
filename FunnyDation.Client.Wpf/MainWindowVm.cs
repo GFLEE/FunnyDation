@@ -26,8 +26,6 @@ namespace FunnyDation.Client.Wpf
     {
         public MainWindowVm()
         {
-            //DocPanelVm = new FDDocPanelVm(this);
-            //DocPanelVm.Panels = new ObservableCollection<PanelItem>();
             CommandFundBase = new DelegateCommand(Test);
             EventAggregator = ServiceLocator.Current.TryResolve<IEventAggregator>();
             EventAggregator.GetEvent<DockPanelShowEvent>().Subscribe(DockPanelShow);
@@ -43,7 +41,7 @@ namespace FunnyDation.Client.Wpf
                 Caption = "Test",
                 ToolTip = "Test_ToolTip",
                 ProcessStyle = EuProcessStyle.CloseAndNew
-            }, "LeftHost") ;
+            }, "DocumentHost") ;
 
         }
 
@@ -89,22 +87,9 @@ namespace FunnyDation.Client.Wpf
             }
             DockManager.CreataOrActiveDocumentPanel(dockPanelParam);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+         
+        public Assembly RankingAssb { get; set; }
+        public DelegateCommand CommandFundBase { get; set; }
 
 
         public UserControl GetTestList()
@@ -126,46 +111,6 @@ namespace FunnyDation.Client.Wpf
 
             return crl as UserControl;
 
-        }
-
-        private void GetFundsInfo()
-        {
-          //  DocPanelVm.AddPanel(2, "sdadsa", new System.Windows.Controls.UserControl());
-
-
-           
-
-
-
-        }
-
-
-
-
-
-
-
-        public Assembly RankingAssb { get; set; }
-        public DelegateCommand CommandFundBase { get; set; }
-
-        public FDDocPanelVm docPanelVm;
-        public FDDocPanelVm DocPanelVm
-        {
-            get
-            {
-                return docPanelVm;
-            }
-
-            set
-            {
-                if (docPanelVm == value)
-                {
-                    return;
-                }
-                docPanelVm = value;
-                SetProperty(ref docPanelVm, value);
-
-            }
         }
 
     }

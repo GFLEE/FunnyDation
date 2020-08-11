@@ -9,7 +9,7 @@ namespace FunnyDation.Wpf.Web
     /// <summary>
     /// HTTP 请求
     /// </summary>
-    public partial class RESTService : IRESTService
+    public partial class RESTService
     {
         public RESTService()
         {
