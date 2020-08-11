@@ -16,7 +16,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
         /// 注册关闭时间
         /// </summary>
         /// <returns></returns>
-        Action<ICrlVm> ActionClose();
+        Action<ICrlVm> ActionClose { get; set; }
 
         /// <summary>
         /// 

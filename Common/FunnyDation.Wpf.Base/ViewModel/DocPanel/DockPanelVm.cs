@@ -17,22 +17,21 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
         public DockPanelVm(string targetName)
         {
             this.TargetName = targetName;
+            IsClosed = false;
+            ID = Guid.NewGuid();
         }
         public string TemplateName { get; set; }
         public string TargetName { get; set; }
         public Guid ID { get; set; }
-
+        public DockManagerVm DockManager { get; set; }
         public string Key
         {
             get
             {
-                return "";
+                return CrlVm.ViewIdentity.Key;
             }
         }
-
-
-        internal DockManagerVm DockManager { get; set; }
-
+         
         public FrameworkElement crl;
         public FrameworkElement Crl
         {
@@ -147,7 +146,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 
         }
 
-        private void Close()
+        public void Close()
         {
             if (CrlVm.CanClose != null)
             {

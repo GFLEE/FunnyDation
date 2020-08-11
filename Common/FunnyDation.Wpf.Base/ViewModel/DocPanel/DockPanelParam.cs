@@ -31,16 +31,19 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 
         public bool IsActive
         {
-            get;set;
+            get; set;
         }
 
 
+        public ICrlVm VmData { get; set; }
 
+        public object SourceVm { get; set; }
 
+        public string TargetName { get; set; }
+        public string TemplateName { get; set; } 
 
-
-
-
+        public bool IsReBindData { get; set; }
+        public EuProcessStyle ProcessStyle { get; set; }
 
     }
 }
