@@ -4,18 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Prism.Mvvm;
 
 namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 {
-    public class DockPanelParam
+    public class DockPanelParam : BindableBase
     {
         public DockPanelParam()
         {
 
         }
+        public string caption;
+        public string Caption
+        {
+            get
+            {
+                return caption;
+            }
 
-        public string Caption { get; set; }
-        public string ToolTip { get; set; }
+            set
+            {
+                caption = value;
+                SetProperty(ref caption, value);
+
+            }
+        }
+        public string toolTip;
+        public string ToolTip
+        {
+            get
+            {
+                return toolTip;
+            }
+
+            set
+            {
+                toolTip = value;
+                SetProperty(ref toolTip, value);
+
+            }
+        }
         public FrameworkElement Crl { get; set; }
         public CrlVm CrlVm
         {
@@ -40,7 +68,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
         public object SourceVm { get; set; }
 
         public string TargetName { get; set; }
-        public string TemplateName { get; set; } 
+        public string TemplateName { get; set; }
 
         public bool IsReBindData { get; set; }
         public EuProcessStyle ProcessStyle { get; set; }

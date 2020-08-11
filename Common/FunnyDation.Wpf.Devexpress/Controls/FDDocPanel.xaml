@@ -22,10 +22,11 @@
 
         <Grid>
             <Grid.Resources>
-                <DataTemplate x:Key="DocumetTemplate">
-                    <dxdo:DocumentPanel Caption="{Binding Caption,Mode=TwoWay}"
+                <DataTemplate x:Key="DocumentTemplate">
+                    <dxdo:DocumentPanel Caption="{Binding Caption,Mode=TwoWay}" 
+                                        ToolTip="{Binding Caption,Mode=TwoWay}"
                                         IsActive="{Binding IsActive,Mode=TwoWay}"
-                                        CloseCommand="{Binding CloseCoomand}">
+                                        CloseCommand="{Binding CommandClose}">
                         <dxdo:DocumentPanel.ContentTemplate>
                             <DataTemplate>
                                 <ContentPresenter Content="{Binding Crl,Mode=TwoWay}"/>
@@ -50,7 +51,8 @@
             </Grid.RowDefinitions>
 
             <dxdo:DockLayoutManager FloatingMode="Desktop" ItemsSource="{Binding Panels}"
-                                    ItemTemplate="{StaticResource DockPanelSelector}">
+                                    ItemTemplate="{StaticResource DocumentTemplate}"
+                                    ItemTemplateSelector="{StaticResource DockPanelSelector}">
                 <dxdo:LayoutGroup>
                     <dxdo:TabbedGroup Name="Root" Orientation="Horizontal"></dxdo:TabbedGroup>
                     <dxdo:LayoutGroup ItemWidth="4*" Orientation="Vertical">

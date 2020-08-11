@@ -84,6 +84,6 @@
             </dxr:RibbonDefaultPageCategory>
         </dxr:RibbonControl>
 
-        <docpanel:FdDocPanel Grid.Row="1" DataContext="{Binding DocPanelVm,Mode=TwoWay}"  />
+        <docpanel:FdDocPanel Grid.Row="1" DataContext="{Binding DockManager,Mode=TwoWay}"  />
     </Grid>
 </dxr:DXRibbonWindow>

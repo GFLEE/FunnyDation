@@ -20,10 +20,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 
             DmvService.Instance.AddDockManagerVm(this);
         }
-        public ObservableCollection<DockPanelVm> Panels
-        {
-            get; set;
-        } 
+        public ObservableCollection<DockPanelVm> Panels { get; set; }
 
 
         public DockPanelVm GetPanel(string key)

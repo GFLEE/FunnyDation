@@ -15,6 +15,10 @@ using FunnyDation.Wpf.Base.ViewModel.DocPanel;
 using System.Collections.ObjectModel;
 using Prism.Modularity;
 using FunnyDation.Common.Helper;
+using Prism.Events;
+using FunnyDation.Wpf.Devexpress.Prisms;
+using CommonServiceLocator;
+using System.Windows.Controls;
 
 namespace FunnyDation.Client.Wpf
 {
@@ -22,16 +26,88 @@ namespace FunnyDation.Client.Wpf
     {
         public MainWindowVm()
         {
-            DocPanelVm = new FDDocPanelVm(this);
-            DocPanelVm.Panels = new ObservableCollection<PanelItem>();
-             CommandFundBase = new DelegateCommand(GetFundsInfo);
+            //DocPanelVm = new FDDocPanelVm(this);
+            //DocPanelVm.Panels = new ObservableCollection<PanelItem>();
+            CommandFundBase = new DelegateCommand(Test);
+            EventAggregator = ServiceLocator.Current.TryResolve<IEventAggregator>();
+            EventAggregator.GetEvent<DockPanelShowEvent>().Subscribe(DockPanelShow);
+            DockManager = new DockManagerVm();
         }
 
-        private void GetFundsInfo()
+        private void Test()
         {
-            DocPanelVm.AddPanel(2, "sdadsa", new System.Windows.Controls.UserControl());
+            var crl = GetTestList();
+            DockManager.CreataOrActiveLayoutPanel(new DockPanelParam()
+            {
+                Crl = crl,
+                Caption="Test",
+                ProcessStyle = EuProcessStyle.CloseAndNew
+            },"DocumentHost");
 
-           
+        }
+
+        public DockManagerVm DockManager { get; set; }
+
+
+
+        public IEventAggregator eventAggregator;
+        public IEventAggregator EventAggregator
+        {
+            get
+            {
+                return eventAggregator;
+            }
+
+            set
+            {
+                eventAggregator = value;
+                if (eventAggregator == null)
+                {
+                    return;
+                }
+                eventAggregator.GetEvent<DockPanelShowEvent>().Subscribe(DockPanelShow);
+            }
+        }
+
+        private void DockPanelShow(DockPanelShowEventArgs args)
+        {
+            DockPanelParam dockPanelParam = new DockPanelParam()
+            {
+                Caption = args.Caption,
+                ToolTip = args.ToolTip,
+                Crl = args.Crl,
+                TemplateName = args.TemplateName,
+                ProcessStyle = args.ProcessStyle,
+                TargetName = args.TargetName,
+            };
+
+            if (!string.IsNullOrWhiteSpace(dockPanelParam.TargetName))
+            {
+                DockManager.CreataOrActivePanel(dockPanelParam);
+                return;
+            }
+            DockManager.CreataOrActiveDocumentPanel(dockPanelParam);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public UserControl GetTestList()
+        {
             if (RankingAssb == null)
             {
                 string mdPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FDConst.ModulePath);
@@ -42,10 +118,21 @@ namespace FunnyDation.Client.Wpf
             var mudule = RankingAssb.GetTypes().FirstOrDefault(p => p.GetInterfaces().Contains(typeof(IModule)));
             var type = RankingAssb.GetType(ReflectionHelper.GetPropertyValueSafely(mudule, mudule.GetProperty("StartPagePath")).ToString());
             var crl = CrlFactory.Create(type, (crlVm) =>
-             {
+            {
 
 
-             });
+            });
+
+            return crl as UserControl;
+
+        }
+
+        private void GetFundsInfo()
+        {
+          //  DocPanelVm.AddPanel(2, "sdadsa", new System.Windows.Controls.UserControl());
+
+
+           
 
 
 
