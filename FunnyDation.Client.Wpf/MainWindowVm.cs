@@ -40,9 +40,10 @@ namespace FunnyDation.Client.Wpf
             DockManager.CreataOrActiveLayoutPanel(new DockPanelParam()
             {
                 Crl = crl,
-                Caption="Test",
+                Caption = "Test",
+                ToolTip = "Test_ToolTip",
                 ProcessStyle = EuProcessStyle.CloseAndNew
-            },"DocumentHost");
+            }, "LeftHost") ;
 
         }
 

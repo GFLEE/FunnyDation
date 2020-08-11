@@ -23,8 +23,8 @@
         <Grid>
             <Grid.Resources>
                 <DataTemplate x:Key="DocumentTemplate">
-                    <dxdo:DocumentPanel Caption="{Binding Caption,Mode=TwoWay}" 
-                                        ToolTip="{Binding Caption,Mode=TwoWay}"
+                    <dxdo:DocumentPanel Caption="{Binding Caption}" Background="White"
+                                        ToolTip="{Binding ToolTip,Mode=TwoWay}"
                                         IsActive="{Binding IsActive,Mode=TwoWay}"
                                         CloseCommand="{Binding CommandClose}">
                         <dxdo:DocumentPanel.ContentTemplate>
@@ -53,8 +53,8 @@
             <dxdo:DockLayoutManager FloatingMode="Desktop" ItemsSource="{Binding Panels}"
                                     ItemTemplate="{StaticResource DocumentTemplate}"
                                     ItemTemplateSelector="{StaticResource DockPanelSelector}">
-                <dxdo:LayoutGroup>
-                    <dxdo:TabbedGroup Name="Root" Orientation="Horizontal"></dxdo:TabbedGroup>
+                <dxdo:LayoutGroup Name="Root" Orientation="Horizontal">
+                    <dxdo:TabbedGroup Name="LeftHost" ItemWidth="300" Background="White"></dxdo:TabbedGroup>
                     <dxdo:LayoutGroup ItemWidth="4*" Orientation="Vertical">
                         <dxdo:LayoutGroup ItemWidth="3*" DestroyOnClosingChildren="True">
                             <dxdo:LayoutGroup Orientation="Horizontal">
@@ -65,7 +65,9 @@
 
                             </dxdo:LayoutGroup>
                         </dxdo:LayoutGroup>
+                        <dxdo:TabbedGroup Name="BottomHost" DestroyOnClosingChildren="True" SelectedTabIndex="1"/>
                     </dxdo:LayoutGroup>
+                    <dxdo:TabbedGroup Name="RightHost" ItemWidth="300"></dxdo:TabbedGroup>
                 </dxdo:LayoutGroup>
             </dxdo:DockLayoutManager>
 

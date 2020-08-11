@@ -41,7 +41,6 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
             }
 
             return dmList.SelectMany(p => p.Panels).FirstOrDefault(p => string.Equals(p.Key, key));
-            // return dmList.FirstOrDefault().Panels.(p => string.Equals(p.Key, key));
         }
 
 
