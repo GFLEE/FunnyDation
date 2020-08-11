@@ -178,6 +178,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FunnyDation.Common\FunnyDation.Common.csproj">
+      <Project>{b4dbf030-1a9b-4bd0-b8a9-5324492be6c1}</Project>
+      <Name>FunnyDation.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FunnyDation.Wpf.Base\FunnyDation.Wpf.Base.csproj">
       <Project>{bee5940b-051d-43b8-98bf-d5f54e65aeda}</Project>
       <Name>FunnyDation.Wpf.Base</Name>

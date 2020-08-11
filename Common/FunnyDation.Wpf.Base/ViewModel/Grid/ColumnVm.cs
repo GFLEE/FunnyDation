@@ -12,6 +12,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.Grid
         public string Header { get; set; }
         public string Mask { get; set; }
         public EuFieldTypes FieldType { get; set; }
+        public int EuFieldTypes { get; set; }
 
         public ColumnVm(string field, string header, EuFieldTypes type, string mask = null)
         {

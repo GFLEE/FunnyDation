@@ -24,20 +24,20 @@ namespace FunnyDation.Wpf.Devexpress.Converter
 
             switch (column.FieldType)
             {
-                case FieldTypes.String:
+                case EuFieldTypes.String:
                     editor = new TextEditSettings();
                     break;
 
-                case FieldTypes.Int:
-                case FieldTypes.Decimal:
+                case EuFieldTypes.Int:
+                case EuFieldTypes.Decimal:
                     editor = new SpinEditSettings { Mask = column.Mask, MaskUseAsDisplayFormat = true };
                     break;
 
-                case FieldTypes.Date:
+                case EuFieldTypes.Date:
                     editor = new DateEditSettings { Mask = column.Mask, MaskUseAsDisplayFormat = true };
                     break;
 
-                case FieldTypes.Bool:
+                case EuFieldTypes.Bool:
                     editor = new CheckEditSettings { IsThreeState = false, NullValue = false };
                     break;
 
