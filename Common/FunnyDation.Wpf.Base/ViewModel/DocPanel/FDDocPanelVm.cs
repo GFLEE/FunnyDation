@@ -13,14 +13,14 @@ namespace FunnyDation.Wpf.Base.ViewModel
     {
         public FDDocPanelVm()
         {
-
+            SelectIndex = 1;
         }
 
         public FDDocPanelVm(object host)
         {
             this.HostVm = host;
         }
-       
+
         /// <summary>
         /// Add
         /// </summary>
@@ -35,7 +35,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
 
             PanelItem panel = new PanelItem(id, name, obj);
             Panels.Add(panel);
-
+            SelectIndex = Panels.Count();
             return panel;
         }
 
@@ -71,7 +71,20 @@ namespace FunnyDation.Wpf.Base.ViewModel
             }
         }
 
+        public int selectIndex;
+        public int SelectIndex
+        {
+            get
+            {
+                return selectIndex;
+            }
 
+            set
+            {
+                selectIndex = value;
+                SetProperty(ref selectIndex, value);
+            }
+        }
     }
 
 }

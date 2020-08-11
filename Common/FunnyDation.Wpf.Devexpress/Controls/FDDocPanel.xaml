@@ -22,9 +22,12 @@
             <dxdo:DockLayoutManager x:Name="dlm" MDIMergeStyle="Always">
                 <dxdo:LayoutGroup>
                     <dxdo:DocumentGroup x:Name="documentGroup"  
-                                    AllowClose="False"  ShowDropDownButton="False"
-                                    ClosePageButtonShowMode="InActiveTabPageHeader"
-                                    ItemsSource="{Binding Panels,Mode=TwoWay}" TabHeaderLayoutType="MultiLine"
+                                    AllowClose="False"  
+                                    ShowDropDownButton="False"
+                                    ClosePageButtonShowMode="InAllTabPageHeaders"
+                                    ItemsSource="{Binding Panels,Mode=TwoWay}" 
+                                    SelectedTabIndex="{Binding SelectIndex,Mode=TwoWay}"
+                                    TabHeaderLayoutType="MultiLine" ShowTabHeaders="True" 
                                     MDIStyle="Tabbed">
 
                         <dxdo:DocumentGroup.ItemContentTemplate>
@@ -38,6 +41,7 @@
                             </DataTemplate>
                         </dxdo:DocumentGroup.ItemCaptionTemplate>
                     </dxdo:DocumentGroup>
+
                 </dxdo:LayoutGroup>
             </dxdo:DockLayoutManager>
         </Grid>
