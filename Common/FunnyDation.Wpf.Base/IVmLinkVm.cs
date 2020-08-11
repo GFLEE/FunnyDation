@@ -8,8 +8,8 @@ namespace FunnyDation.Wpf.Base
 {
     public interface IVmLinkVm
     {
+        VmViewIdentity ViewIdentity { get; set; }
         object VmData { get; set; }
-
         object SourceVm { get; set; }
     }
 }

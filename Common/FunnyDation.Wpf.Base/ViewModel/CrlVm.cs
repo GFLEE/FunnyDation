@@ -9,7 +9,7 @@ using Prism.Mvvm;
 
 namespace FunnyDation.Wpf.Base
 {
-    public class CrlVm : BindableBase, ICrlVm
+    public class CrlVm : VmLinkVm, ICrlVm
     {
         public CrlVm()
         {
@@ -17,10 +17,28 @@ namespace FunnyDation.Wpf.Base
         }
 
         public object CanClose { get; internal set; }
+        public VmViewIdentity ViewIdentity { get; set; }
+        public object VmData { get; set; }
+        public object SourceVm { get; set; }
+
+        public Action<ICrlVm> ActionClose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CancelClose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Close()
+        {
+            throw new NotImplementedException();
+        }
 
         public void Init()
         {
-           
+
             OnInitComplete();
         }
         public void Init(Action<CrlVm> preInit)
