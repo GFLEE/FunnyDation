@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Prism.Events;
 
-namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
+namespace FunnyDation.Wpf.Devexpress.Prisms
 {
-    public class DockManagerVm
+    public class DockPanelShowEvent:PubSubEvent<DockPanelShowEventArgs>
     {
+
+
 
 
 
