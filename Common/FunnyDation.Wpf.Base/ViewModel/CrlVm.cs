@@ -15,6 +15,9 @@ namespace FunnyDation.Wpf.Base
         {
 
         }
+
+        public object CanClose { get; internal set; }
+
         public void Init()
         {
            
@@ -42,5 +45,9 @@ namespace FunnyDation.Wpf.Base
 
         }
 
+        internal void Close1()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

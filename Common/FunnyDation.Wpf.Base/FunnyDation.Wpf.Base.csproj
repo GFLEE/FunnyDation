@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="DevExpress.Xpf.Core.v20.1">
+      <HintPath>D:\DevExpress\Components\Bin\Framework\DevExpress.Xpf.Core.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v20.1">
+      <HintPath>D:\DevExpress\Components\Bin\Framework\DevExpress.Xpf.Docking.v20.1.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsBase" />

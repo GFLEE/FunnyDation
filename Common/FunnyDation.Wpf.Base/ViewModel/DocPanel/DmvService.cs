@@ -21,12 +21,40 @@ namespace FunnyDation.Wpf.Base.ViewModel.DocPanel
 
         }
 
+        internal void AddDockManagerVm(DockManagerVm dockManagerVm)
+        {
+            dmList.Add(dockManagerVm);
+        }
 
 
+        internal void RemoveDockManagerVm(DockManagerVm dockManagerVm)
+        {
+            dmList.Remove(dockManagerVm);
+        }
 
 
+        public DockPanelVm GetPanel(string key)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                return null;
+            }
+
+            return dmList.SelectMany(p => p.Panels).FirstOrDefault(p => string.Equals(p.Key, key));
+            // return dmList.FirstOrDefault().Panels.(p => string.Equals(p.Key, key));
+        }
 
 
+        public string DefaultLevelCode()
+        {
+            return DateTime.Now.ToString("yyyyMMddHHmmss");
+        }
+
+        public bool ContainsKey(string key)
+        {
+            var panel = GetPanel(key);
+            return panel != null;
+        }
 
     }
 }
