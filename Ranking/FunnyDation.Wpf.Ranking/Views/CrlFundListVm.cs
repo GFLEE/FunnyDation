@@ -24,7 +24,7 @@ namespace FunnyDation.Wpf.Ranking.Views
         public override void OnInitComplete()
         {
             GetList();
-            MessageBox.Show("555");
+            //MessageBox.Show("555");
         }
 
         public async void GetList()

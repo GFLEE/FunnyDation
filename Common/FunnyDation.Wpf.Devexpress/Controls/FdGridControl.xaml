@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="FunnyDation.Wpf.Devexpress.Controls.FdGridControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys"
+             xmlns:dxp="http://schemas.devexpress.com/winfx/2008/xaml/printing"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
+             xmlns:dxrudex="http://schemas.devexpress.com/winfx/2008/xaml/reports/userdesignerextensions"
+             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+             xmlns:dynamicColumns="clr-namespace:FunnyDation.Wpf.Devexpress.Converter"
+             xmlns:ViewModels="clr-namespace:FunnyDation.Wpf.Base.ViewModel.Grid;assembly=FunnyDation.Wpf.Base"
+             xmlns:dxci="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" 
+             DataContext="{dxmvvm:ViewModelSource Type=ViewModels:GridVm}">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type dxg:GridControl}">
+            <Setter Property="AutoGenerateColumns" Value="None"/>
+            <Setter Property="EnableSmartColumnsGeneration" Value="True"/>
+            <Setter Property="ColumnGeneratorTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <ContentControl>
+                            <dxg:GridColumn FieldName="{Binding (dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}" 
+                                            Header="{Binding (dxci:DependencyObjectExtensions.DataContext).Header, RelativeSource={RelativeSource Self}}" 
+                                            EditSettings="{Binding ., Converter={dynamicColumns:FieldTypeToEditSettingsConverter}}"/>
+                        </ContentControl>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ColumnGeneratorStyle">
+                <Setter.Value>
+                    <Style TargetType="{x:Type dxg:GridColumn}">
+                        <Setter Property="FilterPopupMode" Value="CheckedList"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type dxg:TableView}">
+            <Setter Property="ShowGroupPanel" Value="False"/>
+            <Setter Property="ShowTotalSummary" Value="False"/>
+            <Setter Property="NavigationStyle" Value="Row"/>
+            <Setter Property="AutoWidth" Value="True"/>
+        </Style>
+    </UserControl.Resources>
+    <dxg:GridControl Name="grid"
+                         AutoExpandAllGroups="True"
+                         ItemsSource="{Binding DataSource,Mode=TwoWay}"
+                         ColumnsSource="{Binding Columns}"
+                         AllowColumnMRUFilterList="False" ShowLoadingPanel="False"
+                         dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
+                         ShowBorder="False">
+        <dxg:GridControl.View>
+            <dxg:TableView     ShowFixedTotalSummary="True"
+                               AllowScrollAnimation="True"
+                               Name="view" ShowAutoFilterRow="False"
+                               ShowBandsPanel="False"
+                               ShowSearchPanelFindButton="False"
+                               ShowDragDropHint="False"
+                               ShowSearchPanelCloseButton="False"
+                               AllowFixedGroups="True"
+                               NavigationStyle="Row"
+                               AllowPrintColumnHeaderImage="True"
+                               UseLegacyFilterPanel="False"
+                               HighlightItemOnHover="True">
+            </dxg:TableView>
+        </dxg:GridControl.View>
+    </dxg:GridControl>
+
+</UserControl>

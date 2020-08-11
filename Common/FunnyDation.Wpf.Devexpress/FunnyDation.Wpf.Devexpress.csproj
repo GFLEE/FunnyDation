@@ -126,9 +126,13 @@
     <Compile Include="Controls\FdDocPanel.xaml.cs">
       <DependentUpon>FdDocPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FdGridControl.xaml.cs">
+      <DependentUpon>FdGridControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FdRibbonControl.xaml.cs">
       <DependentUpon>FdRibbonControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\FieldTypeToEditSettingsConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -164,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\FdGridControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\FdRibbonControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -179,8 +187,6 @@
       <Name>FunnyDation.Wpf</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converter\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
