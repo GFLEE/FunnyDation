@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
 {
@@ -13,6 +14,24 @@ namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
             this.Key = key;
 
         }
+
+        public ToolBarBaseVm AddButton(string toolTip, string glyphName, Visibility visibility, bool IsShowBtnText = true)
+        {
+            var item = new BarButtonVm(toolTip, glyphName, visibility);
+            if (!IsShowBtnText)
+            {
+                item.BtnText = null;
+            }
+            AddChild(item);
+            return this;
+        }
+
+
+
+
+
+
+
 
 
         public string Key { get; set; }

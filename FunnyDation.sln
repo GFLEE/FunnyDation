@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Wpf.Devexpress"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Dapper", "Common\FunnyDation.Dapper\FunnyDation.Dapper.csproj", "{BA1B7629-9713-44E2-9584-7B8F085B20BA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Text", "Text", "{8022A0CA-070D-4705-B480-9BAE3D9111EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
