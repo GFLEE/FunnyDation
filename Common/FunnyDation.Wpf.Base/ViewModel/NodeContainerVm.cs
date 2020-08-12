@@ -35,5 +35,15 @@ namespace FunnyDation.Wpf.Base.ViewModel
         {
             throw new NotImplementedException();
         }
+
+        internal void DoubClicked(NodeVm nodeVm)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void DoDoubClicked(NodeVm nodeVm)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Prism.Mvvm;
 using System.Windows.Controls;
+using System.Windows.Input;
+using FunnyDation.Wpf.Command;
 
 namespace FunnyDation.Wpf.Base.ViewModel
 {
@@ -304,6 +306,24 @@ namespace FunnyDation.Wpf.Base.ViewModel
         }
 
         /// <summary>
+        /// orderID
+        /// </summary>
+        public int orderID;
+        public int OrderID
+        {
+            get
+            {
+                return orderID;
+            }
+
+            set
+            {
+                orderID = value;
+                SetProperty(ref orderID, value);
+
+            }
+        }
+        /// <summary>
         /// 图片地址
         /// </summary>
         public string glyphName;
@@ -344,28 +364,77 @@ namespace FunnyDation.Wpf.Base.ViewModel
 
             }
         }
+
+
+        /// <summary>
+        /// 命令事件
+        /// </summary>
+        ICommand commandClick;
+        public ICommand CommandClick
+        {
+            get
+            {
+                if (commandClick == null)
+                {
+                    commandClick = new RelayCommand(() =>
+                    {
+                        Container.DoubClicked(this);
+                    });
+                }
+
+                return commandClick;
+            }
+
+
+        }
+
+        /// <summary>
+        /// 双击命令事件
+        /// </summary>
+        ICommand commandDoubleClick;
+        public ICommand CommandDoubleClick
+        {
+            get
+            {
+                if (commandDoubleClick == null)
+                {
+                    commandDoubleClick = new RelayCommand(() =>
+                    {
+                        Container.DoDoubClicked(this);
+                    });
+                }
+
+                return commandDoubleClick;
+            }
+
+
+        }
+
+        /// <summary>
+        /// 查找祖先节点
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public T FindAncestry<T>() where T : NodeVm
+        {
+            var parent = GetParent();
+            while (parent != null)
+            {
+                if (parent is T)
+                {
+                    return (T)parent;
+                }
+                parent = GetParent();
+            }
+
+            return null;
+        }
+
+
         public Guid Id { get; set; }
         public NodeContainerVm Container { get; set; }
         public ObservableCollection<NodeVm> Nodes { get; set; }
 
 
-        /// <summary>
-        /// orderID
-        /// </summary>
-        public int orderID;
-        public int OrderID
-        {
-            get
-            {
-                return orderID;
-            }
-
-            set
-            {
-                orderID = value;
-                SetProperty(ref orderID, value);
-
-            }
-        }
     }
 }
