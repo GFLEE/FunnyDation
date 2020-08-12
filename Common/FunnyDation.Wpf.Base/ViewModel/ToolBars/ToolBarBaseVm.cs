@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
 {
-    public class ToolBarBaseVm : NodeContainerVm
+    public class ToolBarBaseVm /*: NodeContainerVm*/
     {
         public ToolBarBaseVm()
         {

@@ -378,7 +378,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
                 {
                     commandClick = new RelayCommand(() =>
                     {
-                        Container.DoubClicked(this);
+                        Container.DoClicked(this);
                     });
                 }
 
@@ -400,7 +400,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
                 {
                     commandDoubleClick = new RelayCommand(() =>
                     {
-                        Container.DoDoubClicked(this);
+                        Container.DoDoubleClicked(this);
                     });
                 }
 
