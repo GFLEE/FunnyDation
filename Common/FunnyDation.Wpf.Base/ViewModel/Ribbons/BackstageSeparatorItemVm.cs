@@ -9,10 +9,7 @@ namespace FunnyDation.Wpf.Base.Ribbons
 {
     public class BackstageSeparatorItemVm
     {
-        public string Content { get; set; }
-        public object PanelVm { get; set; }
-        public ICommand Cmd { get; set; }
-
+       
         public BackstageSeparatorItemVm()
         {
 

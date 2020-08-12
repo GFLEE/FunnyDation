@@ -7,23 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 
 namespace FunnyDation.Wpf.Base.Ribbons
 {
 
-    public class BackstageTabItemVm : ITemplateItem
+    public class BackstageTabItemVm 
     {
-        public BackstageTabItemVm(RibbonPageGroupVm ribbonPageGroupVm)
-        {
-            RibbonPageGroup = ribbonPageGroupVm;
-            Items = new ObservableCollection<BarItemVm>();
-        }
+        public string Content { get; set; }
+        public object PanelVm { get; set; }
+        public ICommand TabClick { get; set; }
+         
 
-
-
-        public RibbonPageGroupVm RibbonPageGroup { get; set; }
-        public string Caption { get; set; }
-        public ObservableCollection<BarItemVm> Items { get; set; }
-        public string TemplateName { get { return "TemplateButtonGroup"; } set { } }
+      
     }
 }

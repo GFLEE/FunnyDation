@@ -8,7 +8,7 @@ namespace FunnyDation.Wpf.Base.Ribbons
 {
     public class RibbonDefaultPageCategoryVm : RibbonPageCategoryVm
     {
-        public RibbonDefaultPageCategoryVm(RibbonVm ribbonVm):base(ribbonVm)
+        public RibbonDefaultPageCategoryVm(RibbonVm ribbonVm) : base(ribbonVm)
         {
 
         }
