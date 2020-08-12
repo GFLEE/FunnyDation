@@ -12,5 +12,10 @@ namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
         {
 
         }
+
+        internal void DoClicked(NodeVm vm)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

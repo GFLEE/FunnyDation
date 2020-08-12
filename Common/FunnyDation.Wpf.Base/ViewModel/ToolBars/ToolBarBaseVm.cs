@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
 {
-    public class ToolBarBaseVm : NodeContainerVm
+    public abstract class ToolBarBaseVm : NodeContainerVm
     {
         public ToolBarBaseVm(object hostVm, string key) : base(hostVm)
         {
@@ -16,6 +16,6 @@ namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
 
 
         public string Key { get; set; }
-
+        protected abstract override void OnClicked(NodeVm vm);
     }
 }
