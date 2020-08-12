@@ -13,7 +13,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
     public abstract class NodeContainerVm : BindableBase
     {
 
-        public NodeContainerVm()
+        static NodeContainerVm()
         {
 
 
