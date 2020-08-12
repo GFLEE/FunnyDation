@@ -11,8 +11,7 @@
              xmlns:prism="http://prismlibrary.com/" 
              xmlns:selector="clr-namespace:FunnyDation.Wpf.Devexpress.Selector"            
              mc:Ignorable="d"  
-             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True
-                              ,Type={x:Type docpanelvm:DockManagerVm}}"
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True ,Type={x:Type docpanelvm:DockManagerVm}}"
              d:DesignHeight="450" d:DesignWidth="800"  >
 
     <dxb:BarManager>
@@ -23,7 +22,8 @@
         <Grid>
             <Grid.Resources>
                 <DataTemplate x:Key="DocumentTemplate">
-                    <dxdo:DocumentPanel Caption="{Binding Caption}" Background="White"
+                    <dxdo:DocumentPanel Caption="{Binding Caption,Mode=TwoWay}" 
+                                        Background="White" ShowCaption="True" ShowCaptionImage="False"
                                         ToolTip="{Binding ToolTip,Mode=TwoWay}"
                                         IsActive="{Binding IsActive,Mode=TwoWay}"
                                         CloseCommand="{Binding CommandClose}">
@@ -32,11 +32,15 @@
                                 <ContentPresenter Content="{Binding Crl,Mode=TwoWay}"/>
                             </DataTemplate>
                         </dxdo:DocumentPanel.ContentTemplate>
-
                     </dxdo:DocumentPanel>
                 </DataTemplate>
+                
                 <DataTemplate x:Key="LayoutPanelTemplate">
-                    <dxdo:LayoutPanel>
+                    <dxdo:LayoutPanel  Caption="{Binding Caption,Mode=TwoWay}" 
+                                        Background="White" ShowCaption="True" ShowCaptionImage="False"
+                                        ToolTip="{Binding ToolTip,Mode=TwoWay}"
+                                        IsActive="{Binding IsActive,Mode=TwoWay}"
+                                        CloseCommand="{Binding CommandClose}">
                         <dxdo:LayoutPanel.ContentTemplate>
                             <DataTemplate>
                                 <ContentPresenter Content="{Binding Crl,Mode=TwoWay}"/>
@@ -44,6 +48,7 @@
                         </dxdo:LayoutPanel.ContentTemplate>
                     </dxdo:LayoutPanel>
                 </DataTemplate>
+                
             </Grid.Resources>
             <Grid.RowDefinitions>
                 <RowDefinition/>

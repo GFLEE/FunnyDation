@@ -15,12 +15,8 @@
         xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="FunnyDation" Height="700" Width="1000">
-    <Grid Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <dxr:RibbonControl x:Name="RibbonControl" Grid.Row="0" 
+    <DockPanel LastChildFill="True">
+        <dxr:RibbonControl x:Name="RibbonControl" Grid.Row="0"   DockPanel.Dock="Top"
                                ApplicationButtonSmallIcon="{dxc:DXImage Image=Home_16x16.png}" 
                                ApplicationButtonLargeIcon="{dxc:DXImage Image=Home_32x32.png}" 
                                PageCategoryAlignment="Right" ToolbarShowMode="Hide" 
@@ -83,7 +79,14 @@
                 </dxr:RibbonPage>
             </dxr:RibbonDefaultPageCategory>
         </dxr:RibbonControl>
+        <docpanel:FdDocPanel Grid.Row="1" DockPanel.Dock="Top" DataContext="{Binding DockManager,Mode=TwoWay}"  />
 
-        <docpanel:FdDocPanel Grid.Row="1" DataContext="{Binding DockManager,Mode=TwoWay}"  />
-    </Grid>
+    </DockPanel>
+    <!--<Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+    </Grid>-->
 </dxr:DXRibbonWindow>
