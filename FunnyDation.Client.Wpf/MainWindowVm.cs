@@ -19,6 +19,7 @@ using Prism.Events;
 using FunnyDation.Wpf.Devexpress.Prisms;
 using CommonServiceLocator;
 using System.Windows.Controls;
+using FunnyDation.Wpf.Base.Ribbons;
 
 namespace FunnyDation.Client.Wpf
 {
@@ -30,6 +31,15 @@ namespace FunnyDation.Client.Wpf
             EventAggregator = ServiceLocator.Current.TryResolve<IEventAggregator>();
             EventAggregator.GetEvent<DockPanelShowEvent>().Subscribe(DockPanelShow);
             DockManager = new DockManagerVm();
+            Ribbon = new RibbonVm(this);
+            Ribbon.Visiable = true;
+            Ribbon.Clicked += Ribbon_Clicked;
+        }
+
+        private void Ribbon_Clicked(object sender, NodeVmArgs e)
+        {
+
+
         }
 
         private void Test()
@@ -41,12 +51,27 @@ namespace FunnyDation.Client.Wpf
                 Caption = "Test",
                 ToolTip = "Test_ToolTip",
                 ProcessStyle = EuProcessStyle.CloseAndNew
-            }, "DocumentHost") ;
+            }, "DocumentHost");
 
         }
 
         public DockManagerVm DockManager { get; set; }
 
+        public RibbonVm ribbon;
+        public RibbonVm Ribbon
+        {
+            get
+            {
+                return ribbon;
+            }
+
+            set
+            {
+                ribbon = value;
+                SetProperty(ref ribbon, value);
+
+            }
+        }
 
 
         public IEventAggregator eventAggregator;
@@ -87,7 +112,7 @@ namespace FunnyDation.Client.Wpf
             }
             DockManager.CreataOrActiveDocumentPanel(dockPanelParam);
         }
-         
+
         public Assembly RankingAssb { get; set; }
         public DelegateCommand CommandFundBase { get; set; }
 

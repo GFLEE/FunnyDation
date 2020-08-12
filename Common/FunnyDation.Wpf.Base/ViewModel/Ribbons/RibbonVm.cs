@@ -94,5 +94,24 @@ namespace FunnyDation.Wpf.Base.Ribbons
 
             }
         }
+
+        /// <summary>
+        /// 隐藏
+        /// </summary>
+        public bool visiable;
+        public bool Visiable
+        {
+            get
+            {
+                return visiable;
+            }
+
+            set
+            {
+                visiable = value;
+                SetProperty(ref visiable, value);
+
+            }
+        }
     }
 }
