@@ -113,9 +113,9 @@
         </DataTemplate>
 
     </UserControl.Resources>
-    <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" 
+    <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2019" 
                        ShowApplicationButton="{Binding IsShowTabMenu,Mode=TwoWay}" 
-                       CategoriesSource="{Binding PageCatories}">
+                       CategoriesSource="{Binding PageCategories,Mode=TwoWay}">
 
         <dxr:RibbonControl.ApplicationMenu>
             <dxr:BackstageViewControl x:Name="ribbonBackStageViewControl"  

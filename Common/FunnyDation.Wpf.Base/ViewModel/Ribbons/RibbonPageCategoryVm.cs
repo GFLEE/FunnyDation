@@ -12,7 +12,9 @@ namespace FunnyDation.Wpf.Base.Ribbons
     {
         public RibbonPageCategoryVm(RibbonVm ribbonVm)
         {
-
+            Ribbon = ribbonVm;
+            Pages = new ObservableCollection<RibbonPageVm>();
+            IsEnabled = ribbonVm.IsEnabledOfPageCategory;
         }
 
         public bool isEnabled;

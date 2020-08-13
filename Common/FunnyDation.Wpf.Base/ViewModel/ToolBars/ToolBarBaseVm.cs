@@ -15,7 +15,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
 
         }
 
-        public ToolBarBaseVm AddButton(string toolTip, string glyphName, Visibility visibility, bool IsShowBtnText = true)
+        public ToolBarBaseVm AddButton(string toolTip, string glyphName, Visibility visibility = Visibility.Visible, bool IsShowBtnText = true)
         {
             var item = new BarButtonVm(toolTip, glyphName, visibility);
             if (!IsShowBtnText)

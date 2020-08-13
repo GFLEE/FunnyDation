@@ -34,11 +34,32 @@ namespace FunnyDation.Client.Wpf
             Ribbon = new RibbonVm(this);
             Ribbon.Visiable = true;
             Ribbon.Clicked += Ribbon_Clicked;
+            Dictionary<string, string> menus = new Dictionary<string, string>();
+            menus.Add("Test1", ClientUtility.GetGlyphPath("vimeo.png"));
+            menus.Add("Test2", ClientUtility.GetGlyphPath("vimeo.png"));
+            menus.Add("Test3", ClientUtility.GetGlyphPath("vimeo.png"));
+            menus.Add("Test4", ClientUtility.GetGlyphPath("vimeo.png"));
+            menus.Add("Test5", ClientUtility.GetGlyphPath("vimeo.png"));
+            menus.Add("Test6", ClientUtility.GetGlyphPath("vimeo.png"));
+
+            AddPageWithMenus("Test", menus);
+        }
+
+
+        public void AddPageWithMenus(string pageName, Dictionary<string, string> menus)
+        {
+            var page = Ribbon.DefaultPageCategoryVm.AddPage(pageName);
+            var gp = page.AddGroup("gp", ClientUtility.GetGlyphPath("vimeo.png"));
+            foreach (string key in menus.Keys)
+            {
+
+                gp.AddButtonOfLarge(key, key, menus[key]);
+            }
         }
 
         private void Ribbon_Clicked(object sender, NodeVmArgs e)
         {
-
+            Test();
 
         }
 
