@@ -32,17 +32,20 @@ namespace FunnyDation.Client.Wpf
             EventAggregator.GetEvent<DockPanelShowEvent>().Subscribe(DockPanelShow);
             DockManager = new DockManagerVm();
             Ribbon = new RibbonVm(this);
-            Dictionary<string, string> menus = new Dictionary<string, string>();
-            menus.Add("Test1", ClientUtility.GetGlyphPath("vimeo.png"));
-            menus.Add("Test2", ClientUtility.GetGlyphPath("vimeo.png"));
-            menus.Add("Test3", ClientUtility.GetGlyphPath("vimeo.png"));
-            menus.Add("Test4", ClientUtility.GetGlyphPath("vimeo.png"));
-            menus.Add("Test5", ClientUtility.GetGlyphPath("vimeo.png"));
-            menus.Add("Test6", ClientUtility.GetGlyphPath("vimeo.png"));
-
-            AddPageWithMenus("Test", menus);
             Ribbon.Visiable = true;
-            Ribbon.Clicked += Ribbon_Clicked;
+            Ribbon.Clicked += Ribbon_Clicked; Dictionary<string, string> menus = new Dictionary<string, string>();
+            menus.Add("Test1", ClientUtility.GetGlyphPath("aim.png"));
+            menus.Add("Test2", ClientUtility.GetGlyphPath("behance.png"));
+            menus.Add("Test3", ClientUtility.GetGlyphPath("wordpress.png"));
+            menus.Add("Test4", ClientUtility.GetGlyphPath("twitter.png"));
+            menus.Add("Test5", ClientUtility.GetGlyphPath("spotify.png"));
+            menus.Add("Test6", ClientUtility.GetGlyphPath("github.png"));
+            menus.Add("Test7", ClientUtility.GetGlyphPath("rdio.png"));
+
+            AddPageWithMenus("Test1", menus);
+            AddPageWithMenus("Test2", menus);
+            AddPageWithMenus("Test3", menus);
+          
      
         }
 

@@ -16,7 +16,7 @@ namespace FunnyDation.Client.Wpf
         /// <returns></returns>
         public static string GetGlyphPath(string name)
         {
-            return string.Format(@"/FunnyDation.Client.Wpf;component/Images/", name);
+            return string.Format("/FunnyDation.Client.Wpf;component/Images/{0}", name);
         }
     }
 }
