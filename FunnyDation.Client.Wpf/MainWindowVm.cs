@@ -27,19 +27,18 @@ namespace FunnyDation.Client.Wpf
     {
         public MainWindowVm()
         {
-            CommandFundBase = new DelegateCommand(Test);
             EventAggregator = ServiceLocator.Current.TryResolve<IEventAggregator>();
-            EventAggregator.GetEvent<DockPanelShowEvent>().Subscribe(DockPanelShow);
             DockManager = new DockManagerVm();
             Ribbon = new RibbonVm(this);
             Ribbon.Visiable = true;
-            Ribbon.Clicked += Ribbon_Clicked; Dictionary<string, string> menus = new Dictionary<string, string>();
-            menus.Add("Test1", ClientUtility.GetGlyphPath("aim.png"));
-            menus.Add("Test2", ClientUtility.GetGlyphPath("behance.png"));
-            menus.Add("Test3", ClientUtility.GetGlyphPath("wordpress.png"));
-            menus.Add("Test4", ClientUtility.GetGlyphPath("twitter.png"));
-            menus.Add("Test5", ClientUtility.GetGlyphPath("spotify.png"));
-            menus.Add("Test6", ClientUtility.GetGlyphPath("github.png"));
+            Ribbon.Clicked += Ribbon_Clicked; 
+            Dictionary<string, string> menus = new Dictionary<string, string>();
+            menus.Add("Test1", ClientUtility.GetGlyphPath("CustomersKPI_32x32.png"));
+            menus.Add("Test2", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Line_32x32.png"));
+            menus.Add("Test3", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Bar_32x32.png"));
+            menus.Add("Test4", ClientUtility.GetGlyphPath("MoviesKPI_32x32.png"));
+            menus.Add("Test5", ClientUtility.GetGlyphPath("Wizard_32x32.png"));
+            menus.Add("Test6", ClientUtility.GetGlyphPath("Effects_32x32.png"));
             menus.Add("Test7", ClientUtility.GetGlyphPath("rdio.png"));
 
             AddPageWithMenus("Test1", menus);
@@ -114,34 +113,11 @@ namespace FunnyDation.Client.Wpf
                 {
                     return;
                 }
-                eventAggregator.GetEvent<DockPanelShowEvent>().Subscribe(DockPanelShow);
+                
             }
-        }
-
-        private void DockPanelShow(DockPanelShowEventArgs args)
-        {
-            DockPanelParam dockPanelParam = new DockPanelParam()
-            {
-                Caption = args.Caption,
-                ToolTip = args.ToolTip,
-                Crl = args.Crl,
-                TemplateName = args.TemplateName,
-                ProcessStyle = args.ProcessStyle,
-                TargetName = args.TargetName,
-            };
-
-            if (!string.IsNullOrWhiteSpace(dockPanelParam.TargetName))
-            {
-                DockManager.CreataOrActivePanel(dockPanelParam);
-                return;
-            }
-            DockManager.CreataOrActiveDocumentPanel(dockPanelParam);
         }
 
         public Assembly RankingAssb { get; set; }
-        public DelegateCommand CommandFundBase { get; set; }
-
-
         public UserControl GetTestList()
         {
             if (RankingAssb == null)
