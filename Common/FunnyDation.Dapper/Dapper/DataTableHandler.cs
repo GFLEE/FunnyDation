@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     internal sealed class DataTableHandler : SqlMapper.ITypeHandler
     {

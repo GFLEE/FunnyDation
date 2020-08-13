@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     internal sealed class DisposedReader : DbDataReader
     {

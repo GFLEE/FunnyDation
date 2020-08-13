@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     public static partial class SqlMapper
     {

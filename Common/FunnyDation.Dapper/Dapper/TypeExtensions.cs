@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     internal static class TypeExtensions
     {

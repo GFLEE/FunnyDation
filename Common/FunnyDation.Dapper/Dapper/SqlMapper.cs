@@ -19,7 +19,7 @@ using System.Threading;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     /// <summary>
     /// Dapper, a light weight object mapper for ADO.NET

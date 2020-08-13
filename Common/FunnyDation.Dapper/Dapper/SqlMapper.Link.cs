@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     public static partial class SqlMapper
     {

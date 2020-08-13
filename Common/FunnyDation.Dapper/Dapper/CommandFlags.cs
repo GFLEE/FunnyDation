@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     /// <summary>
     /// Additional state flags that control command behaviour

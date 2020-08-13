@@ -9,4 +9,13 @@
     <DocumentationFile>..\..\Assembly\FunnyDation.Service.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FunnyDation.Common\FunnyDation.Common.csproj" />
+    <ProjectReference Include="..\FunnyDation.Dapper\FunnyDation.Dapper.csproj" />
+  </ItemGroup>
+
 </Project>

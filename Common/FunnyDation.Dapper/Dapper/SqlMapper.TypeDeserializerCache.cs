@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     public static partial class SqlMapper
     {

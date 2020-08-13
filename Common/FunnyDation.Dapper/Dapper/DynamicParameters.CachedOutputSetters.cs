@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Dapper
+namespace FunnyDation.Dapper
 {
     public partial class DynamicParameters
     {
