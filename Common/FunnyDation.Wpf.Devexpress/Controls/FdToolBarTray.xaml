@@ -1,6 +1,7 @@
 ﻿<UserControl x:Class="FunnyDation.Wpf.Devexpress.Controls.FdToolBarTray"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:selectors="clr-namespace:FunnyDation.Wpf.Selectors;assembly=FunnyDation.Wpf"             
              xmlns:vms="clr-namespace:FunnyDation.Wpf.Base.ViewModel.ToolBars;assembly=FunnyDation.Wpf.Base"
@@ -18,10 +19,35 @@
                 <Setter Property="Margin" Value="0,0,5,0"/>
             </Style>
             <DataTemplate x:Key="TemplateButton">
-                <Button>
-                    
+                <Button Style="{DynamicResource {x:Static ToolBar.ButtonStyleKey}}"
+                        ToolTip="{Binding ToolTip,Mode=TwoWay}" 
+                        Background="White" Padding="0,0,8,0"
+                        Visibility="{Binding Visibility}"
+                        Command="{Binding CommandClick}">
+                    <WrapPanel Height="auto" Width="auto">
+                        <Image Source="{Binding GlyphName}"/>
+                        <TextBlock TextWrapping="Wrap" Width="auto" 
+                                   Height="auto" Text="{Binding BtnText,Mode=TwoWay}" 
+                                   VerticalAlignment="Center" Padding="3,0,0,0"/>
+                    </WrapPanel>
                 </Button>
             </DataTemplate>
+
+            <DataTemplate x:Key="TemplateButton2">
+                <dxb:BarSubItem  Content="{Binding Name}"
+                                 ToolTip="{Binding ToolTip,Mode=TwoWay}"
+                                 Glyph="{Binding GlyphName}"
+                                 LargeGlyph="{Binding LargeGlyphName}"
+                                 ItemLinksSource="{Binding Items}"
+                                 ItemTemplateSelector="{StaticResource TemplateSelector}"
+                                 Command="{Binding CommandClick}">
+                </dxb:BarSubItem>
+            </DataTemplate>
+
+            <DataTemplate x:Key="TemplateSeparator">
+                <Separator Style="{StaticResource  }" Visibility="{Binding Visibility}"/>
+            </DataTemplate>
+            
         </Grid.Resources>
 
 
