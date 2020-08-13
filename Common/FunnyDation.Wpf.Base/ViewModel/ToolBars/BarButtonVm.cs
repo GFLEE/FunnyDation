@@ -8,7 +8,7 @@ using System.Windows;
 namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
 {
     public class BarButtonVm : BarItemVm
-    { 
+    {
         public BarButtonVm(string toolTip, string glyphName) : base(toolTip)
         {
             this.TemplateName = "TemplateButton";
@@ -69,7 +69,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
         /// <summary>
         /// 显示与否
         /// </summary>
-        public bool isEnableBtn;
+        public bool isEnableBtn = true;
         public bool IsEnableBtn
         {
             get
@@ -103,6 +103,6 @@ namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
 
             }
         }
-     
+
     }
 }

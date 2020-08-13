@@ -163,6 +163,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
             AllNodes[node.Id] = node;
             //加入父子集合
             Relater[node.Id] = Id;
+            node.RefreshShortFullName();
         }
 
         /// <summary>
@@ -236,7 +237,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
                 OnClicked(vm);
             }
 
-            if (Clicked != null || vm != null)
+            if (Clicked != null && vm != null)
             {
                 Clicked(this, new NodeVmArgs(vm));
             }

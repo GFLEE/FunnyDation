@@ -53,9 +53,9 @@ namespace FunnyDation.Wpf.Base.Ribbons
 
         public ObservableCollection<RibbonPageVm> Pages { get; set; }
 
-        public RibbonPageVm AddPage(string Caption)
+        public RibbonPageVm AddPage(string cap)
         {
-            var page = new RibbonPageVm(this.Ribbon) { Caption = caption };
+            var page = new RibbonPageVm(this.Ribbon) { Caption = cap };
 
             Pages.Add(page);
 

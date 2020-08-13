@@ -79,7 +79,8 @@ namespace FunnyDation.Wpf.Base.Ribbons
                 Name = name,
                 LargeGlyphName = largeGlyphName,
             };
-            Items.Add(barButtonVm);
+            //Items.Add(barButtonVm);
+            AddChild(barButtonVm);
             return barButtonVm;
         }
         /// <summary>

@@ -177,7 +177,7 @@ namespace FunnyDation.Wpf.Base.ViewModel
         /// <summary>
         /// RefreshShortFullName
         /// </summary>
-        private void RefreshShortFullName()
+        public void RefreshShortFullName()
         {
             if (this.Container == null)
             {

@@ -32,8 +32,6 @@ namespace FunnyDation.Client.Wpf
             EventAggregator.GetEvent<DockPanelShowEvent>().Subscribe(DockPanelShow);
             DockManager = new DockManagerVm();
             Ribbon = new RibbonVm(this);
-            Ribbon.Visiable = true;
-            Ribbon.Clicked += Ribbon_Clicked;
             Dictionary<string, string> menus = new Dictionary<string, string>();
             menus.Add("Test1", ClientUtility.GetGlyphPath("vimeo.png"));
             menus.Add("Test2", ClientUtility.GetGlyphPath("vimeo.png"));
@@ -43,13 +41,16 @@ namespace FunnyDation.Client.Wpf
             menus.Add("Test6", ClientUtility.GetGlyphPath("vimeo.png"));
 
             AddPageWithMenus("Test", menus);
+            Ribbon.Visiable = true;
+            Ribbon.Clicked += Ribbon_Clicked;
+     
         }
 
 
         public void AddPageWithMenus(string pageName, Dictionary<string, string> menus)
         {
             var page = Ribbon.DefaultPageCategoryVm.AddPage(pageName);
-            var gp = page.AddGroup("gp", ClientUtility.GetGlyphPath("vimeo.png"));
+            var gp = page.AddGroup("gp", "Test");
             foreach (string key in menus.Keys)
             {
 

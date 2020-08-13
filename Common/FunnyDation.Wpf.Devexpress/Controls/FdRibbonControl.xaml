@@ -113,7 +113,8 @@
         </DataTemplate>
 
     </UserControl.Resources>
-    <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2019" 
+    <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2019" ToolbarShowMode="Hide" 
+                       ToolbarShowCustomizationButton="True"
                        ShowApplicationButton="{Binding IsShowTabMenu,Mode=TwoWay}" 
                        CategoriesSource="{Binding PageCategories,Mode=TwoWay}">
 
