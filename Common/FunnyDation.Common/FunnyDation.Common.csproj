@@ -4,6 +4,11 @@
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <OutputPath>..\..\Assembly\</OutputPath>
+    <DocumentationFile>..\..\Assembly\FunnyDation.Common.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
   </ItemGroup>

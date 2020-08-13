@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FunnyDation.Wpf.Base</name>
+    </assembly>
+    <members>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm">
+            <summary>
+            Simple Line
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.DocPanel.DockManagerVm">
+            <summary>
+            Doc ManagerVm
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.DocPanel.EuProcessStyle.Active">
+            <summary>
+            激活
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.DocPanel.EuProcessStyle.UpdateVm">
+            <summary>
+            更新Vm
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.DocPanel.EuProcessStyle.UpdateVmData">
+            <summary>
+            更新VmData
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.DocPanel.EuProcessStyle.CloseAndNew">
+            <summary>
+            关闭并更新
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.DocPanel.EuProcessStyle.New">
+            <summary>
+            新窗口
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.DocPanel.EuProcessStyle.Open">
+            <summary>
+            打开或新建
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.DocPanel.PanelItem">
+            <summary>
+            panel： 唯一ID，名称，内容
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.FDDocPanelVm.AddPanel(System.Int32,System.String,System.Windows.Controls.UserControl)">
+            <summary>
+            Add
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.ICrlVm.OnControlLoaded">
+            <summary>
+            Control Loaded
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.ICrlVm.ActionClose">
+            <summary>
+            注册关闭时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.ICrlVm.CancelClose">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.ICrlVm.Close">
+            <summary>
+            关闭容器
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.NodeContainerVm">
+            <summary>
+            Node容器
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeContainerVm.FindDescendantByDataKey``1(System.String)">
+            <summary>
+            查询后代
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dataKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeContainerVm.AddChild``1(System.Action{``0})">
+            <summary>
+            添加自对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="initVm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeContainerVm.Expand">
+            <summary>
+            展开所有
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeContainerVm.Collapse">
+            <summary>
+            合并所有
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeContainerVm.currentNode">
+            <summary>
+            当前
+            </summary>
+        </member>
+        <member name="E:FunnyDation.Wpf.Base.ViewModel.NodeContainerVm.CurrentNodeChanged">
+            <summary>
+            变更事件
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.NodeVmArgs">
+            <summary>
+            Node参数
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeVm.AddChild(FunnyDation.Wpf.Base.ViewModel.NodeVm)">
+            <summary>
+            Add a child node
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeVm.RemoveChild(FunnyDation.Wpf.Base.ViewModel.NodeVm)">
+            <summary>
+            移除节点及其关系
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeVm.AddChild``1(System.Action{``0})">
+            <summary>
+            添加自对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="initVm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeVm.GetParent">
+            <summary>
+            获取父节点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.NodeVm.Data">
+            <summary>
+            附着数据
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.name">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.shortName">
+            <summary>
+            短名称
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.shortFullName">
+            <summary>
+            短名称全路径
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeVm.RefreshShortFullName">
+            <summary>
+            RefreshShortFullName
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.isLazyLoaded">
+            <summary>
+            IsLazyLoaded
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.isSelected">
+            <summary>
+            选中
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.typeKey">
+            <summary>
+            类型关键字
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.orderID">
+            <summary>
+            orderID
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.glyphName">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.templateName">
+            <summary>
+            TemplateName
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.commandClick">
+            <summary>
+            命令事件
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.NodeVm.commandDoubleClick">
+            <summary>
+            双击命令事件
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.NodeVm.FindAncestry``1">
+            <summary>
+            查找祖先节点
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarButtonVm.largeGlyphName">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarButtonVm.visibility">
+            <summary>
+            显示隐藏
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarButtonVm.isEnableBtn">
+            <summary>
+            显示与否
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarButtonVm.btnText">
+            <summary>
+            Button Text
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarItemVm">
+            <summary>
+            BarItemVm
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm.isEnableToolBar">
+            <summary>
+            使能ToolBar
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm.toolBarOpacity">
+            <summary>
+            ToolBar 透明度
+            </summary>
+        </member>
+        <member name="E:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm.Clicked">
+            <summary>
+            点击事件
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.Ribbons.RibbonPageGroupVm.AddButton1(System.String,System.String,System.String,System.String,System.String,System.Windows.Visibility)">
+            <summary>
+            Add Button Base
+            </summary>
+            <param name="dataKey"></param>
+            <param name="name"></param>
+            <param name="glyphName"></param>
+            <param name="largeGlyphName"></param>
+            <param name="toolTip"></param>
+            <param name="visibility"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.Ribbons.RibbonPageGroupVm.AddButtonOfLarge(System.String,System.String,System.String,System.String)">
+            <summary>
+            Large Button
+            </summary>
+            <param name="dataKey"></param>
+            <param name="name"></param>
+            <param name="glyphName"></param>
+            <param name="toolTip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.Ribbons.RibbonPageGroupVm.AddButtonOfSmall(System.String,System.String,System.String,System.String)">
+            <summary>
+            Small Button
+            </summary>
+            <param name="dataKey"></param>
+            <param name="name"></param>
+            <param name="glyphName"></param>
+            <param name="toolTip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.Ribbons.RibbonPageGroupVm.AddButtonGroup">
+            <summary>
+            添加按钮组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.Ribbons.RibbonVm.ApplicationBtnPanelVm">
+            <summary>
+            整体导航页面
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.Ribbons.RibbonVm.isShowTabMenu">
+            <summary>
+            显示Back Tab
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.Ribbons.RibbonVm.visiable">
+            <summary>
+            隐藏
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.VmLinkVm.OnSourceVmChanged">
+            <summary>
+            OnSourceVmChanged
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.VmLinkVm.CallBack(System.String,System.Object)">
+            <summary>
+            Rela Object Invoke
+            </summary>
+            <param name="name"></param>
+            <param name="param"></param>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.VmLinkVm.FindSourceVm``1">
+            <summary>
+            查找SourceVm
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.VmLinkVm.RegisterFindFakeSourceVm(FunnyDation.Wpf.Base.VmLinkVm.FakeFinder)">
+            <summary>
+            注册可以类似SourceVm查找的委托
+            </summary>
+            <param name="finder"></param>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.VmLinkVm.FakeFinder.#ctor(System.Func{System.Object,System.Object},System.Func{System.Object,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <param name="find">查找的委托</param>
+            <param name="check">是否应用“查找的委托”</param>
+        </member>
+    </members>
+</doc>

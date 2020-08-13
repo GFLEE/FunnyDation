@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FunnyDation.Wpf.Devexpress</name>
+    </assembly>
+    <members>
+        <member name="T:FunnyDation.Wpf.Devexpress.Controls.Charts.FdLine">
+            <summary>
+            FdLine.xaml 的交互逻辑
+            </summary>
+            <summary>
+            FdLine
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.Charts.FdLine.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Devexpress.Controls.FdDocPanel">
+            <summary>
+            FDDocPanel.xaml 的交互逻辑
+            </summary>
+            <summary>
+            FdDocPanel
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdDocPanel.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Devexpress.Controls.FdGridControl">
+            <summary>
+            FdGridControl.xaml 的交互逻辑
+            </summary>
+            <summary>
+            FdGridControl
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdGridControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Devexpress.Controls.FdRibbonControl">
+            <summary>
+            FdRibbonControl.xaml 的交互逻辑
+            </summary>
+            <summary>
+            FdRibbonControl
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdRibbonControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Devexpress.Properties.Resources">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Devexpress.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Devexpress.Properties.Resources.Culture">
+            <summary>
+              覆盖当前线程的 CurrentUICulture 属性
+              使用此强类型的资源类的资源查找。
+            </summary>
+        </member>
+    </members>
+</doc>
