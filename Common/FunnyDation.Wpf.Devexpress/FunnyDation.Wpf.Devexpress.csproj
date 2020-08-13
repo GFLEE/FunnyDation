@@ -137,6 +137,9 @@
     <Compile Include="Controls\FdRibbonControl.xaml.cs">
       <DependentUpon>FdRibbonControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FdToolBarTray.xaml.cs">
+      <DependentUpon>FdToolBarTray.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converter\FieldTypeToEditSettingsConverter.cs" />
     <Compile Include="Prisms\DockPanelShowEvent.cs" />
     <Compile Include="Prisms\DockPanelShowEventArgs.cs" />
@@ -183,6 +186,10 @@
     <Page Include="Controls\FdRibbonControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FdToolBarTray.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

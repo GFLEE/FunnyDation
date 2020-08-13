@@ -56,6 +56,19 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:FunnyDation.Wpf.Devexpress.Controls.FdToolBarTray">
+            <summary>
+            FdToolBarTray.xaml 的交互逻辑
+            </summary>
+            <summary>
+            FdToolBarTray
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdToolBarTray.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:FunnyDation.Wpf.Devexpress.Properties.Resources">
             <summary>
               强类型资源类，用于查找本地化字符串等。

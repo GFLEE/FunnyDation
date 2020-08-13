@@ -10,16 +10,31 @@ using DevExpress.Xpf.Core.Utils;
 
 namespace FunnyDation.Wpf.Base.ViewModel.ToolBars
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ToolBarTrayVm : BindableBase
     {
+        /// <summary>
+        /// ToolBarTrayVm
+        /// </summary>
         public ToolBarTrayVm()
         {
 
         }
+        /// <summary>
+        /// default
+        /// </summary>
+        /// <param name="hostVm"></param>
         public ToolBarTrayVm(object hostVm) : this(hostVm, "default")
         {
 
         }
+        /// <summary>
+        /// ToolBarTrayVm
+        /// </summary>
+        /// <param name="hostVm"></param>
+        /// <param name="key"></param>
         public ToolBarTrayVm(object hostVm, string key)
         {
             HostVm = hostVm;

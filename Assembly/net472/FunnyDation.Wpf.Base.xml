@@ -247,6 +247,29 @@
             BarItemVm
             </summary>
         </member>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm.#ctor">
+            <summary>
+            ToolBarTrayVm
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm.#ctor(System.Object)">
+            <summary>
+            default
+            </summary>
+            <param name="hostVm"></param>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm.#ctor(System.Object,System.String)">
+            <summary>
+            ToolBarTrayVm
+            </summary>
+            <param name="hostVm"></param>
+            <param name="key"></param>
+        </member>
         <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm.isEnableToolBar">
             <summary>
             使能ToolBar

@@ -15,7 +15,8 @@
              xmlns:selectors="clr-namespace:FunnyDation.Wpf.Selectors;assembly=FunnyDation.Wpf"
              xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
              xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-             xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"            
+             xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"  
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True,Type=x:Type ribbons:RibbonVm}"
              mc:Ignorable="d" d:DesignHeight="150" d:DesignWidth="400" >
 
     <UserControl.Resources>
