@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
              xmlns:selectors="clr-namespace:FunnyDation.Wpf.Selectors;assembly=FunnyDation.Wpf"             
              xmlns:vms="clr-namespace:FunnyDation.Wpf.Base.ViewModel.ToolBars;assembly=FunnyDation.Wpf.Base"
+             xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True,Type=x:Type vms:ToolBarTrayVm}"
@@ -40,23 +42,54 @@
                                  LargeGlyph="{Binding LargeGlyphName}"
                                  ItemLinksSource="{Binding Items}"
                                  ItemTemplateSelector="{StaticResource TemplateSelector}"
-                                 Command="{Binding CommandClick}">
-                </dxb:BarSubItem>
+                                 Command="{Binding CommandClick}"/>
+
             </DataTemplate>
 
             <DataTemplate x:Key="TemplateSeparator">
-                <Separator Style="{StaticResource  }" Visibility="{Binding Visibility}"/>
+                <Separator Style="{x:Static ToolBar.SeparatorStyleKey}" Visibility="{Binding Visibility}"/>
             </DataTemplate>
-            
+
+            <DataTemplate x:Key="TemplateTextBox">
+                <dxe:TextEdit Text="{Binding Text ,UpdateSourceTrigger=PropertyChanged}"
+                              Foreground="{Binding FontColor}"
+                              Padding="0,6,0,0"/>
+
+            </DataTemplate>
+
+            <DataTemplate x:Key="TemplateCombo">
+                <dxe:ComboBoxEdit VerticalAlignment="Center"
+                                  Name="combo"
+                                  AllowDefaultButton="False"
+                                  NullText="{Binding NullText,Mode=TwoWay}"
+                                  DisplayMember="{Binding DisplayMember}"
+                                  ValueMember="{Binding ValueMember}"
+                                  SelectedItem="{Binding SelectedItem,UpdateSourceTrigger=PropertyChanged}"
+                                  ItemsSource="{Binding ItemsSource,Mode=TwoWay}"
+                                  ToolTip="{Binding ToolTip,Mode=TwoWay}"
+                                  Width="{Binding Width}" Height="27" Margin="0,0,10,0"
+                                  IsTextEditable="False" BorderThickness="1" BorderBrush="Black"
+                                  Visibility="{Binding Visibility}">
+                    <dxe:ComboBoxEdit.Buttons>
+                        <dxe:ButtonInfo>
+                            <dxe:ButtonInfo.Template>
+                                <DataTemplate>
+                                    <dxe:ButtonClose Command="{Binding ElementName=combo,Path=DataContext.CommandClear}"
+                                                     HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,0"/>
+                                </DataTemplate>
+                            </dxe:ButtonInfo.Template>
+                        </dxe:ButtonInfo>
+                        <dxe:ButtonInfo IsDefaultButton="True" GlyphKind="DropDown"/>
+                    </dxe:ComboBoxEdit.Buttons>
+                </dxe:ComboBoxEdit>
+            </DataTemplate>
         </Grid.Resources>
-
-
-
-
-
-
-
-
-
+        <Border Grid.Row="0" BorderBrush="WhiteSmoke" BorderThickness="0,0,0,3" >
+            <ToolBarTray IsLocked="True" ToolBar.OverflowMode="Never"
+                         IsEnabled="{Binding IsEnabledToolBar,Mode=TwoWay}"
+                         local:FdToolBarTray.Bars="{Binding Bars}" Background="White" 
+                         Opacity="{Binding ToolBarOpacity,Mode=TwoWay}" ></ToolBarTray>
+            
+        </Border>
     </Grid>
 </UserControl>

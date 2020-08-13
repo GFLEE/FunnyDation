@@ -64,6 +64,34 @@
             FdToolBarTray
             </summary>
         </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdToolBarTray.GetBars(System.Windows.DependencyObject)">
+            <summary>
+            GetBars
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdToolBarTray.SetBars(System.Windows.DependencyObject,System.Collections.ObjectModel.ObservableCollection{FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarVm})">
+            <summary>
+            SetBars
+            </summary>
+            <param name="obj"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdToolBarTray.OnBarsPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Add Bar
+            </summary>
+            <param name="d"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdToolBarTray.Tb_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Hidden ToolBar's  Overflow Grid
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdToolBarTray.InitializeComponent">
             <summary>
             InitializeComponent
