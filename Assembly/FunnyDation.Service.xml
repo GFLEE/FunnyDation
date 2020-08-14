@@ -612,5 +612,57 @@
             Custom for Dapper.SimpleCRUD to exclude a property from Update methods
             </summary>
         </member>
+        <member name="T:FunnyDation.Service.IBaseRepository`1">
+            <summary>
+            接口层 
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Service.IBaseRepository`1.Add(`0)">
+            <summary>
+            增加一条数据
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Service.IBaseRepository`1.Delete(System.Int32)">
+            <summary>
+            根据ID删除一条数据
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Service.IBaseRepository`1.DeleteList(System.String,System.Object)">
+            <summary>
+            根据条件删除数据
+            </summary>
+            <param name="strWhere"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Service.IBaseRepository`1.Update(`0)">
+            <summary>
+            更新一条数据
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Service.IBaseRepository`1.GetModel(System.Int32)">
+            <summary>
+            根据ID获取实体对象
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Service.IBaseRepository`1.GetModelList(System.String,System.Object)">
+            <summary>
+            根据条件获取实体对象集合
+            </summary>
+            <param name="strWhere"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Service.IBaseRepository`1.GetListPage(System.Int32,System.Int32,System.String,System.String,System.Object)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="pageNum">页码</param>
+            <param name="rowsNum">每页行数</param>
+            <param name="strWhere">where条件</param>
+            <param name="orderBy">Orde by排序</param>
+            <param name="parameters">parameters参数</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

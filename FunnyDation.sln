@@ -32,7 +32,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Service", "Common\FunnyDation.Service\FunnyDation.Service.csproj", "{AEA64FA3-147D-4402-AC7B-B28ACDD2EC60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Service", "Common\FunnyDation.Service\FunnyDation.Service.csproj", "{AEA64FA3-147D-4402-AC7B-B28ACDD2EC60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dev2018", "Dev2018", "{D4AE5090-D35C-4B45-8E67-8F9AC02F8D9C}"
+	ProjectSection(SolutionItems) = preProject
+		Dev2018\DevExpress.Data.v18.1.dll = Dev2018\DevExpress.Data.v18.1.dll
+		Dev2018\DevExpress.Mvvm.v18.1.dll = Dev2018\DevExpress.Mvvm.v18.1.dll
+		Dev2018\DevExpress.Xpf.Charts.v18.1.dll = Dev2018\DevExpress.Xpf.Charts.v18.1.dll
+		Dev2018\DevExpress.Xpf.Core.v18.1.dll = Dev2018\DevExpress.Xpf.Core.v18.1.dll
+		Dev2018\DevExpress.Xpf.Docking.v18.1.dll = Dev2018\DevExpress.Xpf.Docking.v18.1.dll
+		Dev2018\DevExpress.Xpf.Grid.v18.1.Core.dll = Dev2018\DevExpress.Xpf.Grid.v18.1.Core.dll
+		Dev2018\DevExpress.Xpf.Grid.v18.1.dll = Dev2018\DevExpress.Xpf.Grid.v18.1.dll
+		Dev2018\DevExpress.Xpf.Layout.v18.1.Core.dll = Dev2018\DevExpress.Xpf.Layout.v18.1.Core.dll
+		Dev2018\DevExpress.Xpf.LayoutControl.v18.1.dll = Dev2018\DevExpress.Xpf.LayoutControl.v18.1.dll
+		Dev2018\DevExpress.Xpf.Ribbon.v18.1.dll = Dev2018\DevExpress.Xpf.Ribbon.v18.1.dll
+		Dev2018\DevExpress.Xpf.Themes.Office2013.v18.1.dll = Dev2018\DevExpress.Xpf.Themes.Office2013.v18.1.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
