@@ -36,6 +36,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Service", "Comm
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dev2018", "Dev2018", "{D4AE5090-D35C-4B45-8E67-8F9AC02F8D9C}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\DevExpress.Charts.v18.1.Core.dll = ..\..\..\Desktop\DevExpress.Charts.v18.1.Core.dll
 		Dev2018\DevExpress.Data.v18.1.dll = Dev2018\DevExpress.Data.v18.1.dll
 		Dev2018\DevExpress.Mvvm.v18.1.dll = Dev2018\DevExpress.Mvvm.v18.1.dll
 		Dev2018\DevExpress.Xpf.Charts.v18.1.dll = Dev2018\DevExpress.Xpf.Charts.v18.1.dll
