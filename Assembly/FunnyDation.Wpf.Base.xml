@@ -9,11 +9,6 @@
             DataSource
             </summary>
         </member>
-        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.primaryKey">
-            <summary>
-            数据主键
-            </summary>
-        </member>
         <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.xLabel">
             <summary>
             X轴标签 

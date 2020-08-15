@@ -17,37 +17,38 @@ namespace FunnyDation.Wpf.Fund.Views
     public class CrlFundListVm : CrlVm
     {
         public IRESTService _RESTService { get; set; }
-        public CrlFundListVm(IRESTService rESTService)
+        public CrlFundListVm(IRESTService rESTService) : base()
         {
             this._RESTService = rESTService;
-            LineVm = new LineVm();
-            LineVm.ChartTitle = "TITLE";
-            LineVm.XLabel = "X";
-            LineVm.YLabel = "Y";
-            LineVm.XParam = "X_Decimal_Value";
-            LineVm.XParam = "Y_Decimal_Value";
-
+            LineVm = new LineVm("X_Decimal_Value", "Y_Decimal_Value", "TITLE", "X", "Y");
+            LineVm.LineColor = "lightblue";
         }
 
         public override void OnInitComplete()
         {
             GetList();
             InitLine();
+
         }
 
         public void InitLine()
         {
-            for (int i = 0; i < 20; i++)
-            {
-                ChartDataBase data = new ChartDataBase("line_key", i, i + 2);
-                this.LineVm.DataSource.Add(data);
-            }
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    ChartDataBase data = new ChartDataBase("line_key", i, i + 2);
+            //    this.LineVm.DataSource.Add(data);
+            //}
 
-            for (int i = 0; i < 20; i += 2)
-            {
-                ChartDataBase data = new ChartDataBase("line_key2", i, i + 2);
-                this.LineVm.DataSource.Add(data);
-            }
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    ChartDataBase data = new ChartDataBase("line_key2", i, i + 4);
+            //    this.LineVm.DataSource.Add(data);
+            //}
+
+            var data = WebTool.GetFunDetail(_RESTService, "007301").data;
+
+
+
         }
 
         public async void GetList()
@@ -56,7 +57,6 @@ namespace FunnyDation.Wpf.Fund.Views
             {
                 //List<FundBase> datas = new List<FundBase>();
                 //datas = WebTool.GetFundingList(_RESTService).data;
-                //Datas = datas;
                 //MessageBox.Show(string.Join(",", datas.Select(P => P.name)));
 
                 //return datas;
@@ -66,7 +66,8 @@ namespace FunnyDation.Wpf.Fund.Views
         }
 
 
-        public List<FundBase> Datas { get; set; }
+
+
 
 
         public LineVm lineVm;

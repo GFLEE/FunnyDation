@@ -6,27 +6,42 @@ using System.IO.Packaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
+using System.Windows.Media;
 
 namespace FunnyDation.Wpf.Base.ViewModel.Charts
 {
-    public class ChartBase : CrlVm
+    public class ChartBase : BindableBase
     {
         public ChartBase()
         {
-            DataSource = new ObservableCollection<ChartDataBase>();
 
+            DataSource = new List<ChartDataBase>();
 
         }
 
 
 
+        public string lineColor;
+        public string LineColor
+        {
+            get
+            {
+                return lineColor;
+            }
+
+            set
+            {
+                lineColor = value;
+                SetProperty(ref lineColor, value);
+
+            }
+        }
+
         /// <summary>
         /// DataSource
         /// </summary>
-        public ObservableCollection<ChartDataBase> dataSource;
-        public ObservableCollection<ChartDataBase> DataSource
+        public List<ChartDataBase> dataSource;
+        public List<ChartDataBase> DataSource
         {
             get
             {
@@ -41,26 +56,6 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
             }
         }
 
-
-
-        /// <summary>
-        /// 数据主键
-        /// </summary>
-        public string primaryKey;
-        public string PrimaryKey
-        {
-            get
-            {
-                return primaryKey;
-            }
-
-            set
-            {
-                primaryKey = value;
-                SetProperty(ref primaryKey, value);
-
-            }
-        }
 
         /// <summary>
         /// X轴标签 

@@ -14,6 +14,7 @@ namespace FunnyDation.Common
 
         #region fund
         public const string FundBaseUrl = @"https://api.doctorxiong.club/v1/fund";
+        public const string FundDetailUrl = @"https://api.doctorxiong.club/v1/fund/detail";
 
 
 

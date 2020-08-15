@@ -1,5 +1,6 @@
 ﻿using FunnyDation.Common;
 using FunnyDation.Wpf.Fund.Base;
+using FunnyDation.Wpf.Ranking.Base;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,33 @@ namespace FunnyDation.Wpf.Fund
             }
 
         }
+
+
+
+        public static FunDetail GetFunDetail(IRESTService rESTService, string code)
+        {
+
+            Dictionary<string, string> dic = new Dictionary<string, string>
+            {
+                { "code", code}
+            };
+
+            var res = rESTService.Get(FDConst.FundDetailUrl, dic);
+
+            FunDetail fundInfo = JsonConvert.DeserializeObject<FunDetail>(res);
+            if (fundInfo.code.Equals(200))
+            {
+                return fundInfo;
+
+            }
+            else
+            {
+                throw new Exception("Get Failed!");
+            }
+
+        }
+
+
 
 
 

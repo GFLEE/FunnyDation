@@ -17,6 +17,16 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
 
 
         }
+        public LineVm(string x_param, string y_param, string title, 
+            string x_label, string y_label, int marker_size = 10) : base()
+        {
+            this.XParam = x_param;
+            this.YParam = y_param;
+            this.ChartTitle = title;
+            this.XLabel = x_label;
+            this.yLabel = y_label;
+            this.MarkerSize = marker_size;
+        }
 
         /// <summary>
         /// 标记圆点大小
