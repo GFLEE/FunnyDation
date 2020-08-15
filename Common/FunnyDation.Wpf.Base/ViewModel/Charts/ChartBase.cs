@@ -20,7 +20,26 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
 
         }
 
-        public ObservableCollection<ChartDataBase> DataSource { get; set; }
+
+
+        /// <summary>
+        /// DataSource
+        /// </summary>
+        public ObservableCollection<ChartDataBase> dataSource;
+        public ObservableCollection<ChartDataBase> DataSource
+        {
+            get
+            {
+                return dataSource;
+            }
+
+            set
+            {
+                dataSource = value;
+                SetProperty(ref dataSource, value);
+
+            }
+        }
 
 
 

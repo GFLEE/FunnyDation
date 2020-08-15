@@ -133,6 +133,10 @@
       <Project>{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}</Project>
       <Name>FunnyDation.Wpf.Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Common\FunnyDation.Wpf.Devexpress\FunnyDation.Wpf.Devexpress.csproj">
+      <Project>{a3ec9455-4c46-4062-99e1-0d7040b4c4bf}</Project>
+      <Name>FunnyDation.Wpf.Devexpress</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\FunnyDation.Wpf\FunnyDation.Wpf.csproj">
       <Project>{B588DC29-15D4-4D80-9AD1-75AE60B08EB9}</Project>
       <Name>FunnyDation.Wpf</Name>

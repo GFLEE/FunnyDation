@@ -4,6 +4,11 @@
         <name>FunnyDation.Wpf.Base</name>
     </assembly>
     <members>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.dataSource">
+            <summary>
+            DataSource
+            </summary>
+        </member>
         <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.primaryKey">
             <summary>
             数据主键

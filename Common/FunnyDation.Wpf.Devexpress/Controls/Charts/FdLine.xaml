@@ -16,10 +16,9 @@
             Name="chart"
             AnimationMode="OnDataChanged"
             CrosshairEnabled="True"
-            DataSource="{Binding DataSource}">
+            DataSource="{Binding DataSource,Mode=TwoWay}"  >
             <dxc:ChartControl.Diagram>
-                <dxc:XYDiagram2D
-                    SeriesDataMember="{Binding PrimaryKey,Mode=TwoWay}">
+                <dxc:XYDiagram2D SeriesDataMember="{Binding PrimaryKey,Mode=TwoWay}">
                     <dxc:XYDiagram2D.AxisX>
                         <dxc:AxisX2D  GridLinesVisible="True">
                             <dxc:AxisX2D.Title>
@@ -44,15 +43,15 @@
                     <dxc:XYDiagram2D.SeriesTemplate>
                         <dxc:LineSeries2D
                             MarkerSize="{Binding MarkerSize,Mode=TwoWay}"
-                            MarkerVisible="True"
+                            MarkerVisible="True" 
                             ArgumentDataMember="{Binding XParam,Mode=TwoWay}"
                             ValueDataMember="{Binding YParam,Mode=TwoWay}"
                             LabelsVisibility="True">
-                            <dxc:LineSeries2D.Label>
+                            <!--<dxc:LineSeries2D.Label>
                                 <dxc:SeriesLabel
                                     ConnectorVisible="False"
                                     ResolveOverlappingMode="Default" />
-                            </dxc:LineSeries2D.Label>
+                            </dxc:LineSeries2D.Label>-->
                         </dxc:LineSeries2D>
                     </dxc:XYDiagram2D.SeriesTemplate>
                 </dxc:XYDiagram2D>

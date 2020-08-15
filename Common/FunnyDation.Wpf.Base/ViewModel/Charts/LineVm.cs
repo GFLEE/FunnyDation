@@ -12,9 +12,8 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
     /// </summary>
     public class LineVm : ChartBase
     {
-        public LineVm()
+        public LineVm() : base()
         {
-
 
 
         }
@@ -22,7 +21,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
         /// <summary>
         /// 标记圆点大小
         /// </summary>
-        public int markerSize;
+        public int markerSize = 5;
         public int MarkerSize
         {
             get
@@ -41,8 +40,8 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
         /// <summary>
         /// X轴参数
         /// </summary>
-        public int xParam;
-        public int XParam
+        public string xParam;
+        public string XParam
         {
             get
             {
@@ -60,8 +59,8 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
         /// <summary>
         /// Y轴参数
         /// </summary>
-        public int yParam;
-        public int YParam
+        public string yParam;
+        public string YParam
         {
             get
             {

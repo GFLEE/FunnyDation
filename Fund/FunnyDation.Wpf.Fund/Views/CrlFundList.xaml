@@ -5,10 +5,14 @@
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FunnyDation.Wpf.Fund.Views"
-             mc:Ignorable="d"      xmlns:prism="http://prismlibrary.com/" 
+             xmlns:crls="clr-namespace:FunnyDation.Wpf.Devexpress.Controls.Charts;assembly=FunnyDation.Wpf.Devexpress"             
+             mc:Ignorable="d"      
+             xmlns:prism="http://prismlibrary.com/" 
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock FontSize="20" Text="9211"></TextBlock>
+
+        <crls:FdLine DataContext="{Binding LineVm}"/>
+
     </Grid>
 </UserControl>

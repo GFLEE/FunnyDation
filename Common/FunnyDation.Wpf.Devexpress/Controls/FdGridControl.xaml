@@ -12,6 +12,7 @@
              xmlns:dxdb="http://schemas.devexpress.com/winfx/2008/xaml/demobase"
              xmlns:dxrudex="http://schemas.devexpress.com/winfx/2008/xaml/reports/userdesignerextensions"
              xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+             xmlns:selectors="clr-namespace:FunnyDation.Wpf.Selectors;assembly=FunnyDation.Wpf"             
              xmlns:dynamicColumns="clr-namespace:FunnyDation.Wpf.Devexpress.Converter"
              xmlns:ViewModels="clr-namespace:FunnyDation.Wpf.Base.ViewModel.Grid;assembly=FunnyDation.Wpf.Base"
              xmlns:dxci="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
@@ -19,6 +20,7 @@
              d:DesignHeight="450" d:DesignWidth="800" 
              DataContext="{dxmvvm:ViewModelSource Type=ViewModels:GridVm}">
     <UserControl.Resources>
+        <selectors:TemplateSelector x:Key="GridColumnTemplateSelector" DefaultTemplateName="GridColumnTemplate" />
         <Style TargetType="{x:Type dxg:GridControl}">
             <Setter Property="AutoGenerateColumns" Value="None"/>
             <Setter Property="EnableSmartColumnsGeneration" Value="True"/>
@@ -68,18 +70,26 @@
         </Style>
     </UserControl.Resources>
     <dxg:GridControl Name="grid" 
-                         AutoExpandAllGroups="True"
-                         ItemsSource="{Binding DataSource,Mode=TwoWay}"
-                         ColumnsSource="{Binding Columns}" 
-                         SelectedItems="{Binding SelectedItems}"
-                         AllowColumnMRUFilterList="False" ShowLoadingPanel="False"
-                         dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
-                         ShowBorder="False">
+                     AutoExpandAllGroups="True"
+                     ItemsSource="{Binding Datas,Mode=TwoWay}"
+                     Visibility="{Binding IsVisiable,Mode=TwoWay}"
+                     ColumnsSource="{Binding Columns}" 
+                     SelectedItems="{Binding SelectedItems}"
+                     ColumnGeneratorTemplateSelector="{StaticResource GridColumnTemplateSelector}"
+                     AllowColumnMRUFilterList="False" 
+                     ShowLoadingPanel="False"
+                     SelectionMode="Row"
+                     dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
+                     ShowBorder="False">
         <dxg:GridControl.View>
             <dxg:TableView     ShowFixedTotalSummary="True"
                                AllowScrollAnimation="True"
-                               Name="view" ShowAutoFilterRow="False"
-                               ShowBandsPanel="False" ShowIndicator="False"
+                               Name="view" 
+                               ShowSearchPanelMode="Never"
+                               ShowAutoFilterRow="False"
+                               ShowBandsPanel="False" 
+                               ShowIndicator="False"
+                               AutoWidth="{Binding AutoWidth}"
                                RowStyle="{Binding RowStyle}"
                                FocusedRow="{Binding SelectItem}"
                                ShowSearchPanelFindButton="False"
@@ -89,9 +99,18 @@
                                NavigationStyle="Row"
                                AllowPrintColumnHeaderImage="True"
                                UseLegacyFilterPanel="False"
-                               HighlightItemOnHover="True">
+                               HighlightItemOnHover="True"  
+                               ShowCheckBoxSelectorColumn="{Binding IsShowCheckBox}">
+                <dxmvvm:Interaction.Behaviors>
+                    <dxmvvm:EventToCommand EventName="RowDoubleClick" Command="{Binding CommandDoubleClick}">
+                        <!--<dxmvvm:EventToCommand.EventArgsConverter>
+                            <convert:EventConvert/>
+                        </dxmvvm:EventToCommand.EventArgsConverter>-->
+                    </dxmvvm:EventToCommand>
+                </dxmvvm:Interaction.Behaviors>
             </dxg:TableView>
         </dxg:GridControl.View>
+       
     </dxg:GridControl>
 
 </UserControl>
