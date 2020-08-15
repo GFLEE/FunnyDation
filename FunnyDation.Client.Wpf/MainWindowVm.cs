@@ -20,6 +20,7 @@ using FunnyDation.Wpf.Devexpress.Prisms;
 using CommonServiceLocator;
 using System.Windows.Controls;
 using FunnyDation.Wpf.Base.Ribbons;
+using FunnyDation.Client.Wpf.Views;
 
 namespace FunnyDation.Client.Wpf
 {
@@ -31,7 +32,34 @@ namespace FunnyDation.Client.Wpf
             DockManager = new DockManagerVm();
             Ribbon = new RibbonVm(this);
             Ribbon.Visiable = true;
-            Ribbon.Clicked += Ribbon_Clicked; 
+            Ribbon.Clicked += Ribbon_Clicked;
+
+            InitRibbonDocs();
+            InitMenu();
+
+
+
+
+        }
+
+        public void InitRibbonDocs()
+        {
+            var crl = CrlFactory.Create<Welcome>((crlvm) =>
+            {
+
+            });
+            DockManager.CreataOrActiveLayoutPanel(new DockPanelParam()
+            {
+                Crl = crl,
+                Caption = "Welcome",
+                ToolTip = "Welcome",
+                ProcessStyle = EuProcessStyle.CloseAndNew
+            }, "DocumentHost");
+
+        }
+
+        public void InitMenu()
+        {
             Dictionary<string, string> menus = new Dictionary<string, string>();
             menus.Add("Test1Test1", ClientUtility.GetGlyphPath("CustomersKPI_32x32.png"));
             menus.Add("Test2Test2", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Line_32x32.png"));
@@ -44,10 +72,7 @@ namespace FunnyDation.Client.Wpf
             AddPageWithMenus("Test1Test1", menus);
             AddPageWithMenus("Test2Test2", menus);
             AddPageWithMenus("Test3Test3", menus);
-          
-     
         }
-
 
         public void AddPageWithMenus(string pageName, Dictionary<string, string> menus)
         {
@@ -113,7 +138,7 @@ namespace FunnyDation.Client.Wpf
                 {
                     return;
                 }
-                
+
             }
         }
 

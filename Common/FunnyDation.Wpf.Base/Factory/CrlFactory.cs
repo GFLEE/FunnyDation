@@ -16,6 +16,7 @@ namespace FunnyDation.Wpf.Base
 
             var crl = res as FrameworkElement;
             var crlVm = crl.DataContext as CrlVm;
+
             if (crlVm != null)
             {
                 crl.Loaded += Crl_Loaded;
@@ -23,6 +24,28 @@ namespace FunnyDation.Wpf.Base
             }
             return res;
         }
+
+        public static T Create<T>(Action<CrlVm> init) where T : class
+        {
+            var res = ServiceLocator.Current.GetInstance<T>();
+
+            var crl = res as FrameworkElement;
+            var crlVm = crl.DataContext as CrlVm;
+            if (crlVm != null)
+            {
+                if (init != null)
+                {
+                    crlVm.Init(init);
+                }
+                else
+                {
+                    crlVm.Init();
+                }
+            } 
+            crl.Loaded += Crl_Loaded;
+            return res;
+        }
+
         public static object Create(Type type)
         {
             if (type == null)
