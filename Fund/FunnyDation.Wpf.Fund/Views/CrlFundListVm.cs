@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
+using System.Windows.Threading;
 
 namespace FunnyDation.Wpf.Fund.Views
 {
@@ -20,49 +21,36 @@ namespace FunnyDation.Wpf.Fund.Views
         public CrlFundListVm(IRESTService rESTService) : base()
         {
             this._RESTService = rESTService;
-            LineVm = new LineVm("X_Decimal_Value", "Y_Decimal_Value", "TITLE", "X", "Y");
+            LineVm = new LineVm("X_String_Value", "Y_String_Value", "TITLE", "日期", "净值涨幅");
             LineVm.LineColor = "lightblue";
         }
 
         public override void OnInitComplete()
         {
-            GetList();
             InitLine();
 
         }
 
         public void InitLine()
         {
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    ChartDataBase data = new ChartDataBase("line_key", i, i + 2);
-            //    this.LineVm.DataSource.Add(data);
-            //}
-
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    ChartDataBase data = new ChartDataBase("line_key2", i, i + 4);
-            //    this.LineVm.DataSource.Add(data);
-            //}
-
-            var data = WebTool.GetFunDetail(_RESTService, "007301").data;
-
-
+            GetList();
 
         }
 
         public async void GetList()
         {
-            await Task.Run(() =>
-            {
-                //List<FundBase> datas = new List<FundBase>();
-                //datas = WebTool.GetFundingList(_RESTService).data;
-                //MessageBox.Show(string.Join(",", datas.Select(P => P.name)));
+           
+                //007301
+                //161725
+                var data = WebTool.GetFunDetail(_RESTService, "161725").data;
+                LineVm.ChartTitle = data.name;
+                foreach (List<string> arr in data.netWorthData)
+                {
+                    ChartDataBase line_data = new ChartDataBase(data.name, arr[0], arr[2]);
+                 
+                        this.LineVm.DataSource.Add(line_data); 
 
-                //return datas;
-
-            });
-
+                } 
         }
 
 

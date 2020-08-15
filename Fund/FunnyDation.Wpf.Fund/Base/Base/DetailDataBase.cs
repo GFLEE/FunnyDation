@@ -28,13 +28,13 @@ namespace FunnyDation.Wpf.Ranking.Base
         public string fundScale { get; set; }
         public string worthDate { get; set; }
         public string expectWorthDate { get; set; }
-
-        public string[][] netWorthData { get; set; }
+        public List<List<string>> netWorthData { get; set; }
         public decimal millionCopiesIncome { get; set; }
-        public string[][] millionCopiesIncomeData { get; set; }
+        public List<List<string>> millionCopiesIncomeData { get; set; }
         public string millionCopiesIncomeDate { get; set; }
         public decimal sevenDaysYearIncome { get; set; }
-        public string[][] sevenDaysYearIncomeData { get; set; }
+        public List<List<string>> sevenDaysYearIncomeData { get; set; }
+     
 
     }
 }

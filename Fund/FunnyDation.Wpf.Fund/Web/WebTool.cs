@@ -59,7 +59,7 @@ namespace FunnyDation.Wpf.Fund
             }
             else
             {
-                throw new Exception("Get Failed!");
+                throw new Exception(string.Format(@"Get Failed!\nurl{0}", FDConst.FundDetailUrl));
             }
 
         }

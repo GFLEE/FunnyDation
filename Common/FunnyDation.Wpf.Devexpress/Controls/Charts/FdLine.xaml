@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls.Charts"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
              mc:Ignorable="d" 
              xmlns:controls="clr-namespace:FunnyDation.Wpf.Base.ViewModel.Charts;assembly=FunnyDation.Wpf.Base"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
@@ -14,17 +15,26 @@
     <Grid>
         <dxc:ChartControl
             Name="chart"
-            AnimationMode="OnLoad"
+            AnimationMode="Disabled"
             CrosshairEnabled="True"
             DataSource="{Binding DataSource,Mode=TwoWay}" >
             <dxc:ChartControl.Diagram>
-                <dxc:XYDiagram2D SeriesDataMember="PrimaryKey">
+                <dxc:XYDiagram2D SeriesDataMember="PrimaryKey" 
+                        DependentAxesYRange="True"
+                        EnableAxisXNavigation="True">
                     <dxc:XYDiagram2D.AxisX>
                         <dxc:AxisX2D  GridLinesVisible="True">
                             <dxc:AxisX2D.Title>
                                 <dxc:AxisTitle
                                     Content="{Binding XLabel,Mode=TwoWay}" />
                             </dxc:AxisX2D.Title>
+                            <dxc:AxisX2D.WholeRange>
+                                <dxc:Range
+                                        SideMarginsValue="1" />
+                            </dxc:AxisX2D.WholeRange>
+                            <dxc:AxisX2D.DateTimeScaleOptions>
+                                <dxc:AutomaticDateTimeScaleOptions />
+                            </dxc:AxisX2D.DateTimeScaleOptions>
                         </dxc:AxisX2D>
                     </dxc:XYDiagram2D.AxisX>
                     <dxc:XYDiagram2D.AxisY>
@@ -41,20 +51,19 @@
                         </dxc:AxisY2D>
                     </dxc:XYDiagram2D.AxisY>
                     <dxc:XYDiagram2D.SeriesTemplate>
-                        <dxc:LineSeries2D
+                        <dxc:SplineSeries2D
                             MarkerSize="{Binding MarkerSize,Mode=TwoWay}"
-                            MarkerVisible="True" 
-                            AnimationAutoStartMode="PlayOnce" 
+                            MarkerVisible="False" 
                             ArgumentDataMember="{Binding XParam,Mode=TwoWay}"
                             ValueDataMember="{Binding YParam,Mode=TwoWay}"
                             Brush="{Binding LineColor,Mode=TwoWay}"
-                            LabelsVisibility="True">
-                            <dxc:LineSeries2D.Label>
+                            LabelsVisibility="False" >
+                            <!--<dxc:LineSeries2D.Label>
                                 <dxc:SeriesLabel
                                     ConnectorVisible="False"
                                     ResolveOverlappingMode="Default" />
-                            </dxc:LineSeries2D.Label>
-                        </dxc:LineSeries2D>
+                            </dxc:LineSeries2D.Label>-->
+                        </dxc:SplineSeries2D>
                     </dxc:XYDiagram2D.SeriesTemplate>
                 </dxc:XYDiagram2D>
             </dxc:ChartControl.Diagram>
