@@ -20,7 +20,7 @@ namespace FunnyDation.Wpf.Ranking
 
             Dictionary<string, string> dic = new Dictionary<string, string>
             {
-                { "code", "202015,007339" }
+                { "code", "007301,202015,007339" }
             };
 
             var res = rESTService.Get(FDConst.FundBaseUrl, dic);

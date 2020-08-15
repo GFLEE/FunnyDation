@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FunnyDation.Wpf.Base.ViewModel.Charts
 {
-    /// <summary>
-    /// Simple Line
-    /// </summary>
-    public class LineVm : CrlVm
+    public class ChartDataBase
     {
-        public LineVm()
+        public ChartDataBase(string primaryKey)
         {
+            PrimaryKey = primaryKey;
         }
 
+        public string PrimaryKey { get; set; }
 
-
-        
 
     }
 }

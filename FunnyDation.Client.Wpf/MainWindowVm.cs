@@ -33,17 +33,17 @@ namespace FunnyDation.Client.Wpf
             Ribbon.Visiable = true;
             Ribbon.Clicked += Ribbon_Clicked; 
             Dictionary<string, string> menus = new Dictionary<string, string>();
-            menus.Add("Test1", ClientUtility.GetGlyphPath("CustomersKPI_32x32.png"));
-            menus.Add("Test2", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Line_32x32.png"));
-            menus.Add("Test3", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Bar_32x32.png"));
-            menus.Add("Test4", ClientUtility.GetGlyphPath("MoviesKPI_32x32.png"));
-            menus.Add("Test5", ClientUtility.GetGlyphPath("Wizard_32x32.png"));
-            menus.Add("Test6", ClientUtility.GetGlyphPath("Effects_32x32.png"));
-            menus.Add("Test7", ClientUtility.GetGlyphPath("rdio.png"));
+            menus.Add("Test1Test1", ClientUtility.GetGlyphPath("CustomersKPI_32x32.png"));
+            menus.Add("Test2Test2", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Line_32x32.png"));
+            menus.Add("Test3Test3", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Bar_32x32.png"));
+            menus.Add("Test4Test4", ClientUtility.GetGlyphPath("MoviesKPI_32x32.png"));
+            menus.Add("Test5Test5", ClientUtility.GetGlyphPath("Wizard_32x32.png"));
+            menus.Add("Test6Test6", ClientUtility.GetGlyphPath("Effects_32x32.png"));
+            menus.Add("Test7Test7", ClientUtility.GetGlyphPath("rdio.png"));
 
-            AddPageWithMenus("Test1", menus);
-            AddPageWithMenus("Test2", menus);
-            AddPageWithMenus("Test3", menus);
+            AddPageWithMenus("Test1Test1", menus);
+            AddPageWithMenus("Test2Test2", menus);
+            AddPageWithMenus("Test3Test3", menus);
           
      
         }

@@ -30,12 +30,12 @@ namespace FunnyDation.Wpf.Ranking.Views
         {
             await Task.Run(() =>
             {
-                //List<FundBase> datas = new List<FundBase>();
-                //datas = WebTool.GetFundingList(_RESTService).data;
-                //Datas = datas;
-                //MessageBox.Show(string.Join(",", datas.Select(P => P.name)));
+                List<FundBase> datas = new List<FundBase>();
+                datas = WebTool.GetFundingList(_RESTService).data;
+                Datas = datas;
+                MessageBox.Show(string.Join(",", datas.Select(P => P.name)));
 
-                //return datas;
+                return datas;
 
             });
 
