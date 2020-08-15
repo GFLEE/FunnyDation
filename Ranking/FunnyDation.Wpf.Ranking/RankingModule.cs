@@ -2,13 +2,13 @@
 using Prism.Modularity;
 using System;
 
-namespace FunnyDation.Wpf.Ranking
+namespace FunnyDation.Wpf.Fund
 {
     public class RankingModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            StartPagePath = "FunnyDation.Wpf.Ranking.Views.CrlFundList";
+            StartPagePath = "FunnyDation.Wpf.Fund.Views.CrlFundList";
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

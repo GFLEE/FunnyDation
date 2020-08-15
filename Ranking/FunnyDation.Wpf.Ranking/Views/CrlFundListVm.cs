@@ -1,5 +1,5 @@
 ﻿using FunnyDation.Wpf.Base;
-using FunnyDation.Wpf.Ranking.Base;
+using FunnyDation.Wpf.Fund.Base;
 using FunnyDation.Wpf.Web;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
 
-namespace FunnyDation.Wpf.Ranking.Views
+namespace FunnyDation.Wpf.Fund.Views
 {
     public class CrlFundListVm : CrlVm
     {

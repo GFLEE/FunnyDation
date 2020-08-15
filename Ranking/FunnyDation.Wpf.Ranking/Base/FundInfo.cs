@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FunnyDation.Wpf.Ranking.Base
+namespace FunnyDation.Wpf.Fund.Base
 {
     public class FundInfo
     {

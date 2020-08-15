@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FunnyDation.IService.Ranking
+namespace FunnyDation.IService.Fund
 {
     public class Class1
     {

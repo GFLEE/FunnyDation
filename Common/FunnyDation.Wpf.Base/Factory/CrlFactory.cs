@@ -33,6 +33,7 @@ namespace FunnyDation.Wpf.Base
             var crlVm = crl.DataContext as CrlVm;
             if (crlVm != null)
             {
+                crlVm.ViewIdentity = new VmViewIdentity(crl.GetType().FullName);
                 if (init != null)
                 {
                     crlVm.Init(init);

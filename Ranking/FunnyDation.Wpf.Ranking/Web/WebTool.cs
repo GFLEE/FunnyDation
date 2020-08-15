@@ -1,5 +1,5 @@
 ﻿using FunnyDation.Common;
-using FunnyDation.Wpf.Ranking.Base;
+using FunnyDation.Wpf.Fund.Base;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FunnyDation.Wpf.Ranking
+namespace FunnyDation.Wpf.Fund
 {
     public class WebTool
     {

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FunnyDation.Wpf.Ranking.Views
+namespace FunnyDation.Wpf.Fund.Views
 {
     /// <summary>
     /// CrlFundList.xaml 的交互逻辑

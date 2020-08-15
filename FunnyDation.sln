@@ -7,17 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{858251
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Common", "Common\FunnyDation.Common\FunnyDation.Common.csproj", "{B4DBF030-1A9B-4BD0-B8A9-5324492BE6C1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ranking", "Ranking", "{0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fund", "Fund", "{0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Wpf", "Common\FunnyDation.Wpf\FunnyDation.Wpf.csproj", "{B588DC29-15D4-4D80-9AD1-75AE60B08EB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Wpf.Base", "Common\FunnyDation.Wpf.Base\FunnyDation.Wpf.Base.csproj", "{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.IService.Ranking", "Ranking\FunnyDation.IService.Ranking\FunnyDation.IService.Ranking.csproj", "{84287163-3033-4CB9-BD7E-D2E2AD2A8458}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.IService.Fund", "Ranking\FunnyDation.IService.Ranking\FunnyDation.IService.Fund.csproj", "{84287163-3033-4CB9-BD7E-D2E2AD2A8458}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Service.Ranking", "Ranking\FunnyDation.Service.Ranking\FunnyDation.Service.Ranking.csproj", "{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Service.Fund", "Ranking\FunnyDation.Service.Ranking\FunnyDation.Service.Fund.csproj", "{9BAF0D0D-3EB6-4AC7-ADC3-C5B335AF361B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Wpf.Ranking", "Ranking\FunnyDation.Wpf.Ranking\FunnyDation.Wpf.Ranking.csproj", "{C4672449-671D-4379-BF3E-2289BF5C9952}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Wpf.Fund", "Ranking\FunnyDation.Wpf.Ranking\FunnyDation.Wpf.Fund.csproj", "{C4672449-671D-4379-BF3E-2289BF5C9952}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Client.Wpf", "FunnyDation.Client.Wpf\FunnyDation.Client.Wpf.csproj", "{A369B43E-EA30-49E8-AA66-A89C213A82AC}"
 EndProject
