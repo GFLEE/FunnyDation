@@ -4,9 +4,44 @@
         <name>FunnyDation.Wpf.Base</name>
     </assembly>
     <members>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.primaryKey">
+            <summary>
+            数据主键
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.xLabel">
+            <summary>
+            X轴标签 
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.yLabel">
+            <summary>
+            Y轴标签
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.chartTitle">
+            <summary>
+            表格标题
+            </summary>
+        </member>
         <member name="T:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm">
             <summary>
             Simple Line
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm.markerSize">
+            <summary>
+            标记圆点大小
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm.xParam">
+            <summary>
+            X轴参数
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm.yParam">
+            <summary>
+            Y轴参数
             </summary>
         </member>
         <member name="T:FunnyDation.Wpf.Base.ViewModel.DocPanel.DockManagerVm">
@@ -54,6 +89,16 @@
             Add
             </summary>
             <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grid.GridColumnVm.Create(System.String,System.String,FunnyDation.Wpf.Base.ViewModel.Grid.GridColumnType,System.String)">
+            <summary>
+            添加Column
+            </summary>
+            <param name="field"></param>
+            <param name="header"></param>
+            <param name="type"></param>
+            <param name="mask"></param>
             <returns></returns>
         </member>
         <member name="M:FunnyDation.Wpf.Base.ViewModel.ICrlVm.OnControlLoaded">

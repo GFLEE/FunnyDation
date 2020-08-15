@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace FunnyDation.Wpf.Base.ViewModel.Charts
 {
-    public class ChartBase : BindableBase
+    public class ChartBase : CrlVm
     {
         public ChartBase()
         {
@@ -42,5 +42,65 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
 
             }
         }
+
+        /// <summary>
+        /// X轴标签 
+        /// </summary>
+        public string xLabel;
+        public string XLabel
+        {
+            get
+            {
+                return xLabel;
+            }
+
+            set
+            {
+                xLabel = value;
+                SetProperty(ref xLabel, value);
+
+            }
+        }
+
+        /// <summary>
+        /// Y轴标签
+        /// </summary>
+        public string yLabel;
+        public string YLabel
+        {
+            get
+            {
+                return yLabel;
+            }
+
+            set
+            {
+                yLabel = value;
+                SetProperty(ref yLabel, value);
+
+            }
+        }
+
+
+        /// <summary>
+        /// 表格标题
+        /// </summary>
+        public string chartTitle;
+        public string ChartTitle
+        {
+            get
+            {
+                return chartTitle;
+            }
+
+            set
+            {
+                chartTitle = value;
+                SetProperty(ref chartTitle, value);
+
+            }
+        }
+
+
     }
 }

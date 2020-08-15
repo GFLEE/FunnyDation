@@ -7,8 +7,8 @@ using FunnyDation.Wpf.Base.ViewModel.Grid;
 
 namespace FunnyDation.Wpf.Devexpress.Converter
 {
-    public class FieldTypeToEditSettingsConverter : MarkupExtension, IValueConverter
-    {
+    public class GridColumnVmEditSettingsConverter : MarkupExtension, IValueConverter
+    { 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
             return this;
@@ -18,26 +18,26 @@ namespace FunnyDation.Wpf.Devexpress.Converter
         {
             if (value == null) return null;
 
-            var column = (ColumnVm)value;
+            var column = (GridColumnVm)value;
 
             object editor;
 
             switch (column.FieldType)
             {
-                case EuFieldTypes.String:
+                case GridColumnType.String:
                     editor = new TextEditSettings();
                     break;
 
-                case EuFieldTypes.Int:
-                case EuFieldTypes.Decimal:
+                case GridColumnType.Int:
+                case GridColumnType.Decimal:
                     editor = new SpinEditSettings { Mask = column.Mask, MaskUseAsDisplayFormat = true };
                     break;
 
-                case EuFieldTypes.Date:
+                case GridColumnType.Date:
                     editor = new DateEditSettings { Mask = column.Mask, MaskUseAsDisplayFormat = true };
                     break;
 
-                case EuFieldTypes.Bool:
+                case GridColumnType.Bool:
                     editor = new CheckEditSettings { IsThreeState = false, NullValue = false };
                     break;
 

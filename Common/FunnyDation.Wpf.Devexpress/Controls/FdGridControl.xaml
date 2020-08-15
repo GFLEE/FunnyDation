@@ -28,7 +28,9 @@
                         <ContentControl>
                             <dxg:GridColumn FieldName="{Binding (dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}" 
                                             Header="{Binding (dxci:DependencyObjectExtensions.DataContext).Header, RelativeSource={RelativeSource Self}}" 
-                                            EditSettings="{Binding ., Converter={dynamicColumns:FieldTypeToEditSettingsConverter}}"/>
+                                            Width="{Binding (dxci:DependencyObjectExtensions.DataContext).Width, RelativeSource={RelativeSource Self}}" 
+                                            Visible="{Binding (dxci:DependencyObjectExtensions.DataContext).Visible, RelativeSource={RelativeSource Self}}"
+                                            EditSettings="{Binding ., Converter={dynamicColumns:GridColumnVmEditSettingsConverter}}"/>
                         </ContentControl>
                     </DataTemplate>
                 </Setter.Value>
@@ -65,10 +67,10 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <dxg:GridControl Name="grid"
+    <dxg:GridControl Name="grid" 
                          AutoExpandAllGroups="True"
                          ItemsSource="{Binding DataSource,Mode=TwoWay}"
-                         ColumnsSource="{Binding Columns}"
+                         ColumnsSource="{Binding Columns}" 
                          SelectedItems="{Binding SelectedItems}"
                          AllowColumnMRUFilterList="False" ShowLoadingPanel="False"
                          dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
@@ -77,7 +79,7 @@
             <dxg:TableView     ShowFixedTotalSummary="True"
                                AllowScrollAnimation="True"
                                Name="view" ShowAutoFilterRow="False"
-                               ShowBandsPanel="False"
+                               ShowBandsPanel="False" ShowIndicator="False"
                                RowStyle="{Binding RowStyle}"
                                FocusedRow="{Binding SelectItem}"
                                ShowSearchPanelFindButton="False"
