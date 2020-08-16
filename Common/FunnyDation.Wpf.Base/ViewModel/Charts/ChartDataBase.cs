@@ -16,6 +16,12 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
             this.X_String_Value = x;
             this.Y_String_Value = y;
         }
+        public ChartDataBase(string primaryKey, DateTime x, string y)
+        {
+            PrimaryKey = primaryKey;
+            this.X_Date_Value = x;
+            this.Y_String_Value = y;
+        }
         public ChartDataBase(string primaryKey, decimal x, decimal y)
         {
             PrimaryKey = primaryKey;
@@ -30,6 +36,9 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
         //decimal
         public decimal X_Decimal_Value { get; set; }
         public decimal Y_Decimal_Value { get; set; }
+
+        //Date
+        public DateTime X_Date_Value { get; set; }
 
 
     }

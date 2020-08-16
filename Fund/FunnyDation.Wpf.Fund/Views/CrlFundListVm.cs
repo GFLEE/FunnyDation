@@ -1,6 +1,7 @@
 ﻿using FunnyDation.Wpf.Base;
 using FunnyDation.Wpf.Base.ViewModel.Charts;
 using FunnyDation.Wpf.Fund.Base;
+using FunnyDation.Wpf.Ranking.Base;
 using FunnyDation.Wpf.Web;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,11 @@ namespace FunnyDation.Wpf.Fund.Views
         public CrlFundListVm(IRESTService rESTService) : base()
         {
             this._RESTService = rESTService;
-            LineVm = new LineVm("X_String_Value", "Y_String_Value", "TITLE", "日期", "净值涨幅");
-            LineVm.LineColor = "lightblue";
+            LineVm = new LineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "净值涨幅");
+            //LineVm.LineColor = "lightblue";
+
+            UnitLineVm = new LineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "单位净值");
+            //UnitLineVm.LineColor = "lightblue";
         }
 
         public override void OnInitComplete()
@@ -39,18 +43,33 @@ namespace FunnyDation.Wpf.Fund.Views
 
         public async void GetList()
         {
-           
-                //007301
-                //161725
-                var data = WebTool.GetFunDetail(_RESTService, "161725").data;
-                LineVm.ChartTitle = data.name;
-                foreach (List<string> arr in data.netWorthData)
-                {
-                    ChartDataBase line_data = new ChartDataBase(data.name, arr[0], arr[2]);
-                 
-                        this.LineVm.DataSource.Add(line_data); 
 
-                } 
+            //007301
+            //161725
+            var data = WebTool.GetFunDetail(_RESTService, "161725").data;
+            LineVm.ChartTitle = data.name;
+            UnitLineVm.ChartTitle = data.name;
+            List<List<string>> worth = data.netWorthData;
+            List<WorthBase> datas = new List<WorthBase>();
+            foreach (List<string> arr in worth)
+            {
+                WorthBase worthBase = new WorthBase(DateTime.Parse(arr[0]), arr[1], arr[2]);
+                datas.Add(worthBase);
+            }
+
+            datas = datas.Where(p => p.Date >= DateTime.Parse("2019-01-01")).ToList();
+            foreach (var dt in datas)
+            {
+                ChartDataBase line_data = new ChartDataBase("净值涨幅", dt.Date,
+                    string.Format("{0}", dt.Rate));
+
+                this.LineVm.DataSource.Add(line_data);
+                LineVm.DataSource.Add(new ChartDataBase("单位净值", dt.Date,
+               string.Format("{0}", dt.Unit_worth)));
+
+                UnitLineVm.DataSource.Add(new ChartDataBase("单位净值", dt.Date,
+                    string.Format("{0}", dt.Unit_worth)));
+            }
         }
 
 
@@ -74,6 +93,21 @@ namespace FunnyDation.Wpf.Fund.Views
             }
         }
 
+        public LineVm unitLineVm;
+        public LineVm UnitLineVm
+        {
+            get
+            {
+                return unitLineVm;
+            }
+
+            set
+            {
+                unitLineVm = value;
+                SetProperty(ref unitLineVm, value);
+
+            }
+        }
 
 
     }

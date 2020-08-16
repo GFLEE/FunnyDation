@@ -17,7 +17,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
 
 
         }
-        public LineVm(string x_param, string y_param, string title, 
+        public LineVm(string x_param, string y_param, string title,
             string x_label, string y_label, int marker_size = 10) : base()
         {
             this.XParam = x_param;
@@ -86,10 +86,43 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
         }
 
 
+        /// <summary>
+        /// 展示Label
+        /// </summary>
+        public bool markerVisible = false;
+        public bool MarkerVisible
+        {
+            get
+            {
+                return markerVisible;
+            }
+
+            set
+            {
+                markerVisible = value;
+                SetProperty(ref markerVisible, value);
+
+            }
+        }
 
 
 
+        public bool showLabel = false;
+        public bool ShowLabel
 
+        {
+            get
+            {
+                return showLabel;
+            }
+
+            set
+            {
+                showLabel = value;
+                SetProperty(ref showLabel, value);
+
+            }
+        }
 
 
 

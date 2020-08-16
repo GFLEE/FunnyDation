@@ -44,6 +44,11 @@
             Y轴参数
             </summary>
         </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm.markerVisible">
+            <summary>
+            展示Label
+            </summary>
+        </member>
         <member name="T:FunnyDation.Wpf.Base.ViewModel.DocPanel.DockManagerVm">
             <summary>
             Doc ManagerVm

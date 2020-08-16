@@ -6,6 +6,19 @@ using System.Threading.Tasks;
 
 namespace FunnyDation.Wpf.Ranking.Base
 {
+    public class WorthBase
+    {
+        public WorthBase(DateTime date, string unit_worth, string rate)
+        {
+            this.Date = date;
+            this.Unit_worth = unit_worth;
+            this.Rate = rate;
+        }
+        public DateTime Date { get; set; }
+        public string Unit_worth { get; set; }
+        public string Rate { get; set; }
+
+    }
     public class DetailDataBase
     {
         public string code { get; set; }
@@ -34,7 +47,7 @@ namespace FunnyDation.Wpf.Ranking.Base
         public string millionCopiesIncomeDate { get; set; }
         public decimal sevenDaysYearIncome { get; set; }
         public List<List<string>> sevenDaysYearIncomeData { get; set; }
-     
+
 
     }
 }

@@ -12,9 +12,17 @@
              dx:ThemeManager.ThemeName="DXStyle"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <dx:LoadingDecorator>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <crls:FdLine DataContext="{Binding LineVm}"/>
+            <crls:FdLine DataContext="{Binding LineVm}" Grid.Row="0"/>
+            <crls:FdLine DataContext="{Binding UnitLineVm}" Grid.Row="1"/>
 
-    </Grid>
+        </Grid>
+    </dx:LoadingDecorator>
+
 </UserControl>

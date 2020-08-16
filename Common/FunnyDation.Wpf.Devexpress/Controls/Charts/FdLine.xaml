@@ -15,7 +15,7 @@
     <Grid>
         <dxc:ChartControl
             Name="chart"
-            AnimationMode="Disabled"
+            AnimationMode="OnDataChanged"
             CrosshairEnabled="True"
             DataSource="{Binding DataSource,Mode=TwoWay}" >
             <dxc:ChartControl.Diagram>
@@ -53,16 +53,16 @@
                     <dxc:XYDiagram2D.SeriesTemplate>
                         <dxc:SplineSeries2D
                             MarkerSize="{Binding MarkerSize,Mode=TwoWay}"
-                            MarkerVisible="False" 
+                            MarkerVisible="{Binding ShowMarker}" 
                             ArgumentDataMember="{Binding XParam,Mode=TwoWay}"
                             ValueDataMember="{Binding YParam,Mode=TwoWay}"
                             Brush="{Binding LineColor,Mode=TwoWay}"
-                            LabelsVisibility="False" >
-                            <!--<dxc:LineSeries2D.Label>
+                            LabelsVisibility="{Binding ShowLabel}" >
+                            <dxc:LineSeries2D.Label>
                                 <dxc:SeriesLabel
                                     ConnectorVisible="False"
                                     ResolveOverlappingMode="Default" />
-                            </dxc:LineSeries2D.Label>-->
+                            </dxc:LineSeries2D.Label>
                         </dxc:SplineSeries2D>
                     </dxc:XYDiagram2D.SeriesTemplate>
                 </dxc:XYDiagram2D>
