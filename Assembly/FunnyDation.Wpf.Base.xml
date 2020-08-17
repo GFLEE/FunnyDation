@@ -96,24 +96,64 @@
             <param name="obj"></param>
             <returns></returns>
         </member>
-        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grid.ConvertItem.ConvertItemBase.FieldName">
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.ConvertItemBase.FieldName">
             <summary>
             字段名称
             </summary>
         </member>
-        <member name="T:FunnyDation.Wpf.Base.ViewModel.Grid.ConvertItem.IConvertItem">
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.Grids.IConvertItem">
             <summary>
             IConvertItem
             </summary>
         </member>
-        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grid.ConvertItem.IConvertItem.Convert(System.Object)">
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.IConvertItem.Convert(System.Object)">
             <summary>
             Convert
             </summary>
             <param name="value"></param>
             <returns></returns>
         </member>
-        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grid.GridColumnVm.Create(System.String,System.String,FunnyDation.Wpf.Base.ViewModel.Grid.GridColumnType,System.String)">
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.Grids.GridBaseVm">
+            <summary>
+            GridBaseVm
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.String">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.Int">
+            <summary>
+            整数
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.Decimal">
+            <summary>
+            浮点
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.Bool">
+            <summary>
+            布尔
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.Enum">
+            <summary>
+            枚举
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.Combo">
+            <summary>
+            下拉
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnVm.Create(System.String,System.String,FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType,System.String)">
             <summary>
             添加Column
             </summary>
@@ -122,6 +162,26 @@
             <param name="type"></param>
             <param name="mask"></param>
             <returns></returns>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.ComboBoxColumnSetting.ItemSource">
+            <summary>
+            ItemSource
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.ComboBoxColumnSetting.ValueMember">
+            <summary>
+            ValueMember
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.ComboBoxColumnSetting.DisplayMember">
+            <summary>
+            DisplayMember
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.DateColumnSetting.Mask">
+            <summary>
+            Mask
+            </summary>
         </member>
         <member name="M:FunnyDation.Wpf.Base.ViewModel.ICrlVm.OnControlLoaded">
             <summary>
