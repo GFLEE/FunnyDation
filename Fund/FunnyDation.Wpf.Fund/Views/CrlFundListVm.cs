@@ -57,7 +57,7 @@ namespace FunnyDation.Wpf.Fund.Views
                 datas.Add(worthBase);
             }
 
-            datas = datas.Where(p => p.Date >= DateTime.Parse("2019-01-01")).ToList();
+            datas = datas.Where(p => p.Date >= DateTime.Parse("2017-01-01")).ToList();
             foreach (var dt in datas)
             {
                 ChartDataBase line_data = new ChartDataBase("净值涨幅", dt.Date,
