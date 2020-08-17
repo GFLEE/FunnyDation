@@ -96,6 +96,23 @@
             <param name="obj"></param>
             <returns></returns>
         </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grid.ConvertItem.ConvertItemBase.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.Grid.ConvertItem.IConvertItem">
+            <summary>
+            IConvertItem
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grid.ConvertItem.IConvertItem.Convert(System.Object)">
+            <summary>
+            Convert
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
         <member name="M:FunnyDation.Wpf.Base.ViewModel.Grid.GridColumnVm.Create(System.String,System.String,FunnyDation.Wpf.Base.ViewModel.Grid.GridColumnType,System.String)">
             <summary>
             添加Column

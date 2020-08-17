@@ -415,6 +415,14 @@
             <param name="prop">Information of property whose value
             is to be copied from the source to the target object.</param>
         </member>
+        <member name="M:FunnyDation.Common.Base.EnumCollection.GetEnumCollection``1(``0)">
+            <summary>
+            GetEnumCollection
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
         <member name="T:FunnyDation.Common.FDConst">
             <summary>
             
