@@ -12,7 +12,7 @@ namespace FunnyDation.Wpf.Base.ViewModel.Grids
         /// <summary>
         /// ItemSource
         /// </summary>
-        public object ItemSource { get; set; }
+        public object ItemsSource { get; set; }
         /// <summary>
         /// ValueMember
         /// </summary>
