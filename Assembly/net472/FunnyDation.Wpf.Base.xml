@@ -163,7 +163,7 @@
             <param name="mask"></param>
             <returns></returns>
         </member>
-        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.ComboBoxColumnSetting.ItemSource">
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.ComboBoxColumnSetting.ItemsSource">
             <summary>
             ItemSource
             </summary>
@@ -179,6 +179,11 @@
             </summary>
         </member>
         <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.DateColumnSetting.Mask">
+            <summary>
+            Mask
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumn.SpinColumnSetting.Mask">
             <summary>
             Mask
             </summary>
