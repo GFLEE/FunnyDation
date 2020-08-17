@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using FunnyDation.Wpf.Selectors;
 using Prism.Mvvm;
 
-namespace FunnyDation.Wpf.Base.ViewModel.Grid
+namespace FunnyDation.Wpf.Base.ViewModel.Grids
 {
     public class GridVm : BindableBase, ITemplateItem
     {

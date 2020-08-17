@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace FunnyDation.Wpf.Base.ViewModel.Grid.ConvertItem
+namespace FunnyDation.Wpf.Base.ViewModel.Grids
 {
     public abstract class ConvertItemBase : IValueConverter
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FunnyDation.Wpf.Base.ViewModel.Grid.ConvertItem
+namespace FunnyDation.Wpf.Base.ViewModel.Grids
 {
     public class EnumConvertItem : ConvertItemBase
     {
