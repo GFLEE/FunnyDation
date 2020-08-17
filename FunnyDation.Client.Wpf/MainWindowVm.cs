@@ -21,6 +21,8 @@ using CommonServiceLocator;
 using System.Windows.Controls;
 using FunnyDation.Wpf.Base.Ribbons;
 using FunnyDation.Client.Wpf.Views;
+using FunnyDation.Wpf.Web;
+using FunnyDation.Common.Service;
 
 namespace FunnyDation.Client.Wpf
 {
@@ -87,8 +89,9 @@ namespace FunnyDation.Client.Wpf
 
         private void Ribbon_Clicked(object sender, NodeVmArgs e)
         {
-            Test();
-
+            //  Test();
+            RESTService rEST = IocService.Resolve(typeof(RESTService)) as RESTService;
+            rEST.Post("http://127.0.0.1:5000/Invoke/", "bayes", "cal_bayes", new object[] { 1, 2, 3, 4 });
         }
 
         private void Test()

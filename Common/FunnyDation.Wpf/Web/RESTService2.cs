@@ -7,7 +7,7 @@ using System.Text;
 namespace FunnyDation.Wpf.Web
 {
     /// <summary>
-    /// HTTP 请求
+    /// HTTP Post 请求
     /// </summary>
     public partial class RESTService
     {

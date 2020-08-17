@@ -64,9 +64,19 @@
             <param name="content"></param>
             <returns></returns>
         </member>
+        <member name="M:FunnyDation.Wpf.IRESTService.Post(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            远程调python
+            </summary>
+            <param name="url"></param>
+            <param name="fileName"></param>
+            <param name="method"></param>
+            <param name="parms"></param>
+            <returns></returns>
+        </member>
         <member name="T:FunnyDation.Wpf.Web.RESTService">
             <summary>
-            HTTP 请求
+            HTTP Post 请求
             </summary>
         </member>
         <member name="M:FunnyDation.Wpf.Web.RESTService.Get(System.String)">
@@ -104,6 +114,16 @@
             </summary>
             <param name="url">请求后台地址</param>
             <param name="content">Post提交数据内容(utf-8编码的)</param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Web.RESTService.Post(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            远程调用
+            </summary>
+            <param name="url"></param>
+            <param name="fileName"></param>
+            <param name="method"></param>
+            <param name="parms"></param>
             <returns></returns>
         </member>
     </members>

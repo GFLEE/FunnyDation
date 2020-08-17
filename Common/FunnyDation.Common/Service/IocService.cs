@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using FunnyDation.Common.Ioc;
 //using Microsoft.Extensions.DependencyInjection;
@@ -18,7 +19,7 @@ namespace FunnyDation.Common.Service
         //        return default;
         //    }
 
-        //    return FDIoc.ServiceProvider.GetService<TService>();
+        //    return FDIoc.ServiceProvider.GetServices<TService>().FirstOrDefault();
         //}
 
         public static object Resolve(Type type)

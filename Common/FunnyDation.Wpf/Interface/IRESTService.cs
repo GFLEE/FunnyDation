@@ -43,5 +43,14 @@ namespace FunnyDation.Wpf
         /// <returns></returns>
         string Post(string url, string content);
 
+        /// <summary>
+        /// 远程调python
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="fileName"></param>
+        /// <param name="method"></param>
+        /// <param name="parms"></param>
+        /// <returns></returns>
+        string Post(string url, string fileName, string method, object[] parms);
     }
 }

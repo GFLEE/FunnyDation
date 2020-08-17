@@ -9,7 +9,13 @@ namespace FunnyDation.Common
     {
         #region Client
         public const string ModulePath = "Modules";
-        public const string ranking_client = "FunnyDation.Wpf.Ranking";        
+        public const string ranking_client = "FunnyDation.Wpf.Ranking";
+        #endregion
+
+        #region RESTService
+        public const string Encoding_UTF8 = "UTF-8";
+        public const string HTTPContent_Json = "application/json";
+
         #endregion
 
         #region fund
