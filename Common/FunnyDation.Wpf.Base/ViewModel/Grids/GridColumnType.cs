@@ -25,6 +25,10 @@ namespace FunnyDation.Wpf.Base.ViewModel.Grids
         /// </summary>
         Date,
         /// <summary>
+        /// 日期
+        /// </summary>
+        DateTime,
+        /// <summary>
         /// 布尔
         /// </summary>
         Bool,

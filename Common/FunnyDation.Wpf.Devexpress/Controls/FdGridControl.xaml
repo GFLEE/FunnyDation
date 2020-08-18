@@ -14,7 +14,7 @@
              xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
              xmlns:selectors="clr-namespace:FunnyDation.Wpf.Selectors;assembly=FunnyDation.Wpf"             
              xmlns:dynamicColumns="clr-namespace:FunnyDation.Wpf.Devexpress.Converter"
-             xmlns:ViewModels="clr-namespace:FunnyDation.Wpf.Base.ViewModel.Grid;assembly=FunnyDation.Wpf.Base"
+             xmlns:ViewModels="clr-namespace:FunnyDation.Wpf.Base.ViewModel.Grids;assembly=FunnyDation.Wpf.Base"
              xmlns:dxci="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" 

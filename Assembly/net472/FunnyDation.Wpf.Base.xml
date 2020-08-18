@@ -138,6 +138,11 @@
             日期
             </summary>
         </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.DateTime">
+            <summary>
+            日期
+            </summary>
+        </member>
         <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType.Bool">
             <summary>
             布尔
@@ -153,11 +158,46 @@
             下拉
             </summary>
         </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnVm.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Create
+            </summary>
+            <param name="fieldName"></param>
+            <param name="header"></param>
+            <param name="templateName"></param>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnVm.Create(System.String,System.String)">
+            <summary>
+            Create
+            </summary>
+            <param name="fieldName"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnVm.Create(System.String,System.String,System.Object)">
+            <summary>
+            Create
+            </summary>
+            <param name="fieldName"></param>
+            <param name="header"></param>
+            <param name="width"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnVm.Create(System.String,System.String,FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType,System.Object)">
+            <summary>
+            Create
+            </summary>
+            <param name="fieldName"></param>
+            <param name="header"></param>
+            <param name="gridColumnType"></param>
+            <param name="width"></param>
+            <returns></returns>
+        </member>
         <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnVm.Create(System.String,System.String,FunnyDation.Wpf.Base.ViewModel.Grids.GridColumnType,FunnyDation.Wpf.Base.ViewModel.Grids.IColumnSetting,System.Object)">
             <summary>
             添加Column
             </summary>
-            <param name="field"></param>
+            <param name="fieldName"></param>
             <param name="header"></param>
             <param name="type"></param>
             <param name="setting"></param>
@@ -212,6 +252,105 @@
         <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridColumn.SpinColumnSetting.Mask">
             <summary>
             Mask
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridDataRow.Grid">
+            <summary>
+            Grid
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridDataRow.IsSelected">
+            <summary>
+            是否选中
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridDataRow.IsFocus">
+            <summary>
+            是否焦点
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridDataRow.Data">
+            <summary>
+            行数据
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridDataSourceOption.GetCondition">
+            <summary>
+            Not Need
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.dataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.Filter">
+            <summary>
+            是否包含在视图中的方法
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.Sort">
+            <summary>
+            获取或设置用于数据集合排序的属性表达式
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.selectedItem">
+            <summary>
+            表选中
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.isShowCheckBox">
+            <summary>
+            显示CheckBox列
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.autoWidth">
+            <summary>
+            自动宽度（表格）
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.isVisiable">
+            <summary>
+            表可见
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.LoadDataSource">
+            <summary>
+            获取或设置数据源加载的委托
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.datas">
+            <summary>
+            界面数据源
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.Refresh">
+            <summary>
+            刷新数据，不加载数据
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.Reload">
+            <summary>
+            重载数据源
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.AddData(System.Object)">
+            <summary>
+            添加数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.Remove(FunnyDation.Wpf.Base.ViewModel.Grids.GridDataRow)">
+            <summary>
+            移除
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.Grids.GridVm.HostVm">
+            <summary> 
+            宿主
             </summary>
         </member>
         <member name="M:FunnyDation.Wpf.Base.ViewModel.ICrlVm.OnControlLoaded">
