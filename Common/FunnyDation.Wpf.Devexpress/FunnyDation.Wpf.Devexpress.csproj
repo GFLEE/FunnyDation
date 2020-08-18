@@ -140,7 +140,7 @@
     <Compile Include="Controls\FdToolBarTray.xaml.cs">
       <DependentUpon>FdToolBarTray.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converter\FieldTypeToEditSettingsConverter.cs" />
+    <Compile Include="Converter\GridColumnVmEditSettingsConverter.cs" />
     <Compile Include="Prisms\DockPanelShowEvent.cs" />
     <Compile Include="Prisms\DockPanelShowEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

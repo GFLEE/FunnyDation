@@ -3,12 +3,13 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Markup;
 using DevExpress.Xpf.Editors.Settings;
-using FunnyDation.Wpf.Base.ViewModel.Grid;
+using FunnyDation.Common.Reflection;
+using FunnyDation.Wpf.Base.ViewModel.Grids;
 
 namespace FunnyDation.Wpf.Devexpress.Converter
 {
     public class GridColumnVmEditSettingsConverter : MarkupExtension, IValueConverter
-    { 
+    {
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
             return this;
@@ -22,10 +23,13 @@ namespace FunnyDation.Wpf.Devexpress.Converter
 
             object editor;
 
-            switch (column.FieldType)
+            switch (column.GridColumnType)
             {
                 case GridColumnType.String:
-                    editor = new TextEditSettings();
+                    var editorTextEdit = new TextEditSettings();
+                    editorTextEdit.TextWrapping = System.Windows.TextWrapping.WrapWithOverflow;
+                    ReflectionUtils.SetProperty(editorTextEdit, "HorizontalContentAlignment", EditSettingsHorizontalAlignment.Center);
+                    editor = editorTextEdit;
                     break;
 
                 case GridColumnType.Int:

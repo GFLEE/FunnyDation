@@ -78,7 +78,7 @@
                      ColumnGeneratorTemplateSelector="{StaticResource GridColumnTemplateSelector}"
                      AllowColumnMRUFilterList="False" 
                      ShowLoadingPanel="False"
-                     SelectionMode="Row"
+                     SelectionMode="Row"  
                      dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
                      ShowBorder="False">
         <dxg:GridControl.View>
@@ -91,7 +91,7 @@
                                ShowIndicator="False"
                                AutoWidth="{Binding AutoWidth}"
                                RowStyle="{Binding RowStyle}"
-                               FocusedRow="{Binding SelectItem}"
+                               FocusedRow="{Binding SelectedItem}"
                                ShowSearchPanelFindButton="False"
                                ShowDragDropHint="False"
                                ShowSearchPanelCloseButton="False"
