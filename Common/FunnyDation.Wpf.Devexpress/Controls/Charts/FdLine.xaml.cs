@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FunnyDation.Wpf.Devexpress.Controls.Charts
+namespace FunnyDation.Wpf.Devexpress.Controls
 {
     /// <summary>
     /// FdLine.xaml 的交互逻辑

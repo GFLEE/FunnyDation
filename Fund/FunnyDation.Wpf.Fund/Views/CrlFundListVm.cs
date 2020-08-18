@@ -1,5 +1,6 @@
 ﻿using FunnyDation.Wpf.Base;
 using FunnyDation.Wpf.Base.ViewModel.Charts;
+using FunnyDation.Wpf.Base.ViewModel.Grids;
 using FunnyDation.Wpf.Fund.Base;
 using FunnyDation.Wpf.Ranking.Base;
 using FunnyDation.Wpf.Web;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Threading;
 
@@ -27,14 +29,30 @@ namespace FunnyDation.Wpf.Fund.Views
 
             UnitLineVm = new LineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "单位净值");
             //UnitLineVm.LineColor = "lightblue";
+            InitLine();
         }
 
         public override void OnInitComplete()
         {
-            InitLine();
+            GridVm = new GridVm(this);
 
+            InitGrid();
         }
 
+        private void InitGrid()
+        {
+            GridVm.Columns.Add(GridColumnVm.Create("Data.PrimaryKey", "PrimaryKey", 130));
+            GridVm.Columns.Add(GridColumnVm.Create("Data.X_Date_Value", "X_Date_Value", 130));
+            GridVm.Columns.Add(GridColumnVm.Create("Data.Y_String_Value", "Y_String_Value", 130));
+
+            GridVm.LoadDataSource += LoadGrid;
+            GridVm.Refresh();
+        }
+        public List<object> LoadGrid()
+        {
+            List<object> data = UnitLineVm.DataSource.Cast<object>().ToList();
+            return data;
+        }
         public void InitLine()
         {
             GetList();
@@ -46,7 +64,7 @@ namespace FunnyDation.Wpf.Fund.Views
 
             //007301
             //161725
-            var data = WebTool.GetFunDetail(_RESTService, "161725").data;
+            var data = WebTool.GetFunDetail(_RESTService, "000001").data;
             LineVm.ChartTitle = data.name;
             UnitLineVm.ChartTitle = data.name;
             List<List<string>> worth = data.netWorthData;
@@ -74,7 +92,7 @@ namespace FunnyDation.Wpf.Fund.Views
 
 
 
-
+        public GridVm GridVm { get; set; }
 
 
         public LineVm lineVm;

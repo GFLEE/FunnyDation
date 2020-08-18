@@ -16,27 +16,24 @@
              xmlns:dynamicColumns="clr-namespace:FunnyDation.Wpf.Devexpress.Converter"
              xmlns:ViewModels="clr-namespace:FunnyDation.Wpf.Base.ViewModel.Grids;assembly=FunnyDation.Wpf.Base"
              xmlns:dxci="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800" 
              DataContext="{dxmvvm:ViewModelSource Type=ViewModels:GridVm}">
     <UserControl.Resources>
         <selectors:TemplateSelector x:Key="GridColumnTemplateSelector" DefaultTemplateName="GridColumnTemplate" />
-        <Style TargetType="{x:Type dxg:GridControl}">
-            <Setter Property="AutoGenerateColumns" Value="None"/>
-            <Setter Property="EnableSmartColumnsGeneration" Value="True"/>
-            <Setter Property="ColumnGeneratorTemplate">
-                <Setter.Value>
-                    <DataTemplate>
-                        <ContentControl>
-                            <dxg:GridColumn FieldName="{Binding (dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}" 
+        <DataTemplate x:Key="GridColumnTemplate">
+            <ContentControl>
+                <dxg:GridColumn HorizontalHeaderContentAlignment="Center" FieldName="{Binding (dxci:DependencyObjectExtensions.DataContext).FieldName, RelativeSource={RelativeSource Self}}" 
                                             Header="{Binding (dxci:DependencyObjectExtensions.DataContext).Header, RelativeSource={RelativeSource Self}}" 
                                             Width="{Binding (dxci:DependencyObjectExtensions.DataContext).Width, RelativeSource={RelativeSource Self}}" 
                                             Visible="{Binding (dxci:DependencyObjectExtensions.DataContext).Visible, RelativeSource={RelativeSource Self}}"
                                             EditSettings="{Binding ., Converter={dynamicColumns:GridColumnVmEditSettingsConverter}}"/>
-                        </ContentControl>
-                    </DataTemplate>
-                </Setter.Value>
-            </Setter>
+            </ContentControl>
+        </DataTemplate>
+        <Style TargetType="{x:Type dxg:GridControl}">
+            <Setter Property="AutoGenerateColumns" Value="None"/>
+            <Setter Property="EnableSmartColumnsGeneration" Value="True"/>
+          
             <Setter Property="ColumnGeneratorStyle">
                 <Setter.Value>
                     <Style TargetType="{x:Type dxg:GridColumn}">
@@ -78,13 +75,22 @@
                      ColumnGeneratorTemplateSelector="{StaticResource GridColumnTemplateSelector}"
                      AllowColumnMRUFilterList="False" 
                      ShowLoadingPanel="False"
-                     SelectionMode="Row"  
+                     SelectionMode="Row"  HorizontalContentAlignment="Center"
                      dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
                      ShowBorder="False">
         <dxg:GridControl.View>
             <dxg:TableView     ShowFixedTotalSummary="True"
                                AllowScrollAnimation="True"
+                               ShowFocusedRectangle="True"
+                               UseEvenRowBackground="True"
                                Name="view" 
+                               AllowEditing="False"
+                               AllowPerPixelScrolling="True"
+                               ShowGroupPanel="False"
+                               AllowColumnMoving="False"
+                               IsColumnMenuEnabled="False"
+                               ShowTotalSummary="False"
+                               ShowFilterPanelMode="Never"
                                ShowSearchPanelMode="Never"
                                ShowAutoFilterRow="False"
                                ShowBandsPanel="False" 

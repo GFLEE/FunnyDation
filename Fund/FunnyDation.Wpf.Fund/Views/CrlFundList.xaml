@@ -5,7 +5,7 @@
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FunnyDation.Wpf.Fund.Views"
-             xmlns:crls="clr-namespace:FunnyDation.Wpf.Devexpress.Controls.Charts;assembly=FunnyDation.Wpf.Devexpress"             
+             xmlns:crls="clr-namespace:FunnyDation.Wpf.Devexpress.Controls;assembly=FunnyDation.Wpf.Devexpress"             
              mc:Ignorable="d" 
              xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
              xmlns:prism="http://prismlibrary.com/" 
@@ -17,10 +17,12 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <crls:FdLine DataContext="{Binding LineVm}" Grid.Row="0"/>
             <crls:FdLine DataContext="{Binding UnitLineVm}" Grid.Row="1"/>
+            <crls:FdGridControl DataContext="{Binding GridVm}" Grid.Row="2"  />
 
         </Grid>
     </dx:LoadingDecorator>

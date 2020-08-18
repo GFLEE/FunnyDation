@@ -89,9 +89,13 @@ namespace FunnyDation.Client.Wpf
 
         private void Ribbon_Clicked(object sender, NodeVmArgs e)
         {
-            //  Test();
-            RESTService rEST = IocService.Resolve(typeof(RESTService)) as RESTService;
-            rEST.Post("http://127.0.0.1:5000/Invoke/", "bayes", "cal_bayes", new object[] { 1, 2, 3, 4 });
+             Test();
+
+
+            //RESTService rEST = IocService.Resolve(typeof(RESTService)) as RESTService;
+            //rEST.Post("http://127.0.0.1:5000/Invoke/", "bayes", "cal_bayes", new object[] { 1, 2, 3, 4 });
+      
+        
         }
 
         private void Test()

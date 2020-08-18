@@ -4,7 +4,7 @@
         <name>FunnyDation.Wpf.Devexpress</name>
     </assembly>
     <members>
-        <member name="T:FunnyDation.Wpf.Devexpress.Controls.Charts.FdLine">
+        <member name="T:FunnyDation.Wpf.Devexpress.Controls.FdLine">
             <summary>
             FdLine.xaml 的交互逻辑
             </summary>
@@ -12,7 +12,7 @@
             FdLine
             </summary>
         </member>
-        <member name="M:FunnyDation.Wpf.Devexpress.Controls.Charts.FdLine.InitializeComponent">
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.FdLine.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>
