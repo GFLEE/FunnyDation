@@ -97,7 +97,6 @@
     <Compile Include="Base\Base\FundBase.cs" />
     <Compile Include="Base\FunDetail.cs" />
     <Compile Include="Base\FundInfo.cs" />
-    <Compile Include="MytUtility.cs" />
     <Compile Include="RankingModule.cs" />
     <Compile Include="Views\CrlFundList.xaml.cs">
       <DependentUpon>CrlFundList.xaml</DependentUpon>

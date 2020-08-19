@@ -57,7 +57,7 @@ namespace FunnyDation.Wpf.Devexpress.Controls
         public static void OnBarsPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
 
-            var toolBarTray = new ToolBarTray();
+            var toolBarTray = (ToolBarTray)d;
             var barVms = e.NewValue as ObservableCollection<ToolBarVm>;
             if (barVms == null)
             {
@@ -69,7 +69,7 @@ namespace FunnyDation.Wpf.Devexpress.Controls
                 tb.Loaded += Tb_Loaded;
                 tb.DataContext = barVm;
                 toolBarTray.ToolBars.Add(tb);
-            } 
+            }
         }
 
         /// <summary>

@@ -802,6 +802,13 @@
             <param name="vals">Array of objects.</param>
             <returns>Comma-separated string representation of the array of objects.</returns>
         </member>
+        <member name="M:FunnyDation.Common.MytUtility.GetGlyphPath(System.String)">
+            <summary>
+            Retrun gly path
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
         <member name="T:FunnyDation.Common.Service.IocService">
             <summary>
             Interface
