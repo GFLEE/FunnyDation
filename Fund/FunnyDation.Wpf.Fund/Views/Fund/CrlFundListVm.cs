@@ -1,5 +1,6 @@
 ﻿using FunnyDation.Common;
 using FunnyDation.Wpf.Base;
+using FunnyDation.Wpf.Base.ViewModel;
 using FunnyDation.Wpf.Base.ViewModel.Charts;
 using FunnyDation.Wpf.Base.ViewModel.Grids;
 using FunnyDation.Wpf.Base.ViewModel.ToolBars;
@@ -44,6 +45,13 @@ namespace FunnyDation.Wpf.Fund.Views
         private void InitToolBar()
         {
             ToolBar.DefaultToolBar.AddButton("new", "添加", MytUtility.GetGlyphPath("Action_Export_ToDOCX_32x32.png")); ;
+            ToolBar.Clicked += ToolBar_Clicked;
+        }
+
+        private void ToolBar_Clicked(object sender, NodeVmArgs e)
+        {
+
+
 
         }
 

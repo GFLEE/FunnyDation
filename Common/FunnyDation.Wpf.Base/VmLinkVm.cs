@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FunnyDation.Wpf.Base
 {
-    public class VmLinkVm : BindableBase, IVmLinkVm
+    public abstract class VmLinkVm : BindableBase, IVmLinkVm
     {
 
         public VmViewIdentity viewIdentity;
