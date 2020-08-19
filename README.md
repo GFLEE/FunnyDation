@@ -1,2 +1,5 @@
+![image](https://github.com/GFLEE/FunnyDation/blob/master/FunnyDation.Client.Wpf/favicon.ico)
+
 # FunnyDation
-Init Repo
+A deskTop client show financial details.
+ 
