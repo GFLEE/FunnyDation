@@ -1,6 +1,7 @@
 ﻿using FunnyDation.Wpf.Base;
 using FunnyDation.Wpf.Base.ViewModel.Charts;
 using FunnyDation.Wpf.Base.ViewModel.Grids;
+using FunnyDation.Wpf.Base.ViewModel.ToolBars;
 using FunnyDation.Wpf.Fund.Base;
 using FunnyDation.Wpf.Ranking.Base;
 using FunnyDation.Wpf.Web;
@@ -26,17 +27,23 @@ namespace FunnyDation.Wpf.Fund.Views
             this._RESTService = rESTService;
             LineVm = new LineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "净值涨幅");
             //LineVm.LineColor = "lightblue";
-
+            GridVm = new GridVm(this);
+            ToolBar = new ToolBarTrayVm(this);
             UnitLineVm = new LineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "单位净值");
             //UnitLineVm.LineColor = "lightblue";
-            InitLine();
         }
 
         public override void OnInitComplete()
         {
-            GridVm = new GridVm(this);
-
+            // InitLine();
+            InitToolBar();
             InitGrid();
+        }
+
+        private void InitToolBar()
+        {
+            ToolBar.DefaultToolBar.AddButton("new","添加",);
+
         }
 
         private void InitGrid()
@@ -50,7 +57,15 @@ namespace FunnyDation.Wpf.Fund.Views
         }
         public List<object> LoadGrid()
         {
-            List<object> data = UnitLineVm.DataSource.Cast<object>().ToList();
+            List<ChartDataBase> datas = new List<ChartDataBase>();
+            int i = 0;
+            while (i < 13000)
+            {
+                ChartDataBase dt = new ChartDataBase("Main", DateTime.Now, i.ToString());
+                datas.Add(dt);
+                i++;
+            }
+            List<object> data = datas.Cast<object>().ToList();
             return data;
         }
         public void InitLine()
@@ -75,7 +90,7 @@ namespace FunnyDation.Wpf.Fund.Views
                 datas.Add(worthBase);
             }
 
-            datas = datas.Where(p => p.Date >= DateTime.Parse("2017-01-01")).ToList();
+            datas = datas.Where(p => p.Date >= DateTime.Parse("2020-01-01")).ToList();
             foreach (var dt in datas)
             {
                 ChartDataBase line_data = new ChartDataBase("净值涨幅", dt.Date,
@@ -91,7 +106,7 @@ namespace FunnyDation.Wpf.Fund.Views
         }
 
 
-
+        public ToolBarTrayVm ToolBar { get; set; }
         public GridVm GridVm { get; set; }
 
 
