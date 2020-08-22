@@ -4,19 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FunnyDation.Common
+namespace FunnyDation.Wpf.Fund
 {
-    public class CommontUtility
+    public class MyUtility 
     {
-         
-        /// <summary>
-        /// Retrun gly path
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+
+
         public static string GetGlyphPath(string name)
         {
             return string.Format(@"/FunnyDation.Client.Wpf;component/Images/{0}", name);
         }
+
+
     }
 }

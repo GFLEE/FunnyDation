@@ -5,6 +5,7 @@ using FunnyDation.Wpf.Base.ViewModel.Charts;
 using FunnyDation.Wpf.Base.ViewModel.Grids;
 using FunnyDation.Wpf.Base.ViewModel.ToolBars;
 using FunnyDation.Wpf.Fund.Base;
+using FunnyDation.Wpf.Ranking;
 using FunnyDation.Wpf.Ranking.Base;
 using FunnyDation.Wpf.Web;
 using System;
@@ -44,7 +45,8 @@ namespace FunnyDation.Wpf.Fund.Views
 
         private void InitToolBar()
         {
-            ToolBar.DefaultToolBar.AddButton("new", "添加", MytUtility.GetGlyphPath("Action_Export_ToDOCX_32x32.png")); ;
+            ToolBar.DefaultToolBar.AddButton("new", "添加", MyUtility.GetGlyphPath("Action_Export_ToDOCX_32x32.png"));
+            ToolBar.DefaultToolBar.AddButton("new2", "添加2", @"C:\Users\Ricov\Desktop\devimgs\AddToLibrary_32x32.png"); 
             ToolBar.Clicked += ToolBar_Clicked;
         }
 

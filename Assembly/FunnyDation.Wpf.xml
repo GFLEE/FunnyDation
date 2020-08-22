@@ -126,5 +126,13 @@
             <param name="parms"></param>
             <returns></returns>
         </member>
+        <member name="M:FunnyDation.Wpf.Web.RESTService.Parms.#ctor(System.String,System.String,System.Object[])">
+            <summary>
+            参数
+            </summary>
+            <param name="fileName">文件名</param>
+            <param name="method">方法</param>
+            <param name="parms">参数</param>
+        </member>
     </members>
 </doc>

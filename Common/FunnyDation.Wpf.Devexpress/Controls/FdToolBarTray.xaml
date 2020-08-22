@@ -27,7 +27,7 @@
                         Visibility="{Binding Visibility}"
                         Command="{Binding CommandClick}">
                     <WrapPanel Height="auto" Width="auto">
-                        <Image Source="{Binding GlyphName}"/>
+                        <Image Source="{Binding GlyphName,Mode=TwoWay}"/>
                         <TextBlock TextWrapping="Wrap" Width="auto" 
                                    Height="auto" Text="{Binding BtnText,Mode=TwoWay}" 
                                    VerticalAlignment="Center" Padding="3,0,0,0"/>

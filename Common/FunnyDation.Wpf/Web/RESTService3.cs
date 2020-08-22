@@ -44,6 +44,12 @@ namespace FunnyDation.Wpf.Web
 
         class Parms
         {
+            /// <summary>
+            /// 参数
+            /// </summary>
+            /// <param name="fileName">文件名</param>
+            /// <param name="method">方法</param>
+            /// <param name="parms">参数</param>
             public Parms(string fileName, string method, object[] parms)
             {
                 this.FileName = fileName;
