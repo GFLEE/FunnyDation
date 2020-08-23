@@ -17,6 +17,19 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:FunnyDation.Wpf.Devexpress.Controls.Fd2DPie">
+            <summary>
+            FdPie.xaml 的交互逻辑
+            </summary>
+            <summary>
+            Fd2DPie
+            </summary>
+        </member>
+        <member name="M:FunnyDation.Wpf.Devexpress.Controls.Fd2DPie.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
         <member name="T:FunnyDation.Wpf.Devexpress.Controls.FdDocPanel">
             <summary>
             FDDocPanel.xaml 的交互逻辑

@@ -24,27 +24,27 @@
             表格标题
             </summary>
         </member>
-        <member name="T:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm">
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.Charts.FdLineVm">
             <summary>
             Simple Line
             </summary>
         </member>
-        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm.markerSize">
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.FdLineVm.markerSize">
             <summary>
             标记圆点大小
             </summary>
         </member>
-        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm.xParam">
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.FdLineVm.xParam">
             <summary>
             X轴参数
             </summary>
         </member>
-        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm.yParam">
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.FdLineVm.yParam">
             <summary>
             Y轴参数
             </summary>
         </member>
-        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.LineVm.markerVisible">
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.FdLineVm.markerVisible">
             <summary>
             展示Label
             </summary>

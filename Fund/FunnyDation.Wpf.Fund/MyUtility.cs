@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FunnyDation.Wpf.Fund
 {
-    public class MyUtility 
+    public class MyUtility
     {
 
 

@@ -128,6 +128,9 @@
     <Compile Include="Controls\Charts\FdLine.xaml.cs">
       <DependentUpon>FdLine.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Charts\Fd2DPie.xaml.cs">
+      <DependentUpon>Fd2DPie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FdDocPanel.xaml.cs">
       <DependentUpon>FdDocPanel.xaml</DependentUpon>
     </Compile>
@@ -172,6 +175,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\Charts\FdLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Charts\Fd2DPie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

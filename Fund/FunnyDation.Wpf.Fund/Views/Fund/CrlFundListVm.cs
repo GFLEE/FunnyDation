@@ -28,11 +28,11 @@ namespace FunnyDation.Wpf.Fund.Views
         public CrlFundListVm(IRESTService rESTService) : base()
         {
             this._RESTService = rESTService;
-            LineVm = new LineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "净值涨幅");
+            LineVm = new FdLineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "净值涨幅");
             //LineVm.LineColor = "lightblue";
             GridVm = new GridVm(this);
             ToolBar = new ToolBarTrayVm(this);
-            UnitLineVm = new LineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "单位净值");
+            UnitLineVm = new FdLineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "单位净值");
             //UnitLineVm.LineColor = "lightblue";
         }
 
@@ -46,7 +46,7 @@ namespace FunnyDation.Wpf.Fund.Views
         private void InitToolBar()
         {
             ToolBar.DefaultToolBar.AddButton("new", "添加", MyUtility.GetGlyphPath("Action_Export_ToDOCX_32x32.png"));
-            ToolBar.DefaultToolBar.AddButton("new2", "添加2", @"C:\Users\Ricov\Desktop\devimgs\AddToLibrary_32x32.png"); 
+            ToolBar.DefaultToolBar.AddButton("new2", "添加2", MyUtility.GetGlyphPath("AddToLibrary_32x32.png"));
             ToolBar.Clicked += ToolBar_Clicked;
         }
 
@@ -116,26 +116,13 @@ namespace FunnyDation.Wpf.Fund.Views
             }
         }
 
-        public ToolBarTrayVm toolBar;
-        public ToolBarTrayVm ToolBar
-        {
-            get
-            {
-                return toolBar;
-            }
+        public ToolBarTrayVm ToolBar { get; set; }
 
-            set
-            {
-                toolBar = value;
-                SetProperty(ref toolBar, value);
-
-            }
-        }
         public GridVm GridVm { get; set; }
 
 
-        public LineVm lineVm;
-        public LineVm LineVm
+        public FdLineVm lineVm;
+        public FdLineVm LineVm
         {
             get
             {
@@ -150,8 +137,8 @@ namespace FunnyDation.Wpf.Fund.Views
             }
         }
 
-        public LineVm unitLineVm;
-        public LineVm UnitLineVm
+        public FdLineVm unitLineVm;
+        public FdLineVm UnitLineVm
         {
             get
             {

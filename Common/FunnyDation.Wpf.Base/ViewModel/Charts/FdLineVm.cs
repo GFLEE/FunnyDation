@@ -10,14 +10,14 @@ namespace FunnyDation.Wpf.Base.ViewModel.Charts
     /// <summary>
     /// Simple Line
     /// </summary>
-    public class LineVm : ChartBase
+    public class FdLineVm : ChartBase
     {
-        public LineVm() : base()
+        public FdLineVm() : base()
         {
 
 
         }
-        public LineVm(string x_param, string y_param, string title,
+        public FdLineVm(string x_param, string y_param, string title,
             string x_label, string y_label, int marker_size = 10) : base()
         {
             this.XParam = x_param;

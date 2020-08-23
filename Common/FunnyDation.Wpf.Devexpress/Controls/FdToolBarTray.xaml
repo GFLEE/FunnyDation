@@ -8,9 +8,10 @@
              xmlns:vms="clr-namespace:FunnyDation.Wpf.Base.ViewModel.ToolBars;assembly=FunnyDation.Wpf.Base"
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True,Type=x:Type vms:ToolBarTrayVm}"
-             d:DesignHeight="40" d:DesignWidth="80">
+             mc:Ignorable="d" d:DesignHeight="40" d:DesignWidth="80" 
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True,Type=x:Type vms:ToolBarTrayVm}">
+    <!---->
+
     <Grid Background="White">
         <Grid.Resources>
             <selectors:TemplateSelector x:Key="TemplateSelector" />
@@ -23,7 +24,7 @@
             <DataTemplate x:Key="TemplateButton">
                 <Button Style="{DynamicResource {x:Static ToolBar.ButtonStyleKey}}"
                         ToolTip="{Binding ToolTip,Mode=TwoWay}" 
-                        Background="White" Padding="0,0,8,0"
+                        Background="White"  Padding="0,0,8,0"
                         Visibility="{Binding Visibility}"
                         Command="{Binding CommandClick}">
                     <WrapPanel Height="auto" Width="auto">
@@ -89,7 +90,7 @@
                          IsEnabled="{Binding IsEnabledToolBar,Mode=TwoWay}"
                          local:FdToolBarTray.Bars="{Binding Bars}" Background="White" 
                          Opacity="{Binding ToolBarOpacity,Mode=TwoWay}" ></ToolBarTray>
-            
+
         </Border>
     </Grid>
 </UserControl>

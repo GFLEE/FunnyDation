@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="FunnyDation.Wpf.Devexpress.Controls.Fd2DPie"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
+             mc:Ignorable="d"
+             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:dxi="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+             xmlns:dxct="http://schemas.devexpress.com/winfx/2008/xaml/charts/themekeys"
+             d:DesignHeight="300" d:DesignWidth="500">
+    <Grid>
+        <dxc:ChartControl
+            Name="chart"
+            AnimationMode="OnLoad"
+            ToolTipEnabled="True">
+            <!--<dxmvvm:Interaction.Behaviors>
+                <local:PieChartSelectionBehavior
+                    ExpandAnimation="{StaticResource ExplodeAnimation}"
+                    CollapseAnimation="{StaticResource CollapseAnimation}" />
+                <local:PieChartRotationBehavior />
+            </dxmvvm:Interaction.Behaviors>-->
+            <dxc:ChartControl.Diagram>
+                <dxc:SimpleDiagram2D>
+                    <dxc:SimpleDiagram2D.Series>
+                        <dxc:PieSeries2D
+                            x:Name="Series"
+                            ArgumentScaleType="Qualitative" DataSource="{Binding DataSource,Mode=TwoWay}"
+                            AnimationAutoStartMode="SetStartState"
+                            HoleRadiusPercent="{Binding CenterWhiteCircle}"
+                            SweepDirection="{Binding DataDisplayIndexInClock}">
+                            <dxc:PieSeries2D.PointAnimation>
+                                <dxc:Pie2DFlyInAnimation
+                                    Duration="0:0:1.5"
+                                    PointOrder="Random" />
+                            </dxc:PieSeries2D.PointAnimation>
+                            <dxc:PieSeries2D.Label>
+                                <dxc:SeriesLabel
+                                    Visible="True"
+                                    dxc:PieSeries.LabelPosition="Outside"
+                                    RenderMode="RectangleConnectedToCenter"
+                                    TextPattern="{}{A}, {VP:P0}" />
+                            </dxc:PieSeries2D.Label>
+                            <dxc:PieSeries2D.Titles>
+                                <dxc:Title
+                                    dxc:PieSeries.SeriesTitleTextPattern="{Binding TitlePattern,Mode=TwoWay}"
+                                    HorizontalAlignment="Center"
+                                    Visible="{Binding Title}" />
+                            </dxc:PieSeries2D.Titles>
+                        </dxc:PieSeries2D>
+                    </dxc:SimpleDiagram2D.Series>
+                </dxc:SimpleDiagram2D>
+            </dxc:ChartControl.Diagram>
+            <!--#region Titles-->
+            <dxc:ChartControl.Titles>
+                <dxc:Title
+                    Dock="Top"
+                    HorizontalAlignment="Center"
+                    FontSize="24" Content="{Binding ChartTitle}"></dxc:Title>
+                <dxc:Title
+                    Dock="Bottom"
+                    HorizontalAlignment="Right"
+                    FontSize="12"
+                    Foreground="Silver"
+                    Margin="0,10,0,0" Content="{Binding ChartBottomText,Mode=TwoWay}">
+                </dxc:Title>
+            </dxc:ChartControl.Titles>
+        </dxc:ChartControl>
+
+    </Grid>
+</UserControl>
