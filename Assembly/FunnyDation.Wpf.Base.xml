@@ -539,6 +539,11 @@
             Button Text
             </summary>
         </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarCheckVm.visibility">
+            <summary>
+            显示隐藏
+            </summary>
+        </member>
         <member name="T:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarItemVm">
             <summary>
             BarItemVm

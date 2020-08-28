@@ -53,11 +53,26 @@
 
             <DataTemplate x:Key="TemplateTextBox">
                 <dxe:TextEdit Text="{Binding Text ,UpdateSourceTrigger=PropertyChanged}"
+                              ToolTip="{Binding ToolTip}"
+                              Foreground="{Binding FontColor}"
+                              Visibility="{Binding Visibility}" 
+                              Width="{Binding Width}"
+                              NullText="{Binding NullText}" />
+
+            </DataTemplate>
+            <DataTemplate x:Key="TemplateTextBlock">
+                <dxe:TextEdit Text="{Binding Text ,UpdateSourceTrigger=PropertyChanged}"
                               Foreground="{Binding FontColor}"
                               Padding="0,6,0,0"/>
 
             </DataTemplate>
+            <DataTemplate x:Key="TemplateCheckEdit">
+                <dxe:CheckEdit Content="{Binding Text ,UpdateSourceTrigger=PropertyChanged}"
+                               Visibility="{Binding Visibility}"
+                               IsChecked="{Binding IsCheck}"
+                               BorderThickness="1" BorderBrush="Black"/>
 
+            </DataTemplate>
             <DataTemplate x:Key="TemplateCombo">
                 <dxe:ComboBoxEdit VerticalAlignment="Center"
                                   Name="combo"
