@@ -1,6 +1,6 @@
 ![image](https://github.com/GFLEE/FunnyDation/blob/master/FunnyDation.Client.Wpf/favicon.ico)
 
-# FunnyDation-A client app about finance .
+# FunnyDation-A desktop app about finance.
 ****
     Hello,This is FunnyDation
 
