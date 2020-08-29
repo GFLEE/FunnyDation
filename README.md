@@ -1,6 +1,6 @@
 ![image](https://github.com/GFLEE/FunnyDation/blob/master/FunnyDation.Client.Wpf/favicon.ico)
 
-# FunnyDation-A deskTop client show financial details:dog::dog::dog:.
+# FunnyDation-A client about finance .
 ****
     Hello,This is FunnyDation
 
