@@ -22,8 +22,8 @@
 
             <!--<crls:FdLine DataContext="{Binding LineVm}" Grid.Row="0"/>-->
             <!--<crls:FdLine DataContext="{Binding UnitLineVm}" Grid.Row="1"/>-->
-            <crls:FdToolBarTray DataContext="{Binding ToolBar}"  Grid.Row="0"/>
-            <crls:FdGridControl DataContext="{Binding GridVm}"  Grid.Row="1" Grid.RowSpan="3"  />
+            <crls:FdToolBarTray DataContext="{Binding ToolBar,Mode=TwoWay}"  Grid.Row="0"/>
+            <!--<crls:FdGridControl DataContext="{Binding GridVm}"  Grid.Row="1" Grid.RowSpan="3"  />-->
 
         </Grid>
     <!--</dx:LoadingDecorator>-->

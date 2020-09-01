@@ -30,21 +30,20 @@ namespace FunnyDation.Client.Wpf
     {
         public MainWindowVm()
         {
-            EventAggregator = ServiceLocator.Current.TryResolve<IEventAggregator>();
             DockManager = new DockManagerVm();
             Ribbon = new RibbonVm(this);
             Ribbon.Visiable = true;
             Ribbon.Clicked += Ribbon_Clicked;
 
-            InitRibbonDocs();
+            WelCome();
             InitMenu();
 
 
 
 
         }
-
-        public void InitRibbonDocs()
+         
+        public void WelCome()
         {
             var crl = CrlFactory.Create<Welcome>((crlvm) =>
             {
@@ -63,17 +62,16 @@ namespace FunnyDation.Client.Wpf
         public void InitMenu()
         {
             Dictionary<string, string> menus = new Dictionary<string, string>();
-            menus.Add("Test1Test1", ClientUtility.GetGlyphPath("CustomersKPI_32x32.png"));
-            menus.Add("Test2Test2", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Line_32x32.png"));
-            menus.Add("Test3Test3", ClientUtility.GetGlyphPath("Demo_ListEditors_Chart_Bar_32x32.png"));
-            menus.Add("Test4Test4", ClientUtility.GetGlyphPath("MoviesKPI_32x32.png"));
-            menus.Add("Test5Test5", ClientUtility.GetGlyphPath("Wizard_32x32.png"));
-            menus.Add("Test6Test6", ClientUtility.GetGlyphPath("Effects_32x32.png"));
-            menus.Add("Test7Test7", ClientUtility.GetGlyphPath("rdio.png"));
+            menus.Add("Test1Test1", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            menus.Add("Test2Test2", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            menus.Add("Test3Test3", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            menus.Add("Test4Test4", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            menus.Add("Test5Test5", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            menus.Add("Test6Test6", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            menus.Add("Test7Test7", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
 
-            AddPageWithMenus("Test1Test1", menus);
-            AddPageWithMenus("Test2Test2", menus);
-            AddPageWithMenus("Test3Test3", menus);
+            AddPageWithMenus("Fund Data", menus);
+            AddPageWithMenus("Gold Data", menus);
         }
 
         public void AddPageWithMenus(string pageName, Dictionary<string, string> menus)
@@ -129,25 +127,7 @@ namespace FunnyDation.Client.Wpf
             }
         }
 
-
-        public IEventAggregator eventAggregator;
-        public IEventAggregator EventAggregator
-        {
-            get
-            {
-                return eventAggregator;
-            }
-
-            set
-            {
-                eventAggregator = value;
-                if (eventAggregator == null)
-                {
-                    return;
-                }
-
-            }
-        }
+      
 
         public Assembly RankingAssb { get; set; }
         public UserControl GetTestList()

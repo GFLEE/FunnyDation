@@ -45,8 +45,8 @@ namespace FunnyDation.Wpf.Fund.Views
 
         private void InitToolBar()
         {
-            ToolBar.DefaultToolBar.AddButton("new", "添加", MyUtility.GetGlyphPath("Action_Export_ToDOCX_32x32.png"));
-            ToolBar.DefaultToolBar.AddButton("new2", "添加2", MyUtility.GetGlyphPath("AddToLibrary_32x32.png"));
+            ToolBar.DefaultToolBar.AddButton("new", "添加", MyUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            ToolBar.DefaultToolBar.AddButton("new2", "添加2", MyUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
             ToolBar.Clicked += ToolBar_Clicked;
         }
 
