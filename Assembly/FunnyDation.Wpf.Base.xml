@@ -4,6 +4,11 @@
         <name>FunnyDation.Wpf.Base</name>
     </assembly>
     <members>
+        <member name="T:FunnyDation.Wpf.Base.CommandInterface">
+            <summary>
+            CommandInterface
+            </summary>
+        </member>
         <member name="F:FunnyDation.Wpf.Base.ViewModel.Charts.ChartBase.dataSource">
             <summary>
             DataSource
@@ -542,6 +547,56 @@
         <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarCheckVm.visibility">
             <summary>
             显示隐藏
+            </summary>
+        </member>
+        <member name="T:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm">
+            <summary>
+            ComboBox
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.ItemSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.ValueMember">
+            <summary>
+            值member
+            </summary>
+        </member>
+        <member name="P:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.DisplayMember">
+            <summary>
+            显示member
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.selectItem">
+            <summary>
+            选中Item
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.commandClear">
+            <summary>
+            Clear事件
+            </summary>
+        </member>
+        <member name="E:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.SelectedItemChanged">
+            <summary>
+            选中改变事件
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.width">
+            <summary>
+            控件宽度
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.visibility">
+            <summary>
+            Visibility
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarComboVm.nullText">
+            <summary>
+            NullText
             </summary>
         </member>
         <member name="T:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarItemVm">

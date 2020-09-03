@@ -81,10 +81,10 @@ namespace FunnyDation.Wpf.Devexpress.Controls
         {
             ToolBar toolBar = sender as ToolBar;
             var overflowGrid = toolBar.Template.FindName("OverflowGrid", toolBar) ;
-            if (overflowGrid != null)
-            {
-              (overflowGrid as FrameworkElement).Visibility = Visibility.Collapsed;
-            }
+            //if (overflowGrid != null)
+            //{
+            //  (overflowGrid as FrameworkElement).Visibility = Visibility.Collapsed;
+            //}
             //var mainPanelBorder = toolBar.Template.FindName("MainPanelBorder", toolBar) as FrameworkElement;
             //if (mainPanelBorder != null)
             //{
