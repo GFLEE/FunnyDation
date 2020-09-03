@@ -37,7 +37,7 @@ namespace FunnyDation.Wpf.Fund.Views
         }
 
         public override void OnInitComplete()
-        {
+        { 
             // InitLine();
             InitToolBar();
             InitGrid();
