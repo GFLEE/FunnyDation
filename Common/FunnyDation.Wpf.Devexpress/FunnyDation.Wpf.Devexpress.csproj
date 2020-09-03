@@ -131,6 +131,7 @@
     <Compile Include="Controls\Charts\Fd2DPie.xaml.cs">
       <DependentUpon>Fd2DPie.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Converter\EventConverter.cs" />
     <Compile Include="Controls\FdDocPanel.xaml.cs">
       <DependentUpon>FdDocPanel.xaml</DependentUpon>
     </Compile>

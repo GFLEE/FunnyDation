@@ -604,6 +604,43 @@
             BarItemVm
             </summary>
         </member>
+        <member name="M:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarTextBlockVm.ColorConvert(System.String)">
+            <summary>
+            ColorConvert
+            </summary>
+            <param name="strColor"></param>
+            <returns></returns>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarTextBlockVm.text">
+            <summary>
+            文字
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarTextBlockVm.fontColor">
+            <summary>
+            字体颜色
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarTextBoxVm.text">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarTextBoxVm.nullText">
+            <summary>
+            NullText
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarTextBoxVm.width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="F:FunnyDation.Wpf.Base.ViewModel.ToolBars.BarTextBoxVm.visibility">
+            <summary>
+            Visibility
+            </summary>
+        </member>
         <member name="T:FunnyDation.Wpf.Base.ViewModel.ToolBars.ToolBarTrayVm">
             <summary>
             

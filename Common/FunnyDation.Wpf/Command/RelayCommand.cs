@@ -19,6 +19,11 @@ namespace FunnyDation.Wpf.Command
         {
 
         }
+
+        public RelayCommand(Action<object> excute) : this(excute, null)
+        {
+
+        }
         public RelayCommand(Action excute, Func<bool> canExcute)
         {
             if (excute == null)
@@ -30,7 +35,17 @@ namespace FunnyDation.Wpf.Command
 
 
         }
+        public RelayCommand(Action<object> excute, Func<object,bool> canExcute)
+        {
+            if (excute == null)
+            {
+                throw new ArgumentException("ArgumentException");
+            }
+            excute2 = excute;
+            canExcute2 = canExcute;
 
+
+        }
         public event EventHandler CanExecuteChanged
         {
             add

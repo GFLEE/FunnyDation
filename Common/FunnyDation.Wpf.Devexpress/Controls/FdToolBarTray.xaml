@@ -4,8 +4,10 @@
              xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
              xmlns:selectors="clr-namespace:FunnyDation.Wpf.Selectors;assembly=FunnyDation.Wpf"             
              xmlns:vms="clr-namespace:FunnyDation.Wpf.Base.ViewModel.ToolBars;assembly=FunnyDation.Wpf.Base"
+             xmlns:convert="clr-namespace:FunnyDation.Wpf.Devexpress.Controls.Converter;assembly=FunnyDation.Wpf.Devexpress"
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" d:DesignHeight="40" d:DesignWidth="80" 
@@ -24,8 +26,8 @@
                         ToolTip="{Binding ToolTip,Mode=TwoWay}" 
                         Background="White"  Padding="0,0,8,0"
                         Visibility="{Binding Visibility}"
-                        Command="{Binding CommandClick}"> 
-                    <WrapPanel Height="auto" Width="auto"> 
+                        Command="{Binding CommandClick}">
+                    <WrapPanel Height="auto" Width="auto">
                         <Image Source="{Binding GlyphName,Mode=TwoWay}"/>
                         <TextBlock TextWrapping="Wrap" Width="auto" 
                                    Height="auto" Text="{Binding BtnText,Mode=TwoWay}" 
@@ -54,12 +56,20 @@
                               ToolTip="{Binding ToolTip}"
                               Foreground="{Binding FontColor}"
                               Visibility="{Binding Visibility}" 
-                              Width="{Binding Width}"
-                              NullText="{Binding NullText}" />
+                              Width="{Binding Width}"  
+                              NullText="{Binding NullText}" >
+                    <!--<dxmvvm:Interaction.Behaviors>
+                        <dxmvvm:EventToCommand EventName="EditValueChanged" Command="{Binding CommandEditValueChanged}">
+                            <dxmvvm:EventToCommand.EventArgsConverter>
+                                <convert:EventConvert />
+                            </dxmvvm:EventToCommand.EventArgsConverter>
+                        </dxmvvm:EventToCommand>
+                    </dxmvvm:Interaction.Behaviors>-->
+                </dxe:TextEdit>
 
             </DataTemplate>
             <DataTemplate x:Key="TemplateTextBlock">
-                <dxe:TextEdit Text="{Binding Text ,UpdateSourceTrigger=PropertyChanged}"
+                <TextBlock Text="{Binding Text ,UpdateSourceTrigger=PropertyChanged}"
                               Foreground="{Binding FontColor}"
                               Padding="0,6,0,0"/>
 
