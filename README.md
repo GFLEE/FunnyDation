@@ -1,6 +1,6 @@
 ![image](https://github.com/GFLEE/FunnyDation/blob/master/FunnyDation.Client.Wpf/favicon.ico)
 
-# FunnyDation-A deskTop client show financial details:dog::dog::dog:.
+# FunnyDation-A desktop app about finance.
 ****
     Hello,This is FunnyDation
 
@@ -18,26 +18,26 @@
 
 ## #安装步骤  
 
-## 自动化测试
+## #自动化测试
 ### 单元测试
 
-### #端对端测试
+### 端对端测试
 
-### #代码风格测试
+### 代码风格测试
 
 ## #服务端部署
 
-## 使用到的框架
+## #使用框架
 
-## 贡献者(CONTRIBUTING)
+## #贡献者(Contributors)
 
-## 版本控制
+## #版本控制
     该项目使用Git进行版本管理。您可以在release参看当前可用版本。
-## 作者
+## #作者
 
-## 版权说明
+## #版权说明
 
-## 鸣谢
+## #鸣谢
 
 
 
