@@ -65,7 +65,7 @@ namespace FunnyDation.Wpf.Fund.Views
 
             GridVm.LoadDataSource += LoadGrid;
             GridVm.Refresh();
-        }
+        } 
         public List<object> LoadGrid()
         {
             List<ChartDataBase> datas = new List<ChartDataBase>();
