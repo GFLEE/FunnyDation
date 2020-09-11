@@ -20,7 +20,7 @@ namespace FunnyDation.Client.Wpf
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : DXRibbonWindow
+    public partial class MainWindow : ThemedWindow
     {
         public MainWindow()
         {

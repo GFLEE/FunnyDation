@@ -33,7 +33,6 @@
         <Style TargetType="{x:Type dxg:GridControl}">
             <Setter Property="AutoGenerateColumns" Value="None"/>
             <Setter Property="EnableSmartColumnsGeneration" Value="True"/>
-          
             <Setter Property="ColumnGeneratorStyle">
                 <Setter.Value>
                     <Style TargetType="{x:Type dxg:GridColumn}">
@@ -66,6 +65,8 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
+    <dx:LoadingDecorator>
+        
     <dxg:GridControl Name="grid" 
                      AutoExpandAllGroups="True"
                      ItemsSource="{Binding Datas,Mode=TwoWay}"
@@ -96,7 +97,6 @@
                                ShowBandsPanel="False" 
                                ShowIndicator="False"
                                AutoWidth="{Binding AutoWidth}"
-                               RowStyle="{Binding RowStyle}"
                                FocusedRow="{Binding SelectedItem}"
                                ShowSearchPanelFindButton="False"
                                AllowCellMerge="False"
@@ -119,5 +119,6 @@
         </dxg:GridControl.View>
        
     </dxg:GridControl>
+    </dx:LoadingDecorator>
 
 </UserControl>

@@ -110,7 +110,7 @@
         </Grid.Resources>
         <Border Grid.Row="0" BorderBrush="WhiteSmoke" BorderThickness="0,0,0,3" >
             <ToolBarTray IsLocked="True"  Background="White"  ToolBar.OverflowMode="Never"
-                         IsEnabled="{Binding IsEnabledToolBar,Mode=TwoWay}"
+                         IsEnabled="{Binding IsEnableToolBar,Mode=TwoWay}"
                          local:FdToolBarTray.Bars="{Binding Bars,Mode=TwoWay}"
                          Opacity="{Binding ToolBarOpacity,Mode=TwoWay}" />
 

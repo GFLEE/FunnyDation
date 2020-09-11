@@ -35,12 +35,16 @@ namespace FunnyDation.Wpf.Fund.Views
             UnitLineVm = new FdLineVm("X_Date_Value", "Y_String_Value", "TITLE", "日期", "单位净值");
             //UnitLineVm.LineColor = "lightblue";
         }
-
-        public override void OnInitComplete()
-        { 
-            // InitLine();
-            InitToolBar();
+        public override void OnControlLoaded()
+        {
+           
             InitGrid();
+        }
+        public override void OnInitComplete()
+        {
+            // InitLine();
+     
+            InitToolBar();
         }
 
         private void InitToolBar()
@@ -85,6 +89,7 @@ namespace FunnyDation.Wpf.Fund.Views
 
         }
 
+    
         public async void GetList()
         {
 
