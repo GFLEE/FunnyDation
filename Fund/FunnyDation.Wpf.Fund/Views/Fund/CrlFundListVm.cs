@@ -37,13 +37,13 @@ namespace FunnyDation.Wpf.Fund.Views
         }
         public override void OnControlLoaded()
         {
-           
+
             InitGrid();
         }
         public override void OnInitComplete()
         {
             // InitLine();
-     
+
             InitToolBar();
         }
 
@@ -69,12 +69,12 @@ namespace FunnyDation.Wpf.Fund.Views
 
             GridVm.LoadDataSource += LoadGrid;
             GridVm.Refresh();
-        } 
+        }
         public List<object> LoadGrid()
         {
             List<ChartDataBase> datas = new List<ChartDataBase>();
             int i = 0;
-            while (i < 13000)
+            while (i < 1000)
             {
                 ChartDataBase dt = new ChartDataBase("Main", DateTime.Now, i.ToString());
                 datas.Add(dt);
@@ -89,7 +89,7 @@ namespace FunnyDation.Wpf.Fund.Views
 
         }
 
-    
+
         public async void GetList()
         {
 

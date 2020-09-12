@@ -30,4 +30,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModel\TabControl\" />
+  </ItemGroup>
+
 </Project>

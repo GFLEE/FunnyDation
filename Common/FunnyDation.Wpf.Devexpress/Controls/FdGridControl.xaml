@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FunnyDation.Wpf.Devexpress.Controls"
+             xmlns:converter="clr-namespace:FunnyDation.Wpf.Devexpress.Controls.Converter"
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
              xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
              xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys"
@@ -16,10 +17,11 @@
              xmlns:dynamicColumns="clr-namespace:FunnyDation.Wpf.Devexpress.Converter"
              xmlns:ViewModels="clr-namespace:FunnyDation.Wpf.Base.ViewModel.Grids;assembly=FunnyDation.Wpf.Base"
              xmlns:dxci="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
-             mc:Ignorable="d"
+             mc:Ignorable="d" dx:ThemeManager.ThemeName="DXStyle"
              d:DesignHeight="450" d:DesignWidth="800" 
              DataContext="{dxmvvm:ViewModelSource Type=ViewModels:GridVm}">
     <UserControl.Resources>
+        <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <selectors:TemplateSelector x:Key="GridColumnTemplateSelector" DefaultTemplateName="GridColumnTemplate" />
         <DataTemplate x:Key="GridColumnTemplate">
             <ContentControl>
@@ -66,11 +68,11 @@
         </Style>
     </UserControl.Resources>
     <dx:LoadingDecorator>
-        
-    <dxg:GridControl Name="grid" 
+
+        <dxg:GridControl Name="grid" 
                      AutoExpandAllGroups="True"
                      ItemsSource="{Binding Datas,Mode=TwoWay}"
-                     Visibility="{Binding IsVisiable,Mode=TwoWay}"
+                     Visibility="{Binding IsVisiable, Converter={StaticResource BooleanToVisibilityConverter}}"
                      ColumnsSource="{Binding Columns}" 
                      SelectedItems="{Binding SelectedItems}"
                      ColumnGeneratorTemplateSelector="{StaticResource GridColumnTemplateSelector}"
@@ -79,8 +81,8 @@
                      SelectionMode="Row"  HorizontalContentAlignment="Center"
                      dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
                      ShowBorder="False">
-        <dxg:GridControl.View>
-            <dxg:TableView     ShowFixedTotalSummary="True"
+            <dxg:GridControl.View>
+                <dxg:TableView     ShowFixedTotalSummary="True"
                                AllowScrollAnimation="True"
                                ShowFocusedRectangle="True"
                                UseEvenRowBackground="True"
@@ -108,17 +110,17 @@
                                UseLegacyFilterPanel="False"
                                HighlightItemOnHover="True"  
                                ShowCheckBoxSelectorColumn="{Binding IsShowCheckBox}">
-                <dxmvvm:Interaction.Behaviors>
-                    <dxmvvm:EventToCommand EventName="RowDoubleClick" Command="{Binding CommandDoubleClick}">
-                        <!--<dxmvvm:EventToCommand.EventArgsConverter>
+                    <dxmvvm:Interaction.Behaviors>
+                        <dxmvvm:EventToCommand EventName="RowDoubleClick" Command="{Binding CommandDoubleClick}">
+                            <!--<dxmvvm:EventToCommand.EventArgsConverter>
                             <convert:EventConvert/>
                         </dxmvvm:EventToCommand.EventArgsConverter>-->
-                    </dxmvvm:EventToCommand>
-                </dxmvvm:Interaction.Behaviors>
-            </dxg:TableView>
-        </dxg:GridControl.View>
-       
-    </dxg:GridControl>
+                        </dxmvvm:EventToCommand>
+                    </dxmvvm:Interaction.Behaviors>
+                </dxg:TableView>
+            </dxg:GridControl.View>
+
+        </dxg:GridControl>
     </dx:LoadingDecorator>
 
 </UserControl>

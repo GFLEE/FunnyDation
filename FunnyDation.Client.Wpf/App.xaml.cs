@@ -5,6 +5,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using FunnyDation.Common;
@@ -31,6 +32,8 @@ namespace FunnyDation.Client.Wpf
             win.Show();
             return win;
         }
+
+
         /// <summary>
         /// IOC
         /// </summary>
@@ -59,8 +62,8 @@ namespace FunnyDation.Client.Wpf
                 var modules = types.Where(p => p.GetInterfaces().Contains(typeof(IModule)));
 
                 foreach (var module in modules)
-                { 
-                    
+                {
+
                     moduleCatalog.AddModule(new ModuleInfo()
                     {
                         ModuleName = module.FullName,
@@ -81,7 +84,18 @@ namespace FunnyDation.Client.Wpf
         /// <param name="e"></param>
         protected override void OnStartup(StartupEventArgs e)
         {
+            Thread thread = new Thread(LoadAssembles);
+            thread.Start();
             base.OnStartup(e);
+        }
+        public void LoadAssembles()
+        {
+            //PreLoading crl = new PreLoading();
+            Assembly.Load("DevExpress.Charts.v20.1.Core");
+            Assembly.Load("DevExpress.Xpf.Grid.v20.1");
+            Assembly.Load("DevExpress.Xpf.Grid.v20.1.Core");
+            Assembly.Load("DevExpress.Data.v20.1");
+
         }
 
         /// <summary>
