@@ -1,6 +1,4 @@
-![image](https://github.com/GFLEE/FunnyDation/blob/master/FunnyDation.Client.Wpf/favicon.ico)
-
-# FunnyDation-A desktop app about finance.
+# <img src="https://github.com/GFLEE/FunnyDation/blob/master/FunnyDation.Client.Wpf/favicon.ico" width="64">  FunnyDation-A desktop app about finance.
 ****
     Hello,This is FunnyDation
 
