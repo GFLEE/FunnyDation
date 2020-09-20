@@ -8,7 +8,7 @@ using FunnyDation.Wpf.Fund.Base;
 using FunnyDation.Wpf.Ranking;
 using FunnyDation.Wpf.Ranking.Base;
 using FunnyDation.Wpf.Web;
-//using FunnyDation.IService.Fund;
+using FunnyDation.IService.Fund;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,6 +20,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Threading;
+using FunnyDation.Service.Fund;
 
 namespace FunnyDation.Wpf.Fund.Views
 {
@@ -38,7 +39,8 @@ namespace FunnyDation.Wpf.Fund.Views
         }
         public override void OnControlLoaded()
         {
-           // IUserInfoRepository
+            IUserInfoRepository repository = new UserInfoRepository();
+            repository.ValidateUser("Lee");
 
             InitGrid();
         }

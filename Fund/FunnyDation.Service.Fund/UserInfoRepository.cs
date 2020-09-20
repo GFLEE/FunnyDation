@@ -13,16 +13,16 @@ namespace FunnyDation.Service.Fund
             UserInfo user = new UserInfo();
             try
             {
-                  
+
                 DynamicParameters Parameters = new DynamicParameters();
                 string strQuery = "WHERE User_Name=@Name";
                 Parameters.Add("Name", strUser);
                 var res = this.GetModelList(strQuery, Parameters).First();
                 return res;
             }
-            catch
+            catch (Exception ex)
             {
-                return user;
+                throw ex;
             }
 
 

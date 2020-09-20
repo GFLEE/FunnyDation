@@ -148,6 +148,10 @@
       <Project>{B4DBF030-1A9B-4BD0-B8A9-5324492BE6C1}</Project>
       <Name>FunnyDation.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Common\FunnyDation.Service\FunnyDation.Service.csproj">
+      <Project>{AEA64FA3-147D-4402-AC7B-B28ACDD2EC60}</Project>
+      <Name>FunnyDation.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\FunnyDation.Wpf.Base\FunnyDation.Wpf.Base.csproj">
       <Project>{BEE5940B-051D-43B8-98BF-D5F54E65AEDA}</Project>
       <Name>FunnyDation.Wpf.Base</Name>
@@ -160,9 +164,17 @@
       <Project>{B588DC29-15D4-4D80-9AD1-75AE60B08EB9}</Project>
       <Name>FunnyDation.Wpf</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\FunnyDation.Data\FunnyDation.Data.csproj">
+      <Project>{71FE5AEC-DEAD-45FD-BB6C-458A2D83C6E4}</Project>
+      <Name>FunnyDation.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FunnyDation.IService.Fund\FunnyDation.IService.Fund.csproj">
-      <Project>{4a4a78ec-5921-4554-a802-51a519637845}</Project>
+      <Project>{afa1fab1-a0c0-4f2d-a9bd-ef04682c76f9}</Project>
       <Name>FunnyDation.IService.Fund</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FunnyDation.Service.Fund\FunnyDation.Service.Fund.csproj">
+      <Project>{FD61814D-FD0E-4EE5-A972-FC79F78BCE66}</Project>
+      <Name>FunnyDation.Service.Fund</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
