@@ -160,6 +160,10 @@
       <Project>{B588DC29-15D4-4D80-9AD1-75AE60B08EB9}</Project>
       <Name>FunnyDation.Wpf</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FunnyDation.IService.Fund\FunnyDation.IService.Fund.csproj">
+      <Project>{4a4a78ec-5921-4554-a802-51a519637845}</Project>
+      <Name>FunnyDation.IService.Fund</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

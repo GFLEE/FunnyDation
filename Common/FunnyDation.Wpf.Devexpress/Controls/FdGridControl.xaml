@@ -68,7 +68,6 @@
         </Style>
     </UserControl.Resources>
     <dx:LoadingDecorator>
-
         <dxg:GridControl Name="grid" 
                      AutoExpandAllGroups="True"
                      ItemsSource="{Binding Datas,Mode=TwoWay}"

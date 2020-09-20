@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\FunnyDation.Data\FunnyDation.Data.csproj" />
+    <ProjectReference Include="..\FunnyDation.IService.Fund\FunnyDation.IService.Fund.csproj" />
+  </ItemGroup>
+
 </Project>

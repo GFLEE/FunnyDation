@@ -8,6 +8,7 @@ using FunnyDation.Wpf.Fund.Base;
 using FunnyDation.Wpf.Ranking;
 using FunnyDation.Wpf.Ranking.Base;
 using FunnyDation.Wpf.Web;
+//using FunnyDation.IService.Fund;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -37,6 +38,7 @@ namespace FunnyDation.Wpf.Fund.Views
         }
         public override void OnControlLoaded()
         {
+           // IUserInfoRepository
 
             InitGrid();
         }
@@ -56,7 +58,7 @@ namespace FunnyDation.Wpf.Fund.Views
 
         private void ToolBar_Clicked(object sender, NodeVmArgs e)
         {
-
+            MessageBox.Show(e.Node.DataKey);
 
 
         }
