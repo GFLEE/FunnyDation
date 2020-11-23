@@ -9,7 +9,6 @@
              mc:Ignorable="d" 
              xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
              xmlns:prism="http://prismlibrary.com/" 
-             dx:ThemeManager.ThemeName="DXStyle"
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
     <!--<dx:LoadingDecorator>-->
@@ -20,8 +19,8 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!--<crls:FdLine DataContext="{Binding LineVm}" Grid.Row="0"/>-->
-            <!--<crls:FdLine DataContext="{Binding UnitLineVm}" Grid.Row="1"/>-->
+            <!--<crls:FdLine DataContext="{Binding LineVm}" Grid.Row="1"/>-->
+            <!--<crls:FdLine DataContext="{Binding UnitLineVm}" Grid.Row="2"/>-->
             <crls:FdToolBarTray DataContext="{Binding ToolBar,Mode=TwoWay}"  Grid.Row="0"/>
             <crls:FdGridControl DataContext="{Binding GridVm}"  Grid.Row="1" Grid.RowSpan="3"  />
 

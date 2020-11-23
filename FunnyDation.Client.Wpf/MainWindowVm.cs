@@ -63,12 +63,12 @@ namespace FunnyDation.Client.Wpf
         {
             Dictionary<string, string> menus = new Dictionary<string, string>();
             menus.Add("Test1Test1", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
-            menus.Add("Test2Test2", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
-            menus.Add("Test3Test3", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
-            menus.Add("Test4Test4", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
-            menus.Add("Test5Test5", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
-            menus.Add("Test6Test6", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
-            menus.Add("Test7Test7", ClientUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            menus.Add("Test2Test2", ClientUtility.GetGlyphPath("Action_AboutInfo_32x32.png"));
+            menus.Add("Test3Test3", ClientUtility.GetGlyphPath("Action_ChartDataVertical_32x32.png"));
+            menus.Add("Test4Test4", ClientUtility.GetGlyphPath("Action_Clear_Settings_32x32.png"));
+            menus.Add("Test5Test5", ClientUtility.GetGlyphPath("AboveAverage_32x32.png"));
+            menus.Add("Test6Test6", ClientUtility.GetGlyphPath("Action_ChooseSkin_32x32.png"));
+            menus.Add("Test7Test7", ClientUtility.GetGlyphPath("Action_Change_State_32x32.png"));
 
             AddPageWithMenus("Fund Data", menus);
             AddPageWithMenus("Gold Data", menus);

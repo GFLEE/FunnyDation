@@ -20,7 +20,7 @@ namespace FunnyDation.Wpf.Base.Ribbons
             this.DefaultPageCategoryVm = new RibbonDefaultPageCategoryVm(this) { Caption = "开始" };
             PageCategories = new ObservableCollection<RibbonPageCategoryVm>();
             PageCategories.Add(DefaultPageCategoryVm);
-            BackstageItems = new ObservableCollection<object>();
+            BackStageItems = new ObservableCollection<object>();
             IsEnabledOfPageCategory = true;
             IsShowTabMenu = true;
         }
@@ -71,11 +71,11 @@ namespace FunnyDation.Wpf.Base.Ribbons
         /// </summary>
         public object ApplicationBtnPanelVm { get; set; }
 
-        public ObservableCollection<object> BackstageItems { get; set; }
+        public ObservableCollection<object> BackStageItems { get; set; }
         public ObservableCollection<RibbonPageCategoryVm> PageCategories { get; set; }
         public RibbonDefaultPageCategoryVm DefaultPageCategoryVm { get; private set; }
         public object HostVm { get; private set; }
-
+         
         /// <summary>
         /// 显示Back Tab
         /// </summary>

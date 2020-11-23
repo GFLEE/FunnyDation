@@ -40,21 +40,22 @@ namespace FunnyDation.Wpf.Fund.Views
         public override void OnControlLoaded()
         {
             IUserInfoRepository repository = new UserInfoRepository();
-            repository.ValidateUser("Lee");
-
+            //repository.ValidateUser("Lee");
+            //GetList();
             InitGrid();
         }
         public override void OnInitComplete()
         {
-            // InitLine();
+          //  InitLine();
 
             InitToolBar();
         }
 
         private void InitToolBar()
         {
-            ToolBar.DefaultToolBar.AddButton("new", "添加", MyUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
-            ToolBar.DefaultToolBar.AddButton("new2", "添加2", MyUtility.GetGlyphPath("Action_Chart_Options_32x32.png"));
+            ToolBar.DefaultToolBar.AddButton("add", "Add", MyUtility.GetMenuGlyphPath("Add.png"));
+            ToolBar.DefaultToolBar.AddButton("edit", "Edit", MyUtility.GetMenuGlyphPath("Edit.png"));
+            ToolBar.DefaultToolBar.AddButton("delete", "Delete", MyUtility.GetMenuGlyphPath("Delete.png"));
             ToolBar.Clicked += ToolBar_Clicked;
         }
 
@@ -78,7 +79,7 @@ namespace FunnyDation.Wpf.Fund.Views
         {
             List<ChartDataBase> datas = new List<ChartDataBase>();
             int i = 0;
-            while (i < 1000)
+            while (i < 100)
             {
                 ChartDataBase dt = new ChartDataBase("Main", DateTime.Now, i.ToString());
                 datas.Add(dt);
@@ -89,40 +90,45 @@ namespace FunnyDation.Wpf.Fund.Views
         }
         public void InitLine()
         {
-            GetList();
+            //GetList();
 
         }
 
 
         public async void GetList()
         {
-
-            //007301
-            //161725
-            var data = WebTool.GetFunDetail(_RESTService, "000001").data;
-            LineVm.ChartTitle = data.name;
-            UnitLineVm.ChartTitle = data.name;
-            List<List<string>> worth = data.netWorthData;
-            List<WorthBase> datas = new List<WorthBase>();
-            foreach (List<string> arr in worth)
+            await Task.Run(() =>
             {
-                WorthBase worthBase = new WorthBase(DateTime.Parse(arr[0]), arr[1], arr[2]);
-                datas.Add(worthBase);
-            }
+                //007301
+                //161725
+                var data = WebTool.GetFunDetail(_RESTService, "161725").data;
+                LineVm.ChartTitle = data.name;
+                UnitLineVm.ChartTitle = data.name;
+                List<List<string>> worth = data.netWorthData;
+                List<WorthBase> datas = new List<WorthBase>();
+                foreach (List<string> arr in worth)
+                {
+                    WorthBase worthBase = new WorthBase(DateTime.Parse(arr[0]), arr[1], arr[2]);
+                    datas.Add(worthBase);
+                }
 
-            datas = datas.Where(p => p.Date >= DateTime.Parse("2020-01-01")).ToList();
-            foreach (var dt in datas)
-            {
-                ChartDataBase line_data = new ChartDataBase("净值涨幅", dt.Date,
-                    string.Format("{0}", dt.Rate));
+                datas = datas.Where(p => p.Date >= DateTime.Parse("2020-01-01")).ToList();
+                foreach (var dt in datas)
+                {
+                    ChartDataBase line_data = new ChartDataBase("净值涨幅", dt.Date,
+                        string.Format("{0}", dt.Rate));
 
-                this.LineVm.DataSource.Add(line_data);
-                LineVm.DataSource.Add(new ChartDataBase("单位净值", dt.Date,
-               string.Format("{0}", dt.Unit_worth)));
+                    this.LineVm.DataSource.Add(line_data);
+                    LineVm.DataSource.Add(new ChartDataBase("单位净值", dt.Date,
+                   string.Format("{0}", dt.Unit_worth)));
 
-                UnitLineVm.DataSource.Add(new ChartDataBase("单位净值", dt.Date,
-                    string.Format("{0}", dt.Unit_worth)));
-            }
+                    UnitLineVm.DataSource.Add(new ChartDataBase("单位净值", dt.Date,
+                        string.Format("{0}", dt.Unit_worth)));
+                }
+
+
+            });
+
         }
 
         public ToolBarTrayVm ToolBar { get; set; }

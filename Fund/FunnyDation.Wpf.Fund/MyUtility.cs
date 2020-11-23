@@ -16,6 +16,10 @@ namespace FunnyDation.Wpf.Fund
             return path;
         }
 
-
+        public static string GetMenuGlyphPath(string name)
+        {
+            var path = string.Format(@"/FunnyDation.Client.Wpf;component/Images/Menu/{0}", name);
+            return path;
+        }
     }
 }

@@ -173,7 +173,7 @@
       <Name>FunnyDation.IService.Fund</Name>
     </ProjectReference>
     <ProjectReference Include="..\FunnyDation.Service.Fund\FunnyDation.Service.Fund.csproj">
-      <Project>{FD61814D-FD0E-4EE5-A972-FC79F78BCE66}</Project>
+      <Project>{fd61814d-fd0e-4ee5-a972-fc79f78bce66}</Project>
       <Name>FunnyDation.Service.Fund</Name>
     </ProjectReference>
   </ItemGroup>

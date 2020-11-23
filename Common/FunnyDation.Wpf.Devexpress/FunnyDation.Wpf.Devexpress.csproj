@@ -133,6 +133,9 @@
     </Compile>
     <Compile Include="Controls\Converter\BooleanToVisibilityConverter.cs" />
     <Compile Include="Controls\Converter\EventConverter.cs" />
+    <Compile Include="Controls\FDDevToolBarTray.xaml.cs">
+      <DependentUpon>FDDevToolBarTray.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FdDocPanel.xaml.cs">
       <DependentUpon>FdDocPanel.xaml</DependentUpon>
     </Compile>
@@ -181,6 +184,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Charts\Fd2DPie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FDDevToolBarTray.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

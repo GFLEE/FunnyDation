@@ -17,7 +17,7 @@
              xmlns:dynamicColumns="clr-namespace:FunnyDation.Wpf.Devexpress.Converter"
              xmlns:ViewModels="clr-namespace:FunnyDation.Wpf.Base.ViewModel.Grids;assembly=FunnyDation.Wpf.Base"
              xmlns:dxci="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
-             mc:Ignorable="d" dx:ThemeManager.ThemeName="DXStyle"
+             mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" 
              DataContext="{dxmvvm:ViewModelSource Type=ViewModels:GridVm}">
     <UserControl.Resources>
@@ -51,10 +51,10 @@
             <Setter Property="AutoWidth" Value="True"/>
         </Style>
 
-        <Style x:Key="FocusedCellStyle" TargetType="dxg:LightweightCellEditor" BasedOn="{StaticResource {dxgt:GridRowThemeKey ResourceKey=LightweightCellStyle}}">
+        <Style x:Key="FocusedCellStyle" TargetType="dxg:LightweightCellEditor" BasedOn="{StaticResource {dxgt:GridRowThemeKey ResourceKey=BorderBrush}}">
             <Style.Triggers>
                 <Trigger Property="dxg:DataViewBase.IsFocusedCell" Value="True">
-                    <Setter  Property="Background" Value="#D9E5FF" />
+                    <Setter  Property="Background" Value="#d9f0ff" />
 
                 </Trigger>
             </Style.Triggers>
@@ -62,13 +62,13 @@
         <Style x:Key="FocusedRowStyle" TargetType="dxg:RowControl">
             <Style.Triggers>
                 <Trigger Property="dxg:DataViewBase.IsFocusedRow" Value="True">
-                    <Setter  Property="Background" Value="#D9E5FF" />
+                    <Setter  Property="Background" Value="#d9f0ff" />
                 </Trigger>
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
     <dx:LoadingDecorator>
-        <dxg:GridControl Name="grid" 
+        <dxg:GridControl Name="grid"  
                      AutoExpandAllGroups="True"
                      ItemsSource="{Binding Datas,Mode=TwoWay}"
                      Visibility="{Binding IsVisiable, Converter={StaticResource BooleanToVisibilityConverter}}"
@@ -79,7 +79,7 @@
                      ShowLoadingPanel="False"
                      SelectionMode="Row"  HorizontalContentAlignment="Center"
                      dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap"
-                     ShowBorder="False">
+                     ShowBorder="True">
             <dxg:GridControl.View>
                 <dxg:TableView     ShowFixedTotalSummary="True"
                                AllowScrollAnimation="True"
@@ -116,7 +116,16 @@
                         </dxmvvm:EventToCommand.EventArgsConverter>-->
                         </dxmvvm:EventToCommand>
                     </dxmvvm:Interaction.Behaviors>
+                    <dxg:TableView.ColumnHeaderStyle>
+                        <Style TargetType="dxg:BaseGridHeader">
+                            <Setter Property="dxg:BaseGridColumnHeader.ShowFilterButtonOnHover" Value="False" />
+                            <Setter Property="Background" Value="WhiteSmoke" />
+                            <Setter Property="Height" Value="27" />
+                            <Setter Property="FontWeight" Value="ExtraBlack" />
+                        </Style>
+                    </dxg:TableView.ColumnHeaderStyle>
                 </dxg:TableView>
+              
             </dxg:GridControl.View>
 
         </dxg:GridControl>

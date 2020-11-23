@@ -236,6 +236,9 @@
     <Resource Include="Images\Action_Clear_32x32.png" />
     <Resource Include="Images\Action_Clear_Settings_32x32.png" />
     <Resource Include="Images\A_32x32.png" />
+    <Resource Include="Images\Menu\Add.png" />
+    <Resource Include="Images\Menu\Edit.png" />
+    <Resource Include="Images\Menu\Delete.png" />
     <Content Include="Images\Menu\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
