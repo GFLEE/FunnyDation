@@ -48,9 +48,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Wpf.Fund", "Fun
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Data", "FunnyDation.Data\FunnyDation.Data.csproj", "{71FE5AEC-DEAD-45FD-BB6C-458A2D83C6E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.IService.Fund", "Fund\FunnyDation.IService.Fund\FunnyDation.IService.Fund.csproj", "{AFA1FAB1-A0C0-4F2D-A9BD-EF04682C76F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.IService.Fund", "Fund\FunnyDation.IService.Fund\FunnyDation.IService.Fund.csproj", "{AFA1FAB1-A0C0-4F2D-A9BD-EF04682C76F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Service.Fund", "Fund\FunnyDation.Service.Fund\FunnyDation.Service.Fund.csproj", "{FD61814D-FD0E-4EE5-A972-FC79F78BCE66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunnyDation.Service.Fund", "Fund\FunnyDation.Service.Fund\FunnyDation.Service.Fund.csproj", "{FD61814D-FD0E-4EE5-A972-FC79F78BCE66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.WebApi", "FunnyDation.WebApi\FunnyDation.WebApi.csproj", "{951BC3E4-134D-4A78-AA58-44202629BD01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnyDation.Repository.Fund", "Fund\FunnyDation.Repository.Fund\FunnyDation.Repository.Fund.csproj", "{4770CF15-85AA-4161-80EA-619246641FB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,6 +106,14 @@ Global
 		{FD61814D-FD0E-4EE5-A972-FC79F78BCE66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD61814D-FD0E-4EE5-A972-FC79F78BCE66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD61814D-FD0E-4EE5-A972-FC79F78BCE66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{951BC3E4-134D-4A78-AA58-44202629BD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951BC3E4-134D-4A78-AA58-44202629BD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951BC3E4-134D-4A78-AA58-44202629BD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951BC3E4-134D-4A78-AA58-44202629BD01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4770CF15-85AA-4161-80EA-619246641FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4770CF15-85AA-4161-80EA-619246641FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4770CF15-85AA-4161-80EA-619246641FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4770CF15-85AA-4161-80EA-619246641FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +129,7 @@ Global
 		{C4672449-671D-4379-BF3E-2289BF5C9952} = {0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}
 		{AFA1FAB1-A0C0-4F2D-A9BD-EF04682C76F9} = {0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}
 		{FD61814D-FD0E-4EE5-A972-FC79F78BCE66} = {0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}
+		{4770CF15-85AA-4161-80EA-619246641FB7} = {0BF192AD-9F5C-4B97-B8E4-C6F5A8830835}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AA461BC-5A17-49E8-881B-37EA6EEFECE9}

@@ -9,6 +9,7 @@ namespace FunnyDation.Wpf.Fund
         public void OnInitialized(IContainerProvider containerProvider)
         {
             StartPagePath = "FunnyDation.Wpf.Fund.Views.CrlFundList";
+            RepoListPath = "FunnyDation.Wpf.Ranking.Views.Fund.CrlList";
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
@@ -17,6 +18,7 @@ namespace FunnyDation.Wpf.Fund
         }
 
         public static string StartPagePath { get; set; }
+        public static string RepoListPath { get; set; }
 
     }
 }

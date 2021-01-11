@@ -103,6 +103,10 @@
       <DependentUpon>CrlFundList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Fund\CrlFundListVm.cs" />
+    <Compile Include="Views\Fund\CrlList.xaml.cs">
+      <DependentUpon>CrlList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fund\CrlListVm.cs" />
     <Compile Include="Views\Gold\CrlGoldList.xaml.cs">
       <DependentUpon>CrlGoldList.xaml</DependentUpon>
     </Compile>
@@ -135,6 +139,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\Fund\CrlFundList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Fund\CrlList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

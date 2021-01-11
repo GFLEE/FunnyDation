@@ -87,13 +87,38 @@ namespace FunnyDation.Client.Wpf
 
         private void Ribbon_Clicked(object sender, NodeVmArgs e)
         {
-             Test();
+            CheckAss();
+
+            if (e.Node.DataKey.Equals("Test1Test1"))
+            {
+                Test();
+
+            }
+            if (e.Node.DataKey.Equals("Test2Test2"))
+            {
+                var mudule = RankingAssb.GetTypes().FirstOrDefault(p => p.GetInterfaces().Contains(typeof(IModule)));
+                var type = RankingAssb.GetType(
+                    ReflectionHelper.GetPropertyValueSafely(mudule, 
+                    mudule.GetProperty("RepoListPath")).ToString());
+                var crl = CrlFactory.Create(type, (crlVm) =>
+                {
+
+
+                });
+                DockManager.CreataOrActiveLayoutPanel(new DockPanelParam()
+                {
+                    Crl = crl as UserControl,
+                    Caption = "Test",
+                    ToolTip = "Test_ToolTip",
+                    ProcessStyle = EuProcessStyle.CloseAndNew
+                }, "DocumentHost");
+            }
 
 
             //RESTService rEST = IocService.Resolve(typeof(RESTService)) as RESTService;
             //rEST.Post("http://127.0.0.1:5000/Invoke/", "bayes", "cal_bayes", new object[] { 1, 2, 3, 4 });
-      
-        
+
+
         }
 
         private void Test()
@@ -109,6 +134,16 @@ namespace FunnyDation.Client.Wpf
 
         }
 
+        public void CheckAss()
+        {
+            if (RankingAssb == null)
+            {
+                string mdPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FDConst.ModulePath);
+                var file = Directory.GetFiles(mdPath, string.Format("{0}.dll", FDConst.ranking_client), SearchOption.AllDirectories).FirstOrDefault();
+                RankingAssb = Assembly.LoadFile(file);
+            }
+
+        }
         public DockManagerVm DockManager { get; set; }
 
         public RibbonVm ribbon;
@@ -131,13 +166,7 @@ namespace FunnyDation.Client.Wpf
 
         public Assembly RankingAssb { get; set; }
         public UserControl GetTestList()
-        {
-            if (RankingAssb == null)
-            {
-                string mdPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FDConst.ModulePath);
-                var file = Directory.GetFiles(mdPath, string.Format("{0}.dll", FDConst.ranking_client), SearchOption.AllDirectories).FirstOrDefault();
-                RankingAssb = Assembly.LoadFile(file);
-            }
+        { 
 
             var mudule = RankingAssb.GetTypes().FirstOrDefault(p => p.GetInterfaces().Contains(typeof(IModule)));
             var type = RankingAssb.GetType(ReflectionHelper.GetPropertyValueSafely(mudule, mudule.GetProperty("StartPagePath")).ToString());

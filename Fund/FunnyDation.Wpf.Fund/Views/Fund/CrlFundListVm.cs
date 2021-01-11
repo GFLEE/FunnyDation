@@ -46,7 +46,7 @@ namespace FunnyDation.Wpf.Fund.Views
         }
         public override void OnInitComplete()
         {
-          //  InitLine();
+            InitLine();
 
             InitToolBar();
         }
@@ -90,7 +90,7 @@ namespace FunnyDation.Wpf.Fund.Views
         }
         public void InitLine()
         {
-            //GetList();
+            GetList();
 
         }
 
