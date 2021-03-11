@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FunnyDation.Wpf.Base.Proxy
 {
-    public class FDProxy
+    public class FDProxyFactory
     {
 
         public static T Create<T>() where T : class,new()

@@ -12,25 +12,28 @@ namespace FunnyDation.Common.Service.Proxy
         public IFPContext _Context;
         public IAppSettingService _AppSettings;
 
+
+        /// <summary>
+        /// WebApiClient（此处最好注入一个appsetting service）
+        /// </summary>
+        /// <param name="fPContext"></param>
+        /// <param name="appSettingService"></param>
         public WebApiClient(IFPContext fPContext, IAppSettingService appSettingService)
         {
             _Context = fPContext;
             _AppSettings = appSettingService;
 
         }
-        //此处最好注入一个appsetting service
 
-        public T Create<T>() where T : class, new()
+        public T Create<T>() where T : class
         {
-
-
-            return new T();
+            return (T)ProxyGenerator.Create(typeof(T), new ServiceProxy(_Context, _AppSettings));
 
         }
 
         public object Create(Type type)
         {
-            return null;
+            return ProxyGenerator.Create(type, new ServiceProxy(_Context, _AppSettings));
         }
     }
 }
