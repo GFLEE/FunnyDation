@@ -5,12 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.1" NoWarn="NU1605" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.1" NoWarn="NU1605" />
+    <PackageReference Include="NLog" Version="4.7.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common\FunnyDation.Common\FunnyDation.Common.csproj" />
     <ProjectReference Include="..\Fund\FunnyDation.IService.Fund\FunnyDation.IService.Fund.csproj" />
     <ProjectReference Include="..\Fund\FunnyDation.Service.Fund\FunnyDation.Service.Fund.csproj" />
   </ItemGroup>

@@ -2,7 +2,11 @@
 
 namespace FunnyDation.Service.Fund
 {
-    public class Class1
+    public class FDService
     {
+
+
+
+
     }
 }

@@ -19,7 +19,11 @@ namespace FunnyDation.Common
             return JsonConvert.SerializeObject(obj, format);
 
         }
+        public static string SerializeWithSetting(object obj, JsonSerializerSettings settings = null)
+        {
+            return JsonConvert.SerializeObject(obj, settings);
 
+        }
         /// <summary>
         /// 反序列化
         /// </summary>
