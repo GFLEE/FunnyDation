@@ -26,12 +26,23 @@ namespace FunnyDation.Common
         /// <typeparam name="T"></typeparam>
         /// <param name="jsonStr"></param>
         /// <returns></returns>
-        public static T DeSerialize<T>(string jsonStr)
+        public static T Deserialize<T>(string jsonStr)
         {
             return JsonConvert.DeserializeObject<T>(jsonStr);
 
         }
 
+        /// <summary>
+        /// 反序列化并转换成指定类型
+        /// </summary>
+        /// <param name="jsonStr"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static object Deserialize(string jsonStr, Type type)
+        {
+            return JsonConvert.DeserializeObject(jsonStr, type);
+
+        }
 
     }
 }

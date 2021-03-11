@@ -10,6 +10,11 @@ namespace FunnyDation.Common
         #region Client
         public const string ModulePath = "Modules";
         public const string ranking_client = "FunnyDation.Wpf.Ranking";
+
+        public const string IS_Client = "WPFClient";
+
+        public const string IS_ClientSecret = "WPFClientSecret";
+
         #endregion
 
         #region RESTService
@@ -18,11 +23,14 @@ namespace FunnyDation.Common
 
         #endregion
 
-        #region 
+        #region proxy
 
-        public const string IS_Authentication = "AuthenticationToken";
+        public const string IS_AuthenticationToken = "AuthenticationToken";
+        public const string IS_AuthenticationRefreshToken = "AuthenticationRefreshToken";
         public const string ServiceAddressEx = "/Api/ApiService/InvokeApi";
         public const string NotAuthorizeServiceAddressEx = "/Api/ApiService/InvokeApiNotAuthorize";
+        public const string AppSettings_ServiceAddress = "ServiceAddress";
+        public const string AppSettings_AuthAddress = "AuthAddress";
 
 
         #endregion
@@ -31,6 +39,9 @@ namespace FunnyDation.Common
         #region fund
         public const string FundBaseUrl = @"https://api.doctorxiong.club/v1/fund";
         public const string FundDetailUrl = @"https://api.doctorxiong.club/v1/fund/detail";
+
+
+
 
 
 
