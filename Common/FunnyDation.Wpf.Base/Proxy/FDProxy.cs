@@ -9,7 +9,7 @@ namespace FunnyDation.Wpf.Base.Proxy
     public class FDProxy
     {
 
-        public static T Create<T>() where T : class
+        public static T Create<T>() where T : class,new()
         {
             var _Proxy = ServiceLocator.Current.TryResolve<IServiceProxy>();
             if (_Proxy == null)

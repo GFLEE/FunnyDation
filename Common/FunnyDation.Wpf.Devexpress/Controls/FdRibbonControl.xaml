@@ -115,7 +115,7 @@
         </DataTemplate>
 
     </UserControl.Resources>
-    <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2019" ToolbarShowMode="Hide" 
+    <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" ToolbarShowMode="Hide" 
                        ToolbarShowCustomizationButton="True" ApplicationButtonText=" "
                        ApplicationButtonSmallIcon="{dxc:DXImage Image=Home_16x16.png}" 
                        ApplicationButtonLargeIcon="{dxc:DXImage Image=Home_32x32.png}" 

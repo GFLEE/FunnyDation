@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FunnyDation.Common.Context;
+using FunnyDation.Common.Service.AppSetting;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
@@ -6,7 +8,7 @@ using System.Text;
 namespace FunnyDation.Common.Service.Proxy
 {
     /// <summary>
-    /// 代理生成器
+    /// 代理生成
     /// </summary>
     public class ProxyGenerator : DispatchProxy
     {
@@ -16,8 +18,13 @@ namespace FunnyDation.Common.Service.Proxy
         }
     }
 
+   
+
+
+
 
 
 
 
 }
+

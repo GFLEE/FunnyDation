@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FunnyDation.Common.Helper
+namespace FunnyDation.Common
 {
     /// <summary>
     /// This class provides basic operations that deal with system types.

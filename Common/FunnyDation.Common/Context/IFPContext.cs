@@ -13,5 +13,6 @@ namespace FunnyDation.Common.Context
 
 
 
+        string GetValue(string key);
     }
 }

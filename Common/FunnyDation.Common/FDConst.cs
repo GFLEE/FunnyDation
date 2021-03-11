@@ -18,6 +18,16 @@ namespace FunnyDation.Common
 
         #endregion
 
+        #region 
+
+        public const string IS_Authentication = "AuthenticationToken";
+        public const string ServiceAddressEx = "/Api/ApiService/InvokeApi";
+        public const string NotAuthorizeServiceAddressEx = "/Api/ApiService/InvokeApiNotAuthorize";
+
+
+        #endregion
+
+
         #region fund
         public const string FundBaseUrl = @"https://api.doctorxiong.club/v1/fund";
         public const string FundDetailUrl = @"https://api.doctorxiong.club/v1/fund/detail";

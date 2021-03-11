@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using DevExpress.Xpf.Core;
 using FunnyDation.Common;
 using FunnyDation.Common.Ioc;
 using FunnyDation.Wpf;
@@ -26,6 +27,7 @@ namespace FunnyDation.Client.Wpf
     {
         protected override Window CreateShell()
         {
+            ApplicationThemeHelper.ApplicationThemeName = Theme.Office2019WhiteName;
             var win = Container.Resolve<MainWindow>();
             win.WindowState = WindowState.Maximized;
             win.WindowStartupLocation = WindowStartupLocation.CenterScreen;

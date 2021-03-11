@@ -9,7 +9,7 @@ namespace FunnyDation.Common.Service.Proxy
     /// </summary>
     public interface IServiceProxy
     {
-        T Create<T>() where T : class;
+        T Create<T>() where T : class, new();
 
         object Create(Type type);
     }
