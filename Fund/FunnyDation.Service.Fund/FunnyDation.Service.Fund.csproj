@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FunnyDation.IService.Fund\FunnyDation.IService.Fund.csproj" />
+    <ProjectReference Include="..\FunnyDation.Repository.Fund\FunnyDation.Repository.Fund.csproj" />
   </ItemGroup>
 
 </Project>

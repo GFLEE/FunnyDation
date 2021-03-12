@@ -14,4 +14,16 @@ namespace FunnyDation.Data
         public string User_Name { get; set; }
         public int Enable { get; set; }
     }
+
+    [Table("FD")]
+    public class FD_Entity
+    {
+        [Key]
+        public string Id { get; set; }
+        public string User_Name { get; set; }
+        public int Enable { get; set; }
+    }
+
+
+
 }

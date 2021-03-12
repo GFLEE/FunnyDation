@@ -2,10 +2,10 @@
 
 namespace FunnyDation.Repository.Fund
 {
-    public class FDRepository
+    public class FDEntityRepository
     {
 
-
+         
 
     }
 }
