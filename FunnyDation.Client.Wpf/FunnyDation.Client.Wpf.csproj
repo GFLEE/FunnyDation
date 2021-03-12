@@ -133,6 +133,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Interface1.cs" />
     <Compile Include="PreLoading.xaml.cs">
       <DependentUpon>PreLoading.xaml</DependentUpon>
     </Compile>
@@ -181,6 +182,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="appsettings.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -212,6 +214,46 @@
     <Folder Include="Images\ToolBar\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\password.png" />
+    <Resource Include="Images\平台API参数.png" />
+    <Resource Include="Images\稳定可靠.png" />
+    <Resource Include="Images\message.png" />
+    <Resource Include="Images\pad.png" />
+    <Resource Include="Images\require.png" />
+    <Resource Include="Images\Tools and hardware.png" />
+    <Resource Include="Images\tools.png" />
+    <Resource Include="Images\报告.png" />
+    <Resource Include="Images\node-multiple.png" />
+    <Resource Include="Images\table-column-width.png" />
+    <Resource Include="Images\树.png" />
+    <Resource Include="Images\phsics.png" />
+    <Resource Include="Images\数据源模型.png" />
+    <Resource Include="Images\order select.png" />
+    <Resource Include="Images\standard.png" />
+    <Resource Include="Images\project_info.png" />
+    <Resource Include="Images\tree5.png" />
+    <Resource Include="Images\故障缺陷.png" />
+    <Resource Include="Images\project-diagram-solid.png" />
+    <Resource Include="Images\tree %281%29.png" />
+    <Resource Include="Images\tree %282%29.png" />
+    <Resource Include="Images\tree.png" />
+    <Resource Include="Images\relation.png" />
+    <Resource Include="Images\project-diagram.png" />
+    <Resource Include="Images\Radial diagram.png" />
+    <Resource Include="Images\uf_model.png" />
+    <Resource Include="Images\Preferentialrules-fill %281%29.png" />
+    <Resource Include="Images\Preferentialrules-fill.png" />
+    <Resource Include="Images\Settings-Window.png" />
+    <Resource Include="Images\st-setting2.png" />
+    <Resource Include="Images\列表.png" />
+    <Resource Include="Images\参数管理.png" />
+    <Resource Include="Images\参数配置.png" />
+    <Resource Include="Images\工程.png" />
+    <Resource Include="Images\指标.png" />
+    <Resource Include="Images\数据字典 %281%29.png" />
+    <Resource Include="Images\数据字典.png" />
+    <Resource Include="Images\选择文件.png" />
+    <Resource Include="Images\配置.png" />
     <Resource Include="Images\Menu\colorrecords.png" />
     <Resource Include="favicon.ico" />
     <Resource Include="Images\3DClusteredColumn_32x32.png" />
@@ -239,6 +281,35 @@
     <Resource Include="Images\Menu\Add.png" />
     <Resource Include="Images\Menu\Edit.png" />
     <Resource Include="Images\Menu\Delete.png" />
+    <Resource Include="Images\home.png" />
+    <Resource Include="Images\DOC图标.png" />
+    <Resource Include="Images\file-settings-line.png" />
+    <Resource Include="Images\icons8-rules 1.png" />
+    <Resource Include="Images\4 Diagram_4.png" />
+    <Resource Include="Images\chart-diagram-1.png" />
+    <Resource Include="Images\chart-diagram-2.png" />
+    <Resource Include="Images\Diagram Point Right.png" />
+    <Resource Include="Images\Diagram-2.png" />
+    <Resource Include="Images\Diagram-3.png" />
+    <Resource Include="Images\Diagram-4.png" />
+    <Resource Include="Images\home2.png" />
+    <Resource Include="Images\home3.png" />
+    <Resource Include="Images\home4.png" />
+    <Resource Include="Images\Diagram-4 %281%29.png" />
+    <Resource Include="Images\data_dic.png" />
+    <Resource Include="Images\Design-Software.png" />
+    <Resource Include="Images\icon-config.png" />
+    <Resource Include="Images\container_node.png" />
+    <Resource Include="Images\27-linked areas.png" />
+    <Resource Include="Images\chart-network.png" />
+    <Resource Include="Images\chart-scatter.png" />
+    <Resource Include="Images\CHART-双轴图.png" />
+    <Resource Include="Images\Dot-Chart 2.png" />
+    <Resource Include="Images\fmeca.png" />
+    <Resource Include="Images\fsux_图表_关系图.png" />
+    <Resource Include="Images\Change password.png" />
+    <Resource Include="Images\fsux_图表_双轴图.png" />
+    <Resource Include="Images\fsux_图表_柱状图.png" />
     <Content Include="Images\Menu\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

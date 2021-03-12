@@ -40,6 +40,18 @@ namespace FunnyDation.Common
         public const string FundBaseUrl = @"https://api.doctorxiong.club/v1/fund";
         public const string FundDetailUrl = @"https://api.doctorxiong.club/v1/fund/detail";
 
+        #region server
+        public const string IS_Scope = "FDAPI";
+
+        public const string IS_Mvc_Client = "MvcClient";
+
+        public const string IS_Mvc_ClientSecret = "MvcClientSecret ";
+
+        public static string IS_Wpf_ClientSecret = "WpfClientSecret ";
+
+        #endregion
+
+
 
 
 
